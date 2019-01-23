@@ -42,3 +42,16 @@
         border: 1px solid #979797;
     }
 }
+
+.selected {
+    background-color: lightgreen;
+}
+.occupied {
+    background-color: #979797;
+    pointer-events: none;
+}
+.reserved-by-lady {
+    background-color: #ff8eb5;
+    pointer-events: none;
+    border: 1px solid #ff8eb5 !important;
+}
