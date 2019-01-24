@@ -3,8 +3,13 @@ import PropTypes from 'prop-types';
 import "./index.scss";
 import config from '../../../config';
 import Axios from 'axios';
+import Footer from '../Footer'
+import { Navbar, Nav, NavItem, Col, Row, NavbarBrand, Glyphicon } from 'react-bootstrap';
+import logo from '../../../img/logo.png';
 
-class Header extends Component {
+
+class Header extends React.Component {
+ 
   handleLogOut() {
     const baseUrl =  config.baseUrl;
     const loginData = localStorage.getItem('loginData') && JSON.parse(localStorage.getItem('loginData'));
@@ -25,18 +30,24 @@ class Header extends Component {
     const loginData = localStorage.getItem('loginData') && JSON.parse(localStorage.getItem('loginData')) ;
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand" href="#">Navbar</a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul className="navbar-nav">
-              <li className="nav-item active">
-                <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
-              </li>
-            </ul>
-          </div>
+        <Navbar fixedTop>
+           <Navbar.Header>
+             <Navbar.Brand>
+                <a href="/">
+                   <img src={logo} className="img-resposive" />
+                </a>                  
+              </Navbar.Brand>
+              <Navbar.Toggle />
+            </Navbar.Header>
+            <Navbar.Collapse>
+              <Nav className="nav navbar-nav">
+                <NavItem eventKey={1} href="#"> Home </NavItem>
+                <NavItem eventKey={2} href="#">Shop</NavItem>
+                <NavItem eventKey={3} href="#"><Glyphicon glyph="shopping-cart" />{' Cart'}</NavItem>
+                <NavItem eventKey={4} href="#"> About </NavItem>
+                <NavItem eventKey={4} href="#"> FAQs </NavItem>  
+              </Nav>
+            </Navbar.Collapse>
           { !loginData ?
             <div className="collapse navbar-collapse sign-in" id="navbarNavDropdown">
             <ul className="navbar-nav">
@@ -48,14 +59,15 @@ class Header extends Component {
             <button type= 'button' onClick={(e)=>{this.handleLogOut(e)}}>Log Out</button>
           </div>
           }
-        </nav>
-      </div>
+          
+        </Navbar>
+        
+      </div>     
     );
   }
 }
 
 export default Header;
-
 Header.contextTypes = {
   router: PropTypes.object
 };
