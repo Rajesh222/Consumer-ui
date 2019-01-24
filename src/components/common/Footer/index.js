@@ -4,9 +4,15 @@ import "./index.scss";
 import config from '../../../config';
 import { Grid, Nav, NavItem } from 'react-bootstrap';
 
-function Footer () {
-    return (
-        <footer>
+class Footer extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { year: new Date().getFullYear() };
+  }
+  
+   render(){ return (
+    <footer>
       <Grid>
         <Nav justified>
           <NavItem
@@ -25,11 +31,12 @@ function Footer () {
         </Nav>
 
         <div className="text-center small copyright">
-          © RLM 2016
+        &copy; {this.state.year} Digital Bihar
         </div>
       </Grid>
     </footer>
     );
+   }
 }
 export default Footer;
 Footer.contextTypes = {

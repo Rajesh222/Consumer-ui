@@ -4,7 +4,7 @@ import "./index.scss";
 import config from '../../../config';
 import Axios from 'axios';
 import Footer from '../Footer'
-import { Navbar, Nav, NavItem, Col, Row, NavbarBrand, Glyphicon } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, NavDropdown,MenuItem, Glyphicon } from 'react-bootstrap';
 import logo from '../../../img/logo.png';
 
 
@@ -29,23 +29,29 @@ class Header extends React.Component {
   render() {
     const loginData = localStorage.getItem('loginData') && JSON.parse(localStorage.getItem('loginData')) ;
     return (
-      <div>
-        <Navbar fixedTop>
+       <Navbar fixedTop>
            <Navbar.Header>
              <Navbar.Brand>
                 <a href="/">
                    <img src={logo} className="img-resposive" />
                 </a>                  
               </Navbar.Brand>
-              <Navbar.Toggle />
+              <Navbar.Toggle data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"/>
             </Navbar.Header>
             <Navbar.Collapse>
-              <Nav className="nav navbar-nav">
-                <NavItem eventKey={1} href="#"> Home </NavItem>
-                <NavItem eventKey={2} href="#">Shop</NavItem>
-                <NavItem eventKey={3} href="#"><Glyphicon glyph="shopping-cart" />{' Cart'}</NavItem>
-                <NavItem eventKey={4} href="#"> About </NavItem>
-                <NavItem eventKey={4} href="#"> FAQs </NavItem>  
+              <Nav>
+                <NavItem className="active" eventKey={1} href="#"> Home </NavItem>
+                <NavItem className="active" eventKey={2} href="#">About Us</NavItem>
+                <NavItem  className="active" eventKey={3} href="#">Bus Booking</NavItem>
+                <NavItem  className="active" eventKey={4} href="#"> Taxi Service </NavItem>
+                <NavItem className="active" eventKey={5} href="#"> FAQs </NavItem>  
+                <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+                    <MenuItem eventKey={3.1}>Action</MenuItem>
+                    <MenuItem eventKey={3.2}>Another action</MenuItem>
+                    <MenuItem eventKey={3.3}>Something else here</MenuItem>
+                    <MenuItem eventKey={3.3}>Separated link</MenuItem>
+                </NavDropdown>
+                <NavItem className="active" eventKey={5} href="#"> Contact US </NavItem>  
               </Nav>
             </Navbar.Collapse>
           { !loginData ?
@@ -59,10 +65,8 @@ class Header extends React.Component {
             <button type= 'button' onClick={(e)=>{this.handleLogOut(e)}}>Log Out</button>
           </div>
           }
-          
-        </Navbar>
-        
-      </div>     
+          </Navbar>
+      
     );
   }
 }
