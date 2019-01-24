@@ -12,6 +12,7 @@ import Privacy from './components/common/Privacy';
 import Terms from './components/common/Terms';
 import Error from './components/common/Error';
 import Contact from './components/common/Contact';
+import Register from './components/Registation';
 
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
          <Route path="/dashboard" component={Dashboard} />
          <Route path="/forgotpassword" component={Forgotpassword} />
          <Route path="/resetpassword" component={Resetpassword} />
+         <Route path="registerUser" component={Register}/>
          <Route path="error" component={Error} />
        </div>
      </Router>
