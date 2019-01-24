@@ -29,7 +29,7 @@ class Header extends React.Component {
   render() {
     const loginData = localStorage.getItem('loginData') && JSON.parse(localStorage.getItem('loginData')) ;
     return (
-       <Navbar fixedTop>
+       <Navbar fixedTop inverse collapseOnSelect>
            <Navbar.Header>
              <Navbar.Brand>
                 <a href="/">
