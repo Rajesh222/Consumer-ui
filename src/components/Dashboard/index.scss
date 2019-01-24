@@ -1,12 +1,20 @@
 .source {
     margin-top: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: beige;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
- 
+.error-message {
+    color: red;
+    font-size: 13px;
+
+}
 .react-datepicker__input-container  input{
      
         height: 36px;
         border: 1px solid #ccc;
         border-radius: 4px;
-        padding-left: 10px;
-    
+        padding-left: 10px; 
 }

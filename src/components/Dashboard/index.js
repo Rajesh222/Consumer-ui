@@ -13,8 +13,10 @@ export default class Dashboard extends Component {
     state = {
         selectedSource: null,
         selectedDestination: null,
+        sourceError: false,
+        destinationError: false,
         cities: [],
-        date: new Date(),
+        searchDate: new Date(),
         searchResult: [
             {
               "createdBy": "SATYAM",
@@ -125,37 +127,54 @@ export default class Dashboard extends Component {
           ]
     }
  
-    handleChange = date => this.setState({ date })
+    handleChange = searchDate => this.setState({ searchDate })
     handleSourceChange = (selectedSource) => {
-        this.setState({ selectedSource });
+        this.setState({ selectedSource, sourceError: false });
     }
     handleDestinationChange = (selectedDestination) => {
-        this.setState({ selectedDestination });
+        this.setState({ selectedDestination, destinationError: false });
     }
     componentDidMount() {
-        Axios.get('http://localhost:8080/BiharConsumer/api/v0/cities').then((res) =>{
-           this.setState({cities: res.data.data}) 
-        })
-    }
-    handleSearch = ()=> {
         const baseUrl= config.baseUrl;
-        const url = `${baseUrl}${config.availability}`;
-        const body = {
-            date: this.state.date,
-            destinationName: this.state.selectedDestination.value.toLowerCase(),
-            sourceName:  this.state.selectedSource.value.toLowerCase()
-        }
-        Axios.post(url, body).then((res)=> {
-            if(res.data) {
-               this.setState({searchResult: res.data.data})
-            }
+        const url = `${baseUrl}${config.cities}`;
+        Axios.get(url).then((res) =>{
+           this.setState({cities: res.data.data}) 
         }).catch((error)=> {
             console.log(error);
-        })
+        });
+    }
+    handleSearch = ()=> {
+        const { selectedSource, selectedDestination, searchDate } = this.state;
+        if (!selectedSource) {
+           this.setState({sourceError: true}); 
+        }
+        if (!selectedDestination) {
+            this.setState({destinationError: true}); 
+         }
+
+        if (selectedSource && selectedDestination && searchDate) {
+            const baseUrl= config.baseUrl;
+            const url = `${baseUrl}${config.availability}`;
+            const body = {
+                date: this.state.date,
+                destinationName: this.state.selectedDestination.value.toLowerCase(),
+                sourceName:  this.state.selectedSource.value.toLowerCase()
+            }
+            Axios.post(url, body).then((res)=> {
+                if(res.data) {
+                this.setState({searchResult: res.data.data})
+                }
+            }).catch((error)=> {
+                console.log(error);
+            })
+        } else {
+            return;
+        }
+        
     }
     render() {
-        const { selectedSource , selectedDestination, searchResult} = this.state;
-        const citiesOptions = this.state.cities.map(item => ({ label: item.cityName, value: item.cityName }))
+        const { selectedSource , selectedDestination, searchResult, searchDate, sourceError, destinationError } = this.state;
+        const citiesOptions = this.state.cities.map(item => ({ label: item.cityName, value: item.cityName }));
         return (
             <div>
             <Grid>
@@ -168,6 +187,7 @@ export default class Dashboard extends Component {
                             isSearchable={true}
                             placeholder="Select Source City"
                         />
+                       {sourceError && <span className="error-message">Please Select Source</span>}
                     </Col>
                     <Col xs={6} md={3}>
                         <Select
@@ -178,10 +198,11 @@ export default class Dashboard extends Component {
                             isSearchable={true}
                         >
                         </Select>
+                        {destinationError &&<span className="error-message">Please Select Destination</span>}
                     </Col>
                     <Col xs={6} md={3}>
                     <DatePicker
-                        selected={this.state.date}
+                        selected={searchDate}
                         onChange={this.handleChange}
                         placeholderText="Select a date"
                     />
@@ -189,8 +210,7 @@ export default class Dashboard extends Component {
                     <Col xs={6} md={2}>
                     <Button
                     block
-                    bsStyle="success"
-                    bsSize="lg"
+                    bsStyle="primary"
                     onClick={this.handleSearch}
                     type="submit"
                     >
@@ -200,7 +220,9 @@ export default class Dashboard extends Component {
                 </Row>
             </Grid>
             {searchResult.map((item, index)=>{
-               return <Bookbus key={index} busDetails={item} />
+               return <Grid><Row><Col md={2}></Col><Col md={10}>
+                        <Bookbus key={index} busDetails={item} />
+                    </Col></Row></Grid>
             })}
          </div>
         )

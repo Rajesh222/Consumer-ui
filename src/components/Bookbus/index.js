@@ -17,8 +17,7 @@ export default class Bookbus extends Component {
     }
 
     render() {
-        const { travelsName, availableSeats, totalSeats, basefare, departureDate, arrivalDate } = this.props.busDetails;
-        console.log('departureDate: ', new Date(departureDate).getHours())
+        const { travelsName, source, destination, totalSeats, basefare, departureDate, arrivalDate, busType } = this.props.busDetails;
         const formatedDepartureDate = new Date(departureDate);
         const formatedArrivalDate = new Date(arrivalDate)
         return (
@@ -26,7 +25,8 @@ export default class Bookbus extends Component {
             <Grid style={{paddingTop : 20, paddingBottom:10 }}>
                 <Row>
                     <Col xs={6} md={3}>{travelsName}</Col>
-                    <Col xs={6} md={3}>{`${formatedDepartureDate.getHours()} : ${formatedDepartureDate.getMinutes()}`}</Col>
+                    <Col xs={6} md={2}>{`${formatedDepartureDate.getHours()} : ${formatedDepartureDate.getMinutes()}`}</Col>
+                    <Col xs={6} md={1}>---></Col>
                     <Col xs={6} md={4}>{`${formatedArrivalDate.getHours()} : ${formatedArrivalDate.getMinutes()}`}</Col>
                     <Col xs={6} md={2}>
                         <Button
@@ -35,6 +35,11 @@ export default class Bookbus extends Component {
                             onClick={this.toggle}
                             > Select Seats</Button>
                     </Col>
+                </Row>
+                <Row className="busrow-details">
+                    <Col xs={6} md={3}>{busType}</Col>
+                    <Col xs={6} md={3}>{source}</Col>
+                    <Col xs={6} md={4}>{destination}</Col>
                 </Row>
                 <Collapsible collapse={this.state.collapse} seatDetails={this.state.seatDetails} metaData={this.state.metaData}/>
             </Grid>
