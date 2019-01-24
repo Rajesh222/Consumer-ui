@@ -11,6 +11,7 @@ import About from './components/common/About';
 import Privacy from './components/common/Privacy';
 import Terms from './components/common/Terms';
 import Contact from './components/common/Contact';
+import Error from './components/common/Error';
 
 class App extends Component {
   render() {
@@ -26,6 +27,7 @@ class App extends Component {
          <Route path="/dashboard" component={Dashboard} />
          <Route path="/forgotpassword" component={Forgotpassword} />
          <Route path="/resetpassword" component={Resetpassword} />
+         <Route path="error" component={NotFound} />
        </div>
      </Router>
     );
