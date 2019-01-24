@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import "./index.scss";
 
-class Contact extends Component { 
+class Contact extends React.Component { 
     render () {                                   
         return (
           <div>
@@ -18,7 +20,12 @@ class Contact extends Component {
                     </form>
                </div>
           </div>
-        )
+        );
      }
   
 }
+
+export default Contact;
+Contact.contextTypes = {
+  router: PropTypes.object
+};

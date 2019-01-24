@@ -10,8 +10,9 @@ import Home from './components/Home';
 import About from './components/common/About';
 import Privacy from './components/common/Privacy';
 import Terms from './components/common/Terms';
-import Contact from './components/common/Contact';
 import Error from './components/common/Error';
+import Contact from './components/common/Contact';
+
 
 class App extends Component {
   render() {
@@ -22,12 +23,12 @@ class App extends Component {
          <Route path="/about" component={About} />
          <Route path="/privacy" component={Privacy} />
          <Route path="/terms" component={Terms} />
-         <Route path="/contact" component={Contact} />
          <Route path="/login" component={Login} />
+         <Route path="/contact" component={Contact} />
          <Route path="/dashboard" component={Dashboard} />
          <Route path="/forgotpassword" component={Forgotpassword} />
          <Route path="/resetpassword" component={Resetpassword} />
-         <Route path="error" component={NotFound} />
+         <Route path="error" component={Error} />
        </div>
      </Router>
     );
