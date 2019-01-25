@@ -4,7 +4,7 @@ import "./index.scss";
 import config from '../../../config';
 import Axios from 'axios';
 import Footer from '../Footer'
-import { Navbar, Nav, NavItem, NavDropdown,MenuItem, Glyphicon } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Glyphicon } from 'react-bootstrap';
 import logo from '../../../img/logo.png';
 
 
@@ -29,14 +29,14 @@ class Header extends React.Component {
   render() {
     const loginData = localStorage.getItem('loginData') && JSON.parse(localStorage.getItem('loginData')) ;
     return (
-       <Navbar fixedTop inverse collapseOnSelect>
+       <Navbar>
            <Navbar.Header>
              <Navbar.Brand>
                 <a href="/">
                    <img src={logo} className="img-resposive" />
                 </a>                  
               </Navbar.Brand>
-              <Navbar.Toggle data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"/>
+              <Navbar.Toggle data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" data-target="#navbar" aria-expanded="false" aria-controls="navbar"/>
             </Navbar.Header>
             <Navbar.Collapse>
               <Nav>

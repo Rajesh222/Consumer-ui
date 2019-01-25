@@ -14,26 +14,25 @@ class Footer extends React.Component {
    render(){ return (
     <footer>
       <Grid>
-        <Nav justified>
-          <NavItem
-            eventKey={1}>
-            Privacy policy
-          </NavItem>
-          <NavItem
-            eventKey={2}
-            title="Item">
-            Terms & Conditions
-          </NavItem>
-          <NavItem
-            eventKey={3}>
-            Some other professional link
-          </NavItem>
-        </Nav>
-
-        <div className="text-center small copyright">
-        &copy; {this.state.year} Digital Bihar
-        </div>
+        <div className="row">
+            <div className="col-sm-4 col-md-4">
+                 <h4>Contact Us</h4>
+            </div>
+            <div className="col-sm-8 col-md-4">
+                <h4>Quick Links</h4>
+            </div>
+            <div className="col-sm-3 col-md-4">
+                 <h4>Taxi Services</h4>
+            </div>
+        </div>       
       </Grid>
+      <div className="sub-footer">
+         <div className="container">
+            <div className="row">
+              <p>Copyright &copy; {this.state.year}. All rights reserved</p>
+            </div>
+        </div>
+      </div>
     </footer>
     );
    }
