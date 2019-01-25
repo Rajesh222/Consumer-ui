@@ -31,7 +31,7 @@ class Header extends React.Component {
       <nav className="navbar navbar-default">
           <div class="container">
             <div class="navbar-header">
-                <a className="  " href="/"><img src={logo} className="img-resposive" /></a> 
+                <a className="  " href="/">Digital Bihar</a> 
                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
