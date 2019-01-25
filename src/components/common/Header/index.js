@@ -28,43 +28,30 @@ class Header extends React.Component {
   render() {
     const loginData = localStorage.getItem('loginData') && JSON.parse(localStorage.getItem('loginData')) ;
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-default navbar-dark bg-primary">
           <div class="container">
             <div class="navbar-header">
-                <a className="navbar-brand" href="/"><img src={logo} className="img-resposive" /></a> 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+                <a className="  " href="/"><img src={logo} className="img-resposive" /></a> 
+                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>                
             </div>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav">
+            <div className="navbar-collapse collapse">
+                <ul className="nav navbar-nav">
                   <li className="active"><a className="nav-link" href="/">Home</a></li>
                   <li className=""><a className="nav-link" href="/">About</a></li>
                   <li className=""><a className="nav-link" href="/">Bus Booking</a></li>
                   <li className="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span className="caret"></span></a>
+                    <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span className="caret"></span></a>
                     <ul className="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">One more separated link</a></li>
+                      <li><a href="#">Bus Booking</a></li>
+                      <li><a href="#">Cab Booking</a></li>
+                      <li><a href="#">Hotal Booking</a></li>
                     </ul>
-                  </li>                  
-                  <li className="dropdown">
-                      <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Taxi Services<span class="caret"></span></a>
-                      <ul className="dropdown-menu">
-                        <li><a href="economy-car-rental.html">Economy Car Rental</a></li>
-                        <li><a href="suvmuv-cars.html">SUV/MUV Car Rental</a></li>
-                        <li><a href="coach-rental.html">Coach Rental</a></li>
-                      </ul>
                   </li>
-                  <li className="active"><a href="contact.html">Contact Us</a></li>
+                  <li><a href="#">Contact Us</a></li>
                 </ul>
                 { !loginData ?
                   <div className="collapse navbar-collapse sign-in" id="navbarNavDropdown">
