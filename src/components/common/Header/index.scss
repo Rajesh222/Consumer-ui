@@ -3,8 +3,19 @@
 }
 
 .navbar {
-    //background-color: #000 !important;
+    background-color: #000 !important;
     border-color: transparent;
     border-bottom: 1px dotted rgba(255,255,255,0.3);
     height: 70px;
+}
+.navbar .nav > li > a, .navbar .nav > li > a:focus {
+   // color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    background-color: transparent;
+}
+a{
+    color: #fff;
 }

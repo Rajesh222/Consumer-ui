@@ -28,7 +28,7 @@ class Header extends React.Component {
   render() {
     const loginData = localStorage.getItem('loginData') && JSON.parse(localStorage.getItem('loginData')) ;
     return (
-      <nav className="navbar navbar-default navbar-dark bg-primary">
+      <nav className="navbar navbar-default">
           <div class="container">
             <div class="navbar-header">
                 <a className="  " href="/"><img src={logo} className="img-resposive" /></a> 
