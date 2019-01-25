@@ -41,17 +41,17 @@ class Header extends React.Component {
             <div className="navbar-collapse collapse">
                 <ul className="nav navbar-nav">
                   <li className="active"><a className="nav-link" href="/">Home</a></li>
-                  <li className=""><a className="nav-link" href="/">About</a></li>
+                  <li className="/about"><a className="nav-link" href="/">About</a></li>
                   <li className=""><a className="nav-link" href="/">Bus Booking</a></li>
                   <li className="dropdown">
                     <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span className="caret"></span></a>
                     <ul className="dropdown-menu">
-                      <li><a href="#">Bus Booking</a></li>
+                      <li><a href="#">Bus Ticket</a></li>
                       <li><a href="#">Cab Booking</a></li>
                       <li><a href="#">Hotal Booking</a></li>
                     </ul>
-                  </li>
-                  <li><a href="#">Contact Us</a></li>
+                  </li>              
+                  <li className="active"><a href="contact.html">Contact Us</a></li>
                 </ul>
                 { !loginData ?
                   <div className="collapse navbar-collapse sign-in" id="navbarNavDropdown">

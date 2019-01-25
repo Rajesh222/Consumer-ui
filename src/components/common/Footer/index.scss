@@ -1,13 +1,15 @@
-#content {
-    padding-top: 70px;
-    min-height: "calc(100vh - 92px)";
-  }
-  
+ 
   footer {
-        border-radius: 0 !important;
-    border-bottom: 0;
-    margin: 20px 0 0;
-  
+      border-radius: 0 !important;
+      border-bottom: 0;
+      margin: 20px 0 0;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #33b5e5!important;
+      color: white;
+      text-align: center;  
   }
   .sub-footer {
     border-top: 1px solid rgba(255,255,255,0.1);
@@ -17,4 +19,11 @@
 .sub-footer p {
   margin: 0;
   color: #fff;
+}
+#footer h4{
+	padding-left: 10px;
+  border-left: 3px solid #eeeeee;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+  color:#ffffff;
 }

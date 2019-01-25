@@ -29,7 +29,7 @@ class App extends Component {
          <Route path="/dashboard" component={Dashboard} />
          <Route path="/forgotpassword" component={Forgotpassword} />
          <Route path="/resetpassword" component={Resetpassword} />
-         <Route path="registerUser" component={Register}/>
+         <Route path="/signup" component={Register}/>
          <Route path="error" component={Error} />
        </div>
      </Router>
