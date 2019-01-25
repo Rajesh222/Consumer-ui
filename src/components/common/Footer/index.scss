@@ -10,6 +10,7 @@
       background-color: #ececed!important;
       text-align: center;  
       padding: 64px 0 20px;
+      font-family: Open\ Sans,sans-serif;
   }
   .sub-footer {
     border-top: 1px solid rgba(255,255,255,0.1);
@@ -21,9 +22,18 @@
   color: #fff;
 }
 #footer h4{
-	padding-left: 10px;
-  border-left: 3px solid #eeeeee;
-  padding-bottom: 6px;
-  margin-bottom: 20px;
-  color:#ffffff;
+	margin: 0 0 10px;
+  font-weight: 600;
+  font-size: 13px;
+  font-family: Open\ Sans,sans-serif;
+}
+iframe{
+  border: 5px dotted green;
+}
+.back-to-top {
+  text-align: right;
+  font-family: Open\ Sans,serif;
+  font-size: 22px;
+  color: #333;
+  margin: 15px 0;
 }

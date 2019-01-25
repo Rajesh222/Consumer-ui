@@ -13,8 +13,13 @@ class Footer extends React.Component {
   
    render(){ return (
     <footer>
-      <Grid>
-        <div className="row">
+       <div className="container">
+          <div className="back-to-top">
+               <a href="javascript:void(0)">Back to Top <i className="icon-more-arow ic-box-top"></i></a>
+          </div>
+      </div>
+       <div className="container">
+          <div className="row">
             <div className="col-xs-12 col-sm-4 col-md-4">
                  <h5>Get in Touch</h5>
                  <p>Tell us what you think</p>
@@ -56,7 +61,7 @@ class Footer extends React.Component {
               </ul>
             </div>
             </div>       
-      </Grid>
+      </div>
       <div className="sub-footer">
          <div className="container">
             <div className="row">
