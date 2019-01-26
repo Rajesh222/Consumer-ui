@@ -46,7 +46,7 @@ class Footer extends React.Component {
             <div className="col-xs-12 col-sm-4 col-md-4">
                  <h4>Services</h4>
                  <ul className="list-unstyled quick-links">
-                  <li><a href="/bus-ticket">Bus Ticket</a></li>
+                  <li><a href="/bus-booking">Bus Ticket</a></li>
                   <li><a href="/cab-ticket">Cab Booking</a></li>
                   <li><a href="/hotel-booking">Hotals Booking</a></li>
                 </ul>
