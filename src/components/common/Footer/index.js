@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import "./index.scss";
 import config from '../../../config';
 import { Grid, Nav, NavItem } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 class Footer extends React.Component {
 
@@ -33,34 +35,34 @@ class Footer extends React.Component {
             <div className="col-xs-12 col-sm-4 col-md-4">
                 <h4>Quick Links</h4>
                <ul className="list-unstyled quick-links">
-                  <li><a href="">About</a></li>
-                  <li><a href="">Careers</a></li>
-                  <li><a href="">Offers</a></li>
-                  <li><a href="">Privacy Policy</a></li>
-                  <li><a href="">Terms & Conditions</a></li>
+                  <li><a href="/about">About</a></li>
+                  <li><a href="/career">Careers</a></li>
+                  <li><a href="/offers">Offers</a></li>
+                  <li><a href="/privacy">Privacy Policy</a></li>
+                  <li><a href="/terms">Terms & Conditions</a></li>
                 </ul>
             </div>
             <div className="clearfix visible-xs"></div>
             <div className="col-xs-12 col-sm-4 col-md-4">
                  <h4>Services</h4>
                  <ul className="list-unstyled quick-links">
-                  <li><a href="">Bus Ticket</a></li>
-                  <li><a href="">Cab Booking</a></li>
-                  <li><a href="">Hotals Booking</a></li>
+                  <li><a href="/bus-ticket">Bus Ticket</a></li>
+                  <li><a href="/cab-ticket">Cab Booking</a></li>
+                  <li><a href="/hotel-booking">Hotals Booking</a></li>
                 </ul>
             </div>
         </div>
         <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+          <div className="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
               <ul className="list-unstyled list-inline social text-center">
-                <li className="list-inline-item"><a href="javascript:void();"><i className="fa fa-facebook"></i></a></li>
+                <li className="list-inline-item"><a href="javascript:void();"><FontAwesomeIcon icon="fa fa-facebook"/><i className="fa fa-facebook"></i></a></li>
                 <li className="list-inline-item"><a href="javascript:void();"><i className="fa fa-twitter"></i></a></li>
                 <li className="list-inline-item"><a href="javascript:void();"><i className="fa fa-instagram"></i></a></li>
                 <li className="list-inline-item"><a href="javascript:void();"><i className="fa fa-google-plus"></i></a></li>
                 <li className="list-inline-item"><a href="javascript:void();" target="_blank"><i className="fa fa-envelope"></i></a></li>
               </ul>
-            </div>
-            </div>       
+          </div>
+      </div>       
       </div>
       <div className="sub-footer">
          <div className="container">
