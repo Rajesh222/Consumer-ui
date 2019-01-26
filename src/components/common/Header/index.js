@@ -41,10 +41,10 @@ class Header extends React.Component {
             <NavItem eventKey={3} href="#">Bus Booking</NavItem>
             <NavItem eventKey={4} href="#"> Taxi Service </NavItem>
             <NavItem eventKey={5} href="#"> FAQs </NavItem>  
-            <NavDropdown eventKey={6} title="Dropdown" id="basic-nav-dropdown">
-                <MenuItem eventKey={6.1}>Action</MenuItem>
-                <MenuItem eventKey={6.2}>Another action</MenuItem>
-                <MenuItem eventKey={6.3}>Something else here</MenuItem>
+            <NavDropdown eventKey={6} title="Services" id="basic-nav-dropdown">
+                <MenuItem eventKey={6.1}>Bus Ticket</MenuItem>
+                <MenuItem eventKey={6.2}>Cab Booking</MenuItem>
+                <MenuItem eventKey={6.3}>Hotal Booking</MenuItem>
             </NavDropdown>
             <NavItem eventKey={7} href="#"> Contact US </NavItem>  
           </Nav>
