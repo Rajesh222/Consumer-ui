@@ -36,17 +36,17 @@ class Header extends React.Component {
           </Navbar.Header>
           <Navbar.Collapse>
           <Nav>
-            <NavItem eventKey={1} href="#"> Home </NavItem>
-            <NavItem eventKey={2} href="#">About Us</NavItem>
-            <NavItem eventKey={3} href="#">Bus Booking</NavItem>
-            <NavItem eventKey={4} href="#"> Taxi Service </NavItem>
-            <NavItem eventKey={5} href="#"> FAQs </NavItem>  
+            <NavItem eventKey={1} href="/"> Home </NavItem>
+            <NavItem eventKey={2} href="about">About Us</NavItem>
             <NavDropdown eventKey={6} title="Services" id="basic-nav-dropdown">
-                <MenuItem eventKey={6.1}>Bus Ticket</MenuItem>
-                <MenuItem eventKey={6.2}>Cab Booking</MenuItem>
-                <MenuItem eventKey={6.3}>Hotal Booking</MenuItem>
+                <MenuItem eventKey={6.1} href="bus-booking">Bus Ticket</MenuItem>
+                <MenuItem eventKey={6.2} href="cab-booking">Cab Booking</MenuItem>
+                <MenuItem eventKey={6.3} href="hotel-booking">Hotal Booking</MenuItem>
             </NavDropdown>
-            <NavItem eventKey={7} href="#"> Contact US </NavItem>  
+            <NavItem eventKey={3} href="privacy">Privacy</NavItem>
+            <NavItem eventKey={4} href="/terms"> Term & Condition </NavItem>
+            <NavItem eventKey={5} href="/faq"> FAQs </NavItem>  
+            <NavItem eventKey={7} href="contact-us"> Contact US </NavItem>  
           </Nav>
        </Navbar.Collapse>
        </Navbar>
