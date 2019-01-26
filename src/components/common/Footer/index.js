@@ -42,11 +42,11 @@ class Footer extends React.Component {
             </div>
             <div className="clearfix visible-xs"></div>
             <div className="col-xs-12 col-sm-4 col-md-4">
-                 <h4>Taxi Services</h4>
+                 <h4>Services</h4>
                  <ul className="list-unstyled quick-links">
                   <li><a href="">Bus Ticket</a></li>
-                  <li><a href="">Cab Bookings</a></li>
-                  <li><a href="">Hotals</a></li>
+                  <li><a href="">Cab Booking</a></li>
+                  <li><a href="">Hotals Booking</a></li>
                 </ul>
             </div>
         </div>
