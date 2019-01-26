@@ -8,10 +8,15 @@
     border-bottom: 1px dotted rgba(255,255,255,0.3);
     height: 70px;
 }
-.navbar .nav > li > a, .navbar .nav > li > a:focus {
+.navbar .nav > li > a, .navbar .nav > li > a:focus ,.navbar .nav > li > a:active{
      font-weight: 700;
      text-transform: uppercase;
      letter-spacing: 2px;
      font-size: 11px;
-     background-color: transparent;
+     background-color: transparent!important;
+     margin-top: 15px;
+     color: #fff;
+}
+.navbar .nav > li> ul{
+    border: 1px solid #bc3f3d;
 }
