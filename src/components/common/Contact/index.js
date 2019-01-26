@@ -1,25 +1,39 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import "./index.scss";
+import { Container, Col, Form, FormGroup, Label, Input, Button} from 'reactstrap';
 
 class Contact extends React.Component { 
     render () {                                   
         return (
-          <div>
-               <div id='signinContainer'>
-                    <form id='form'>       
-                        <input className='input' type="text"   
-                         placeholder="First Name"/>
-                        <input className='input' type="text"  
-                         placeholder="Last Name"/>          
-                        <input className='input' type="text"  
-                         placeholder="Email"/>          
-                        <input className='input' type="password" 
-                         placeholder="Password"/>
-                        <button id='submit'>Sign Up</button>
-                    </form>
-               </div>
-          </div>
+          <Container className="App">
+          <h2>Sign In</h2>
+          <Form className="form">
+            <Col>
+              <FormGroup>
+                <Label>Email</Label>
+                <Input
+                  type="email"
+                  name="email"
+                  id="exampleEmail"
+                  placeholder="myemail@email.com"
+                />
+              </FormGroup>
+            </Col>
+            <Col>
+              <FormGroup>
+                <Label for="examplePassword">Password</Label>
+                <Input
+                  type="password"
+                  name="password"
+                  id="examplePassword"
+                  placeholder="********"
+                />
+              </FormGroup>
+            </Col>
+            <Button>Submit</Button>
+          </Form>
+        </Container>
         );
      }
   
