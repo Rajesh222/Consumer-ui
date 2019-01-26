@@ -29,7 +29,7 @@ class Header extends React.Component {
       <Navbar fixedTop inverse staticTop>
           <Navbar.Header>
               <NavbarBrand>
-                <img src={logo} className="img-resposive" />
+                <img src={logo} className="img-resposive" width={100} height={50}/>
             </NavbarBrand>
             <Navbar.Toggle/>
           </Navbar.Header>

@@ -9,7 +9,7 @@ class Home extends React.Component {
     return (
       <div>
         <Header />
-        
+        Home Page
         <Footer />
       </div>     
     );
