@@ -13,7 +13,7 @@ class Home extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 col-md-offset-3">
-                        <div class="title">
+                        <div className="title">
                             <h2>Our Service</h2>
                             <p>We Provide Taxi Services &amp; Tours Packages in Delhi-NCR and Nearby Cities !</p>
                         </div>

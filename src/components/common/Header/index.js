@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import "./index.scss";
-import config from '../../../config';
 import Axios from 'axios';
-import { Navbar, Nav, NavItem, NavDropdown,MenuItem, Glyphicon } from 'react-bootstrap';
+import config from '../../../config';
+import {  Navbar, Nav, NavItem, NavDropdown,MenuItem, Glyphicon } from 'react-bootstrap';
 import logo from '../../../img/logo.png';
-
 
 class Header extends React.Component {
  
@@ -13,8 +12,6 @@ class Header extends React.Component {
     const baseUrl =  config.baseUrl;
     const loginData = localStorage.getItem('loginData') && JSON.parse(localStorage.getItem('loginData'));
     const uid = loginData.userId;
-    // localStorage.clear();
-    // this.context.router.history.push('/login');
     Axios.put(`${baseUrl}${config.logOut}/${uid}`).then( (res) => {
       if(res) {
         localStorage.clear();
@@ -28,45 +25,31 @@ class Header extends React.Component {
   render() {
     const loginData = localStorage.getItem('loginData') && JSON.parse(localStorage.getItem('loginData')) ;
     return (
-      <nav className="navbar navbar-default">
-          <div class="container">
-            <div class="navbar-header">
-                <a className="  " href="/">Digital Bihar</a> 
-                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>                
-            </div>
-            <div className="navbar-collapse collapse">
-                <ul className="nav navbar-nav">
-                  <li className="active"><a className="nav-link" href="/">Home</a></li>
-                  <li className="/about"><a className="nav-link" href="/">About</a></li>
-                  <li className=""><a className="nav-link" href="/">Bus Booking</a></li>
-                  <li className="dropdown">
-                    <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span className="caret"></span></a>
-                    <ul className="dropdown-menu">
-                      <li><a href="#">Bus Ticket</a></li>
-                      <li><a href="#">Cab Booking</a></li>
-                      <li><a href="#">Hotal Booking</a></li>
-                    </ul>
-                  </li>              
-                  <li className="active"><a href="contact.html">Contact Us</a></li>
-                </ul>
-                { !loginData ?
-                  <div className="collapse navbar-collapse sign-in" id="navbarNavDropdown">
-                  <ul className="navbar-nav">
-                    <button><a href="/signup"><span className="glyphicon glyphicon-user"></span> Sign Up</a></button>
-                    <button><a href="/login"><span className="glyphicon glyphicon-log-in"></span> Login</a></button>
-                  </ul>
-                </div>: 
-                <div className="sign-in">
-                  <button type= 'button' onClick={(e)=>{this.handleLogOut(e)}}>Log Out</button>
-                </div>
-                }
-            </div>
-        </div>
-      </nav>   
+      <Navbar fixedTop inverse staticTop>
+          <Navbar.Header>
+              <Navbar.Brand>
+              <a href="/">
+                  <img src={logo} className="img-resposive" />
+              </a>                  
+            </Navbar.Brand>
+             <Navbar.Toggle data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"/>
+          </Navbar.Header>
+          <Navbar.Collapse>
+          <Nav>
+            <NavItem eventKey={1} href="#"> Home </NavItem>
+            <NavItem eventKey={2} href="#">About Us</NavItem>
+            <NavItem eventKey={3} href="#">Bus Booking</NavItem>
+            <NavItem eventKey={4} href="#"> Taxi Service </NavItem>
+            <NavItem eventKey={5} href="#"> FAQs </NavItem>  
+            <NavDropdown eventKey={6} title="Dropdown" id="basic-nav-dropdown">
+                <MenuItem eventKey={6.1}>Action</MenuItem>
+                <MenuItem eventKey={6.2}>Another action</MenuItem>
+                <MenuItem eventKey={6.3}>Something else here</MenuItem>
+            </NavDropdown>
+            <NavItem eventKey={7} href="#"> Contact US </NavItem>  
+          </Nav>
+       </Navbar.Collapse>
+       </Navbar>
     );
   }
 }
