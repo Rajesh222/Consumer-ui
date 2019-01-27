@@ -22,6 +22,9 @@ footer h4{
   font-size: 14px;
   font-family: Open\ Sans,sans-serif;
 }
+footer .nav>li>a{
+  padding: 0;
+}
 footer a, footer a:hover{
   color: #666;
   display: block;
