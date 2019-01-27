@@ -66,13 +66,13 @@ class Footer extends React.Component {
       </Row>       
       </Grid>
       <div className="sub-footer">
-         <div className="container">
-            <div className="row">
-              <div className="col-sm-8">
+         <Grid>
+            <Row>
+              <Col sm={8}>
               <p>Copyright &copy; {this.state.year}. All rights reserved</p>
-              </div>
-            </div>
-        </div>
+              </Col>
+            </Row>
+        </Grid>
       </div>
     </footer>
     );
