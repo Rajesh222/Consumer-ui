@@ -19,16 +19,18 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             font-size: 11px;
-           // background-color: transparent!important;
             margin-top: 15px;
             color: #fff;
            }
-           a :active {
+           a :active , a :hover{
                color: #000;
            }
        }
    }
-   .dropdown-menu {
-       background-color: #bc3f3d;
+   .navDropDown a, .dropdown-menu {
+       background-color: #bc3f3d !important;
+       :hover{
+        color: #000;
+       }
    }
 }

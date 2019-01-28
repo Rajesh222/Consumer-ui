@@ -37,7 +37,7 @@ class Header extends React.Component {
             <Nav>
               <NavItem eventKey={1} href="/"> Home </NavItem>
               <NavItem eventKey={2} href="/about">About Us</NavItem>
-              <NavDropdown eventKey={6} title="Services" id="basic-nav-dropdown" style={{backgroundColor: "#bc3f3d"}}>
+              <NavDropdown eventKey={6} title="Services" className="navDropDown">
                   <MenuItem eventKey={6.1} href="/bus-booking" style={{backgroundColor: "#bc3f3d"}}>Bus Ticket</MenuItem>
                   <MenuItem eventKey={6.2} href="/cab-booking" style={{backgroundColor: "#bc3f3d"}}>Cab Booking</MenuItem>
                   <MenuItem eventKey={6.3} href="/hotel-booking" style={{backgroundColor: "#bc3f3d"}}>Hotal Booking</MenuItem>
