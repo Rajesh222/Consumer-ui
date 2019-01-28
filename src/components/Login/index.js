@@ -5,6 +5,8 @@ import "./index.scss";
 import Axios from 'axios';
 import { showToastrOnSuccess } from '../../utils/common';
 import PropTypes from 'prop-types';
+import toastr from 'reactjs-toastr';
+
 
 export default class Login extends Component {
   constructor(props) {
@@ -58,6 +60,7 @@ export default class Login extends Component {
               onChange={this.handleChange}
             />
           </FormGroup>
+          <p onClick={()=>toastr.success('Success Message', 'Title', {displayDuration:3000})}>Show Success Message</p>
           <FormGroup controlId="password" bsSize="large">
             <ControlLabel>Password</ControlLabel>
             <FormControl
