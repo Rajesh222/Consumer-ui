@@ -156,7 +156,7 @@ export default class Dashboard extends Component {
             const baseUrl= config.baseUrl;
             const url = `${baseUrl}${config.availability}`;
             const body = {
-                date: this.state.date,
+                date: this.state.searchDate,
                 destinationName: this.state.selectedDestination.value.toLowerCase(),
                 sourceName:  this.state.selectedSource.value.toLowerCase()
             }
