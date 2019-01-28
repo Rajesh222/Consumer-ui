@@ -42,7 +42,7 @@ class Header extends React.Component {
                   <MenuItem eventKey={6.2} href="/cab-booking" style={{backgroundColor: "#bc3f3d"}}>Cab Booking</MenuItem>
                   <MenuItem eventKey={6.3} href="/hotel-booking" style={{backgroundColor: "#bc3f3d"}}>Hotal Booking</MenuItem>
               </NavDropdown>
-              <NavItem eventKey={3} href="/privacy">Privacy</NavItem>
+              <NavItem eventKey={3} href="/privacypolicy">Privacy</NavItem>
               <NavItem eventKey={5} href="/faq"> FAQs </NavItem>  
               <NavItem eventKey={7} href="/contact-us"> Contact US </NavItem>  
           </Nav>
