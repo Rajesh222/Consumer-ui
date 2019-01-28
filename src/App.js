@@ -27,8 +27,8 @@ class App extends Component {
                 <Route exact path="/" component={Dashboard} />
                 <Route path="/login" component={Login} />
                 <Route path='/about' component={About} />
-                <Route path='/privacy' component={Privacy} />
-                <Route path="/terms" component={Terms} />
+                <Route path='/privacypolicy' component={Privacy} />
+                <Route path="/termscondition" component={Terms} />
                 <Route path="/contact-us" component={Contact} />
                 <Route path="/bus-booking" component={Dashboard} />
                 <Route path="/forgotpassword" component={Forgotpassword} />

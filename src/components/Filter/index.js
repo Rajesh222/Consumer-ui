@@ -9,7 +9,7 @@ class Filter extends Component {
  
    render(){
     return (
-   <div>Fiter</div>
+      <div>Fiter</div>
       
     )
    }

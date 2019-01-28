@@ -34,8 +34,8 @@ class Footer extends React.Component {
                   <NavItem href="/about">About</NavItem>
                   <NavItem href="/career">Careers</NavItem>
                   <NavItem href="/offers">Offers</NavItem>
-                  <NavItem href="/privacy">Privacy Policy</NavItem>
-                  <NavItem href="/terms">Terms & Conditions</NavItem>
+                  <NavItem href="/privacypolicy">Privacy Policy</NavItem>
+                  <NavItem href="/termscondition">Terms & Conditions</NavItem>
                 </Nav>
             </Col>
             <div className="clearfix visible-xs"></div>
