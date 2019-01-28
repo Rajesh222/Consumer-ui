@@ -46,6 +46,7 @@ class Footer extends React.Component {
                   <NavItem href="/bus-booking">Bus Ticket</NavItem>
                   <NavItem href="/cab-ticket">Cab Booking</NavItem>
                   <NavItem href="/hotel-booking">Hotals Booking</NavItem>
+                  <NavItem href="https://www.icicilombard.com/" target="_blank">Agent Login</NavItem>
                 </Nav>                
             </Col>
         </Row>       
