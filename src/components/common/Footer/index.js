@@ -33,9 +33,10 @@ class Footer extends React.Component {
                <Nav className="list-unstyled">
                   <NavItem href="/about">About</NavItem>
                   <NavItem href="/career">Careers</NavItem>
-                  <NavItem href="/offers">Offers</NavItem>
+                  <NavItem href="/faq">FAQ</NavItem>
                   <NavItem href="/privacypolicy">Privacy Policy</NavItem>
                   <NavItem href="/termscondition">Terms & Conditions</NavItem>
+                  <NavItem href="https://www.icicilombard.com/" target="_blank">Insurance Partner</NavItem>
                 </Nav>
             </Col>
             <div className="clearfix visible-xs"></div>
