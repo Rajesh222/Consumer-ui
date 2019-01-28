@@ -17,18 +17,149 @@ export default class Dashboard extends Component {
         sourceError: false,
         destinationError: false,
         cities: [],
+        filterValue: [], 
         searchDate: new Date(),
         searchResult: [
             {
-              "createdBy": "SATYAM",
-              "createdOn": 1544553000000,
-              "modifyBy": "SATYAM",
-              "modifyOn": 1544553000000,
               "boardingLocations": [
-                
+                {
+                  "createdBy": null,
+                  "createdOn": null,
+                  "modifyBy": null,
+                  "modifyOn": null,
+                  "locationId": "1",
+                  "displayName": null,
+                  "locationName": "DELHA",
+                  "locationAddress": "Postmaster, Post Office DELHA (SUB OFFICE), GAYA, BIHAR (BR), India (IN), Pin Code:- 823002",
+                  "landmark": null,
+                  "dateTime": null,
+                  "lat": 0.0,
+                  "lng": 0.0,
+                  "boardingDate": 1547404200000,
+                  "reportingTime": 1547404200000,
+                  "contactNumber": "8130787891"
+                },
+                {
+                  "createdBy": null,
+                  "createdOn": null,
+                  "modifyBy": null,
+                  "modifyOn": null,
+                  "locationId": "2",
+                  "displayName": null,
+                  "locationName": "AN COLLEGE",
+                  "locationAddress": "AN COLLEGE, GAYA, BIHAR (BR), India (IN), Pin Code:- 823002",
+                  "landmark": null,
+                  "dateTime": null,
+                  "lat": 0.0,
+                  "lng": 0.0,
+                  "boardingDate": 1547404200000,
+                  "reportingTime": 1547404200000,
+                  "contactNumber": "8130787891"
+                },
+                {
+                  "createdBy": null,
+                  "createdOn": null,
+                  "modifyBy": null,
+                  "modifyOn": null,
+                  "locationId": "3",
+                  "displayName": null,
+                  "locationName": "MERZAGALI COLLEGE",
+                  "locationAddress": "MIRZAGALI COLLEGE GAYA, BIHAR (BR), India (IN), Pin Code:- 823002",
+                  "landmark": null,
+                  "dateTime": null,
+                  "lat": 0.0,
+                  "lng": 0.0,
+                  "boardingDate": 1547404200000,
+                  "reportingTime": 1547404200000,
+                  "contactNumber": "8130787891"
+                },
+                {
+                  "createdBy": null,
+                  "createdOn": null,
+                  "modifyBy": null,
+                  "modifyOn": null,
+                  "locationId": "4",
+                  "displayName": null,
+                  "locationName": "AP COLONY GAYA",
+                  "locationAddress": "AP COLONY GAYA",
+                  "landmark": null,
+                  "dateTime": null,
+                  "lat": 0.0,
+                  "lng": 0.0,
+                  "boardingDate": 1547404200000,
+                  "reportingTime": 1546540200000,
+                  "contactNumber": "8130787891"
+                }
               ],
               "droppingLocations": [
-                
+                {
+                  "createdBy": null,
+                  "createdOn": null,
+                  "modifyBy": null,
+                  "modifyOn": null,
+                  "locationId": "1",
+                  "displayName": null,
+                  "locationName": "DELHA",
+                  "locationAddress": "Postmaster, Post Office DELHA (SUB OFFICE), GAYA, BIHAR (BR), India (IN), Pin Code:- 823002",
+                  "landmark": null,
+                  "dateTime": null,
+                  "lat": 0.0,
+                  "lng": 0.0,
+                  "boardingDate": 1547404200000,
+                  "reportingTime": 1547404200000,
+                  "contactNumber": "8130787891"
+                },
+                {
+                  "createdBy": null,
+                  "createdOn": null,
+                  "modifyBy": null,
+                  "modifyOn": null,
+                  "locationId": "2",
+                  "displayName": null,
+                  "locationName": "AN COLLEGE",
+                  "locationAddress": "AN COLLEGE, GAYA, BIHAR (BR), India (IN), Pin Code:- 823002",
+                  "landmark": null,
+                  "dateTime": null,
+                  "lat": 0.0,
+                  "lng": 0.0,
+                  "boardingDate": 1547404200000,
+                  "reportingTime": 1547404200000,
+                  "contactNumber": "8130787891"
+                },
+                {
+                  "createdBy": null,
+                  "createdOn": null,
+                  "modifyBy": null,
+                  "modifyOn": null,
+                  "locationId": "3",
+                  "displayName": null,
+                  "locationName": "MERZAGALI COLLEGE",
+                  "locationAddress": "MIRZAGALI COLLEGE GAYA, BIHAR (BR), India (IN), Pin Code:- 823002",
+                  "landmark": null,
+                  "dateTime": null,
+                  "lat": 0.0,
+                  "lng": 0.0,
+                  "boardingDate": 1547404200000,
+                  "reportingTime": 1547404200000,
+                  "contactNumber": "8130787891"
+                },
+                {
+                  "createdBy": null,
+                  "createdOn": null,
+                  "modifyBy": null,
+                  "modifyOn": null,
+                  "locationId": "4",
+                  "displayName": null,
+                  "locationName": "AP COLONY GAYA",
+                  "locationAddress": "AP COLONY GAYA",
+                  "landmark": null,
+                  "dateTime": null,
+                  "lat": 0.0,
+                  "lng": 0.0,
+                  "boardingDate": 1547404200000,
+                  "reportingTime": 1546540200000,
+                  "contactNumber": "8130787891"
+                }
               ],
               "busInfo": [
                 
@@ -43,12 +174,12 @@ export default class Dashboard extends Component {
                 
               ],
               "fare": [
-                
+                1200.0
               ],
               "classType": "Normal",
               "busId": "1",
               "travelsName": "SATYAM TRAVELS",
-              "busType": null,
+              "busType": "NON A/C Seater/Sleaper",
               "duration": "12",
               "idProofRequired": false,
               "rating": "0",
@@ -63,7 +194,7 @@ export default class Dashboard extends Component {
               "departureDate": "2018-12-12 13:30:00.0",
               "departureTime": "",
               "travelDate": "2019-01-21 18:18:10.957",
-              "seatType": "S/SL",
+              "seatType": "Seater/Sleaper",
               "boardingTime": "",
               "reportingTime": "",
               "source": "NEW DELHI",
@@ -73,15 +204,145 @@ export default class Dashboard extends Component {
               "ac": false
             },
             {
-              "createdBy": "SATYAM KUMAR",
-              "createdOn": 1547922600000,
-              "modifyBy": "SATYAM",
-              "modifyOn": 1547922600000,
               "boardingLocations": [
-                
+                {
+                  "createdBy": null,
+                  "createdOn": null,
+                  "modifyBy": null,
+                  "modifyOn": null,
+                  "locationId": "1",
+                  "displayName": null,
+                  "locationName": "DELHA",
+                  "locationAddress": "Postmaster, Post Office DELHA (SUB OFFICE), GAYA, BIHAR (BR), India (IN), Pin Code:- 823002",
+                  "landmark": null,
+                  "dateTime": null,
+                  "lat": 0.0,
+                  "lng": 0.0,
+                  "boardingDate": 1547404200000,
+                  "reportingTime": 1547404200000,
+                  "contactNumber": "8130787891"
+                },
+                {
+                  "createdBy": null,
+                  "createdOn": null,
+                  "modifyBy": null,
+                  "modifyOn": null,
+                  "locationId": "2",
+                  "displayName": null,
+                  "locationName": "AN COLLEGE",
+                  "locationAddress": "AN COLLEGE, GAYA, BIHAR (BR), India (IN), Pin Code:- 823002",
+                  "landmark": null,
+                  "dateTime": null,
+                  "lat": 0.0,
+                  "lng": 0.0,
+                  "boardingDate": 1547404200000,
+                  "reportingTime": 1547404200000,
+                  "contactNumber": "8130787891"
+                },
+                {
+                  "createdBy": null,
+                  "createdOn": null,
+                  "modifyBy": null,
+                  "modifyOn": null,
+                  "locationId": "3",
+                  "displayName": null,
+                  "locationName": "MERZAGALI COLLEGE",
+                  "locationAddress": "MIRZAGALI COLLEGE GAYA, BIHAR (BR), India (IN), Pin Code:- 823002",
+                  "landmark": null,
+                  "dateTime": null,
+                  "lat": 0.0,
+                  "lng": 0.0,
+                  "boardingDate": 1547404200000,
+                  "reportingTime": 1547404200000,
+                  "contactNumber": "8130787891"
+                },
+                {
+                  "createdBy": null,
+                  "createdOn": null,
+                  "modifyBy": null,
+                  "modifyOn": null,
+                  "locationId": "4",
+                  "displayName": null,
+                  "locationName": "AP COLONY GAYA",
+                  "locationAddress": "AP COLONY GAYA",
+                  "landmark": null,
+                  "dateTime": null,
+                  "lat": 0.0,
+                  "lng": 0.0,
+                  "boardingDate": 1547404200000,
+                  "reportingTime": 1546540200000,
+                  "contactNumber": "8130787891"
+                }
               ],
               "droppingLocations": [
-                
+                {
+                  "createdBy": null,
+                  "createdOn": null,
+                  "modifyBy": null,
+                  "modifyOn": null,
+                  "locationId": "1",
+                  "displayName": null,
+                  "locationName": "DELHA",
+                  "locationAddress": "Postmaster, Post Office DELHA (SUB OFFICE), GAYA, BIHAR (BR), India (IN), Pin Code:- 823002",
+                  "landmark": null,
+                  "dateTime": null,
+                  "lat": 0.0,
+                  "lng": 0.0,
+                  "boardingDate": 1547404200000,
+                  "reportingTime": 1547404200000,
+                  "contactNumber": "8130787891"
+                },
+                {
+                  "createdBy": null,
+                  "createdOn": null,
+                  "modifyBy": null,
+                  "modifyOn": null,
+                  "locationId": "2",
+                  "displayName": null,
+                  "locationName": "AN COLLEGE",
+                  "locationAddress": "AN COLLEGE, GAYA, BIHAR (BR), India (IN), Pin Code:- 823002",
+                  "landmark": null,
+                  "dateTime": null,
+                  "lat": 0.0,
+                  "lng": 0.0,
+                  "boardingDate": 1547404200000,
+                  "reportingTime": 1547404200000,
+                  "contactNumber": "8130787891"
+                },
+                {
+                  "createdBy": null,
+                  "createdOn": null,
+                  "modifyBy": null,
+                  "modifyOn": null,
+                  "locationId": "3",
+                  "displayName": null,
+                  "locationName": "MERZAGALI COLLEGE",
+                  "locationAddress": "MIRZAGALI COLLEGE GAYA, BIHAR (BR), India (IN), Pin Code:- 823002",
+                  "landmark": null,
+                  "dateTime": null,
+                  "lat": 0.0,
+                  "lng": 0.0,
+                  "boardingDate": 1547404200000,
+                  "reportingTime": 1547404200000,
+                  "contactNumber": "8130787891"
+                },
+                {
+                  "createdBy": null,
+                  "createdOn": null,
+                  "modifyBy": null,
+                  "modifyOn": null,
+                  "locationId": "4",
+                  "displayName": null,
+                  "locationName": "AP COLONY GAYA",
+                  "locationAddress": "AP COLONY GAYA",
+                  "landmark": null,
+                  "dateTime": null,
+                  "lat": 0.0,
+                  "lng": 0.0,
+                  "boardingDate": 1547404200000,
+                  "reportingTime": 1546540200000,
+                  "contactNumber": "8130787891"
+                }
               ],
               "busInfo": [
                 
@@ -96,12 +357,12 @@ export default class Dashboard extends Component {
                 
               ],
               "fare": [
-                
+                1200.0
               ],
               "classType": "Normal",
               "busId": "1",
               "travelsName": "SATYAM TRAVELS",
-              "busType": null,
+              "busType": "NON A/C Seater/Sleaper",
               "duration": "12",
               "idProofRequired": false,
               "rating": "0",
@@ -116,7 +377,7 @@ export default class Dashboard extends Component {
               "departureDate": "2018-12-12 13:30:00.0",
               "departureTime": "",
               "travelDate": "2019-01-21 18:18:10.957",
-              "seatType": "S/SL",
+              "seatType": "Seater/Sleaper",
               "boardingTime": "",
               "reportingTime": "",
               "source": "RAPHIGANJ",
@@ -128,6 +389,22 @@ export default class Dashboard extends Component {
           ]
     }
  
+    handleCheck = (e) => {
+        const filterValue = this.state.filterValue;
+        const index = filterValue.indexOf(e.target.value);
+        if (index > -1) {
+            filterValue.splice(index, 1);
+        } else {
+            filterValue.push(e.target.value)
+        }
+        this.setState({ filterValue });
+        const searchResult = this.state.searchResult;
+        searchResult.filter((result)=>{
+            return result.busType.indexOf(e.target.value);
+        })
+        this.setState({searchResult});
+    }
+
     handleChange = searchDate => this.setState({ searchDate })
     handleSourceChange = (selectedSource) => {
         this.setState({ selectedSource, sourceError: false });
@@ -221,8 +498,8 @@ export default class Dashboard extends Component {
                 </Row>
                 <Grid>
                     <Row>
-                        <Col md={2}>
-                            <Filter />
+                        <Col md={2} className="filter">
+                            <Filter handleCheck={this.handleCheck} filterValue={this.state.filterValue}/>
                         </Col >
                         <Col md={10}>
                             {searchResult.map((item, index)=>{
