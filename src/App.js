@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './App.scss';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import Route from 'react-router-dom/Route';
+
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import Forgotpassword from './components/Forgotpassword';
 import Resetpassword from './components/Resetpassword';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
-import Route from 'react-router-dom/Route';
 import Home from './components/Home';
 import About from './components/common/About';
 import Privacy from './components/common/Privacy';
@@ -13,6 +14,8 @@ import Terms from './components/common/Terms';
 import Error from './components/common/Error';
 import Contact from './components/common/Contact';
 import Register from './components/Registation';
+import Faq from './components/common/Faq'
+import Career from './components/common/Career';
 
 
 class App extends Component {
@@ -27,13 +30,15 @@ class App extends Component {
                 <Route exact path="/" component={Dashboard} />
                 <Route path="/login" component={Login} />
                 <Route path='/about' component={About} />
-                <Route path='/privacy' component={Privacy} />
-                <Route path="/terms" component={Terms} />
+                <Route path='/privacypolicy' component={Privacy} />
+                <Route path="/termscondition" component={Terms} />
                 <Route path="/contact-us" component={Contact} />
                 <Route path="/bus-booking" component={Dashboard} />
                 <Route path="/forgotpassword" component={Forgotpassword} />
                 <Route path="/resetpassword" component={Resetpassword} />
                 <Route path="/signup" component={Register}/>
+                <Route path='/faq' component={Faq} />
+                <Route path="/careers" component={Career}/>
                 <Route path="error" component={Error} />
               </div>
             }/>

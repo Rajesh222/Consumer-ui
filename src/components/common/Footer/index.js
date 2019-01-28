@@ -32,10 +32,11 @@ class Footer extends React.Component {
                 <h4>Quick Links</h4>
                <Nav className="list-unstyled">
                   <NavItem href="/about">About</NavItem>
-                  <NavItem href="/career">Careers</NavItem>
-                  <NavItem href="/offers">Offers</NavItem>
-                  <NavItem href="/privacy">Privacy Policy</NavItem>
-                  <NavItem href="/terms">Terms & Conditions</NavItem>
+                  <NavItem href="/careers">Careers</NavItem>
+                  <NavItem href="/faq">FAQ</NavItem>
+                  <NavItem href="/privacypolicy">Privacy Policy</NavItem>
+                  <NavItem href="/termscondition">Terms & Conditions</NavItem>
+                  <NavItem href="https://www.icicilombard.com/" target="_blank">Insurance Partner</NavItem>
                 </Nav>
             </Col>
             <div className="clearfix visible-xs"></div>
@@ -45,6 +46,7 @@ class Footer extends React.Component {
                   <NavItem href="/bus-booking">Bus Ticket</NavItem>
                   <NavItem href="/cab-ticket">Cab Booking</NavItem>
                   <NavItem href="/hotel-booking">Hotals Booking</NavItem>
+                  <NavItem href="https://www.icicilombard.com/" target="_blank">Agent Login</NavItem>
                 </Nav>                
             </Col>
         </Row>       
