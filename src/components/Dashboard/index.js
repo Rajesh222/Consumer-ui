@@ -19,6 +19,7 @@ export default class Dashboard extends Component {
         cities: [],
         filterValue: [], 
         searchDate: new Date(),
+        newSearch: [],
         searchResult: [
             {
               "boardingLocations": [
@@ -399,10 +400,16 @@ export default class Dashboard extends Component {
         }
         this.setState({ filterValue });
         const searchResult = this.state.searchResult;
-        searchResult.filter((result)=>{
-            return result.busType.indexOf(e.target.value);
-        })
-        this.setState({searchResult});
+        let newSearch = [];
+        filterValue.forEach(element => {
+            newSearch.push(... searchResult.filter((result)=>{
+                return result.busType.toLowerCase().indexOf(element.toLowerCase()) > -1;
+            }))
+        });
+        if (filterValue.length === 0) {
+            newSearch = searchResult;
+        }
+        this.setState({ newSearch });
     }
 
     handleChange = searchDate => this.setState({ searchDate })
@@ -440,7 +447,7 @@ export default class Dashboard extends Component {
             }
             Axios.post(url, body).then((res)=> {
                 if(res.data) {
-                this.setState({searchResult: res.data.data})
+                this.setState({searchResult: res.data.data, newSearch: res.data.data})
                 }
             }).catch((error) => {
                 console.log(error);
@@ -451,7 +458,7 @@ export default class Dashboard extends Component {
         
     }
     render() {
-        const { selectedSource , selectedDestination, searchResult, searchDate, sourceError, destinationError } = this.state;
+        const { selectedSource , newSearch, selectedDestination, searchResult, searchDate, sourceError, destinationError } = this.state;
         const citiesOptions = this.state.cities.map(item => ({ label: item.cityName, value: item.cityName }));
         return (
             <div>
@@ -502,7 +509,7 @@ export default class Dashboard extends Component {
                             <Filter handleCheck={this.handleCheck} filterValue={this.state.filterValue}/>
                         </Col >
                         <Col md={10}>
-                            {searchResult.map((item, index)=>{
+                            {newSearch.map((item, index)=>{
                             return <div>
                                 <Bookbus key={index} busDetails={item} />
                             </div>     
