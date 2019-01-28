@@ -15,6 +15,7 @@ import Error from './components/common/Error';
 import Contact from './components/common/Contact';
 import Register from './components/Registation';
 import Faq from './components/common/Faq'
+import Career from './components/common/Career';
 
 
 class App extends Component {
@@ -37,6 +38,7 @@ class App extends Component {
                 <Route path="/resetpassword" component={Resetpassword} />
                 <Route path="/signup" component={Register}/>
                 <Route path='/faq' component={Faq} />
+                <Route path="/careers" component={Career}/>
                 <Route path="error" component={Error} />
               </div>
             }/>

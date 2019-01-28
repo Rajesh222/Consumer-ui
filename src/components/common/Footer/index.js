@@ -32,7 +32,7 @@ class Footer extends React.Component {
                 <h4>Quick Links</h4>
                <Nav className="list-unstyled">
                   <NavItem href="/about">About</NavItem>
-                  <NavItem href="/career">Careers</NavItem>
+                  <NavItem href="/careers">Careers</NavItem>
                   <NavItem href="/faq">FAQ</NavItem>
                   <NavItem href="/privacypolicy">Privacy Policy</NavItem>
                   <NavItem href="/termscondition">Terms & Conditions</NavItem>
