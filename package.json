@@ -23,7 +23,7 @@
     "react-select": "^2.2.0",
     "reactjs-toastr": "^1.1.0",
     "reactstrap": "^7.1.0"
-    },
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

@@ -26,21 +26,21 @@ class Header extends React.Component {
   render() {
     const loginData = localStorage.getItem('loginData') && JSON.parse(localStorage.getItem('loginData')) ;
     return (
-      <Navbar fixedTop inverse staticTop>
+      <Navbar className="mynav">
           <Navbar.Header>
               <NavbarBrand>
                 <img src={logo} className="img-resposive" width={100} height={50}/>
             </NavbarBrand>
             <Navbar.Toggle/>
           </Navbar.Header>
-          <Navbar.Collapse className="navbar-collapse">
+          <Navbar.Collapse className="">
             <Nav>
               <NavItem eventKey={1} href="/"> Home </NavItem>
               <NavItem eventKey={2} href="/about">About Us</NavItem>
-              <NavDropdown eventKey={6} title="Services" id="basic-nav-dropdown">
-                  <MenuItem eventKey={6.1} href="/bus-booking">Bus Ticket</MenuItem>
-                  <MenuItem eventKey={6.2} href="/cab-booking">Cab Booking</MenuItem>
-                  <MenuItem eventKey={6.3} href="/hotel-booking">Hotal Booking</MenuItem>
+              <NavDropdown eventKey={6} title="Services" id="basic-nav-dropdown" style={{backgroundColor: "#bc3f3d"}}>
+                  <MenuItem eventKey={6.1} href="/bus-booking" style={{backgroundColor: "#bc3f3d"}}>Bus Ticket</MenuItem>
+                  <MenuItem eventKey={6.2} href="/cab-booking" style={{backgroundColor: "#bc3f3d"}}>Cab Booking</MenuItem>
+                  <MenuItem eventKey={6.3} href="/hotel-booking" style={{backgroundColor: "#bc3f3d"}}>Hotal Booking</MenuItem>
               </NavDropdown>
               <NavItem eventKey={3} href="/privacy">Privacy</NavItem>
               <NavItem eventKey={5} href="/faq"> FAQs </NavItem>  

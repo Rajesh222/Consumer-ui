@@ -1,5 +1,6 @@
-import toastr from 'toastr';
-
+import React from 'react';
+import toastr, { ToastContainer } from 'reactjs-toastr';
+let container;
 function baseToastrConfig() {
     return {
         "closeButton": true,
@@ -14,7 +15,8 @@ function baseToastrConfig() {
         "extendedTimeOut": "0",
         "showMethod": "fadeIn",
         "hideMethod": "fadeOut",
-        "tapToDismiss": false
+        "tapToDismiss": false,
+        "className" : "toast-top-right"
     }
 }
   
@@ -26,6 +28,6 @@ export function showToastrOnSuccess(message, showDuration = 100) {
     config.timeOut = 3000;
     toastr.options = config;
     console.log('toastr: ', toastr)
-    toastr.success(message);
+    container.success(message);
 }
 

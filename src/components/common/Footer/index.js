@@ -15,12 +15,7 @@ class Footer extends React.Component {
   }
   
    render(){ return (
-    <footer>
-       <Grid>
-          <div className="back-to-top">
-               <a href="javascript:void(0)">Back to Top <i className="icon-more-arow ic-box-top"></i></a>
-          </div>
-      </Grid>
+    <footer className="">
        <Grid>
           <Row>
             <Col xs={12} sm={4} md={4}>
