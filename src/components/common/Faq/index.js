@@ -18,7 +18,7 @@ class Faq extends React.Component {
            <Accordion>
                 <AccordionItem>
                     <AccordionItemTitle>
-                        <h3>GENERAL</h3>
+                        <span>GENERAL</span>
                     </AccordionItemTitle>
                     <AccordionItemBody>
                         <strong>What are the advantages of purchasing a bus ticket with redBus?</strong>
@@ -35,7 +35,7 @@ class Faq extends React.Component {
                 </AccordionItem>
                 <AccordionItem>
                     <AccordionItemTitle>
-                        <h3>TICKET-RELATED</h3>
+                        <span>TICKET-RELATED</span>
                     </AccordionItemTitle>
                     <AccordionItemBody>
                         <strong>Is it mandatory to take a printout of the ticket?</strong><br/><br/>
@@ -45,7 +45,7 @@ class Faq extends React.Component {
                 </AccordionItem>
                 <AccordionItem>
                     <AccordionItemTitle>
-                        <h3>PAYMENT-RELATED</h3>
+                        <span>PAYMENT-RELATED</span>
                     </AccordionItemTitle>
                     <AccordionItemBody>
                         <strong>Does the owner of the credit card with which the ticket is purchased need to be one of the passengers?</strong><br/><br/>
@@ -62,7 +62,7 @@ class Faq extends React.Component {
                 </AccordionItem>
                 <AccordionItem>
                     <AccordionItemTitle>
-                        <h3>CANCELLATION-RELATED</h3>
+                        <span>CANCELLATION-RELATED</span>
                     </AccordionItemTitle>
                     <AccordionItemBody>
                      <strong>Can I cancel my ticket online?</strong>
@@ -74,7 +74,7 @@ class Faq extends React.Component {
                 </AccordionItem>
                 <AccordionItem>
                     <AccordionItemTitle>
-                        <h3>REFUND-RELATED</h3>
+                        <span>REFUND-RELATED</span>
                     </AccordionItemTitle>
                     <AccordionItemBody>
                       <strong> I missed the bus. Do I get a refund?<br/></strong>
