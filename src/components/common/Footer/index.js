@@ -52,18 +52,7 @@ class Footer extends React.Component {
                   <NavItem href="/hotel-booking">Hotals Booking</NavItem>
                 </Nav>                
             </Col>
-        </Row>
-        <Row>
-          <Col xs={12} sm={12} md={12}  className="mt-2 mt-sm-5">
-              <ul className="list-unstyled list-inline social text-center">
-                <li className="list-inline-item"><a href="javascript:void();"><FontAwesomeIcon icon="fa fa-facebook"/><i className="fa fa-facebook"></i></a></li>
-                <li className="list-inline-item"><a href="javascript:void();"><i className="fa fa-twitter"></i></a></li>
-                <li className="list-inline-item"><a href="javascript:void();"><i className="fa fa-instagram"></i></a></li>
-                <li className="list-inline-item"><a href="javascript:void();"><i className="fa fa-google-plus"></i></a></li>
-                <li className="list-inline-item"><a href="javascript:void();" target="_blank"><i className="fa fa-envelope"></i></a></li>
-              </ul>
-          </Col>
-      </Row>       
+        </Row>       
       </Grid>
       <div className="sub-footer">
          <Grid>
