@@ -509,6 +509,14 @@ export default class Dashboard extends Component {
                             <Filter handleCheck={this.handleCheck} filterValue={this.state.filterValue}/>
                         </Col >
                         <Col md={10}>
+                            <Row>
+                                <Col md={3} className="head">Traveller</Col>
+                                <Col md={3} className="head">Departure Time</Col>
+                                <Col md={2} className="head">Arrival Time</Col>
+                                <Col md={1} className="head">Fare</Col>
+                                <Col md={2} className="head">Availability</Col>
+                            </Row>
+                            
                             {newSearch.map((item, index)=>{
                             return <div>
                                 <Bookbus key={index} busDetails={item} />

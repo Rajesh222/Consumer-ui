@@ -17,7 +17,7 @@ export default class Bookbus extends Component {
     }
 
     render() {
-        const { travelsName, source, destination, totalSeats, basefare, departureDate, arrivalDate, busType } = this.props.busDetails;
+        const { travelsName, source, destination, totalSeats, basefare, departureDate, arrivalDate, busType, fare } = this.props.busDetails;
         const formatedDepartureDate = new Date(departureDate);
         const formatedArrivalDate = new Date(arrivalDate)
         return (
@@ -26,7 +26,8 @@ export default class Bookbus extends Component {
                     <Col xs={6} md={3}>{travelsName}</Col>
                     <Col xs={6} md={2}>{`${formatedDepartureDate.getHours()} : ${formatedDepartureDate.getMinutes()}`}</Col>
                     <Col xs={6} md={1}>---></Col>
-                    <Col xs={6} md={4}>{`${formatedArrivalDate.getHours()} : ${formatedArrivalDate.getMinutes()}`}</Col>
+                    <Col xs={6} md={2}>{`${formatedArrivalDate.getHours()} : ${formatedArrivalDate.getMinutes()}`}</Col>
+                    <Col xs={6} md={2}>{fare}</Col>
                     <Col xs={6} md={2}>
                         <Button
                             bsStyle="primary"
