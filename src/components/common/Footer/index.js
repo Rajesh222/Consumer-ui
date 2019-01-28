@@ -15,7 +15,7 @@ class Footer extends React.Component {
   }
   
    render(){ return (
-    <footer className="">
+    <footer className="" style={{marginTop: 100, backgroundColor: "whitesmoke", padding:30}}>
        <Grid>
           <Row>
             <Col xs={12} sm={4} md={4}>

@@ -24,6 +24,7 @@ class App extends Component {
           <Home>
             <Route component={({ match }) =>
               <div>
+                <Route exact path="/" component={Dashboard} />
                 <Route path="/login" component={Login} />
                 <Route path='/about' component={About} />
                 <Route path='/privacy' component={Privacy} />

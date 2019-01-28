@@ -7,6 +7,7 @@ import DatePicker from "react-datepicker";
 import config from '../../config.js';
 import Collapsible from '../common/Collapsible';
 import Bookbus from '../Bookbus';
+import Filter from '../Filter';
 
 import "react-datepicker/dist/react-datepicker.css";
 export default class Dashboard extends Component {
@@ -218,12 +219,21 @@ export default class Dashboard extends Component {
                 </Button>
                     </Col>
                 </Row>
+                <Row>
+                    <Col md={2}>
+                        <Filter />
+                    </Col>
+                    {searchResult.map((item, index)=>{
+                    return <div>
+                        <Col md={10}>
+                            <Bookbus key={index} busDetails={item} />
+                        </Col>
+                    </div>     
+                })}
+                </Row>
+              
             </Grid>
-            {searchResult.map((item, index)=>{
-               return <Grid><Row><Col md={2}></Col><Col md={10}>
-                        <Bookbus key={index} busDetails={item} />
-                    </Col></Row></Grid>
-            })}
+        
          </div>
         )
    }

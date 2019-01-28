@@ -22,7 +22,6 @@ export default class Bookbus extends Component {
         const formatedArrivalDate = new Date(arrivalDate)
         return (
         <div className="bus">
-            <Grid style={{paddingTop : 20, paddingBottom:10 }}>
                 <Row>
                     <Col xs={6} md={3}>{travelsName}</Col>
                     <Col xs={6} md={2}>{`${formatedDepartureDate.getHours()} : ${formatedDepartureDate.getMinutes()}`}</Col>
@@ -42,7 +41,6 @@ export default class Bookbus extends Component {
                     <Col xs={6} md={4}>{destination}</Col>
                 </Row>
                 <Collapsible collapse={this.state.collapse} seatDetails={this.state.seatDetails} metaData={this.state.metaData}/>
-            </Grid>
         </div>
         )
     }
