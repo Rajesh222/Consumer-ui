@@ -164,7 +164,7 @@ export default class Dashboard extends Component {
                 if(res.data) {
                 this.setState({searchResult: res.data.data})
                 }
-            }).catch((error)=> {
+            }).catch((error) => {
                 console.log(error);
             })
         } else {
