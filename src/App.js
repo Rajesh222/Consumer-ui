@@ -16,6 +16,7 @@ import Contact from './components/common/Contact';
 import Register from './components/Registation';
 import Faq from './components/common/Faq'
 import Career from './components/common/Career';
+import Cabbooking from './components/Cabbooking';
 
 
 class App extends Component {
@@ -39,6 +40,7 @@ class App extends Component {
                 <Route path="/signup" component={Register}/>
                 <Route path='/faq' component={Faq} />
                 <Route path="/careers" component={Career}/>
+                <Route path="/cab-booking" component={Cabbooking}/>
                 <Route path="error" component={Error} />
               </div>
             }/>
