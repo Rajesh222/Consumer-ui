@@ -219,19 +219,21 @@ export default class Dashboard extends Component {
                 </Button>
                     </Col>
                 </Row>
-                <Row>
-                    <Col md={2}>
-                        <Filter />
-                    </Col>
-                    {searchResult.map((item, index)=>{
-                    return <div>
+                <Grid>
+                    <Row>
+                        <Col md={2}>
+                            <Filter />
+                        </Col >
                         <Col md={10}>
-                            <Bookbus key={index} busDetails={item} />
+                            {searchResult.map((item, index)=>{
+                            return <div>
+                                <Bookbus key={index} busDetails={item} />
+                            </div>     
+                            })}
                         </Col>
-                    </div>     
-                })}
-                </Row>
-              
+                        
+                    </Row>
+                </Grid>
             </Grid>
         
          </div>
