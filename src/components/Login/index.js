@@ -38,7 +38,7 @@ export default class Login extends Component {
     const loginUrl = `${baseUrl}auth/serviceLoginAuth`;
     Axios.post(loginUrl, body)
       .then(res => {
-        showToastrOnSuccess('Success Message');
+        //showToastrOnSuccess('Success Message');
         localStorage.setItem('loginData', JSON.stringify(res.data.data));
         if(res.data.data) {
           this.context.router.history.push('/dashboard');
