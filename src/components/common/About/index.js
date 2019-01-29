@@ -23,34 +23,45 @@ class About extends React.Component {
                  and innovation and a seasoned senior management team comprising of industry executives with deep roots
                   in the travel industry in India and abroad.</p>
               <hr/>
-              <h3>Management Team  </h3>
-              <div className="media">
-                  <div class="media-left media-top">
-                      <Image src={ceoImg} circle class="media-object" width="80" />
-                  </div>
-                  <div class="media-body">
-                    <h4 class="media-heading">Tej Narayan Shahu</h4>
-                    <p>Prakash Sangam has been Chief Executive Officer of redBus since June 2014. Prior to redBus. He served as an Executive Vice President of Info Edge India (Naukri group), heading two group businesses namely Shiksha.com and Jeevansathi.com. He’s also worked as General Manager of Marketing and Innovation at Airtel and has also had multiple roles across Marketing, Brand Management and Sales at Hindustan Unilever. Prakash has completed his MBA from IIM Calcutta and also holds an Honours degree in Production Engineering from Mumbai University.</p>
-                  </div>
-              </div>
-              <div className="media">
-                  <div class="media-left media-top">
-                      <Image src={ceoImg} circle class="media-object" width="80" />
-                  </div>
-                  <div class="media-body">
-                    <h4 class="media-heading">Tej Narayan Shahu</h4>
-                    <p>Prakash Sangam has been Chief Executive Officer of redBus since June 2014. Prior to redBus. He served as an Executive Vice President of Info Edge India (Naukri group), heading two group businesses namely Shiksha.com and Jeevansathi.com. He’s also worked as General Manager of Marketing and Innovation at Airtel and has also had multiple roles across Marketing, Brand Management and Sales at Hindustan Unilever. Prakash has completed his MBA from IIM Calcutta and also holds an Honours degree in Production Engineering from Mumbai University.</p>
-                  </div>
-              </div>
-              <div className="media">
-                  <div class="media-left media-top">
-                      <Image src={ceoImg} circle class="media-object" width="80" />
-                  </div>
-                  <div class="media-body">
-                    <h4 class="media-heading">Tej Narayan Shahu</h4>
-                    <p>Prakash Sangam has been Chief Executive Officer of redBus since June 2014. Prior to redBus. He served as an Executive Vice President of Info Edge India (Naukri group), heading two group businesses namely Shiksha.com and Jeevansathi.com. He’s also worked as General Manager of Marketing and Innovation at Airtel and has also had multiple roles across Marketing, Brand Management and Sales at Hindustan Unilever. Prakash has completed his MBA from IIM Calcutta and also holds an Honours degree in Production Engineering from Mumbai University.</p>
-                  </div>
-              </div>              
+             </Row>
+            <Row className="team">
+                <h3>Management Team  </h3>
+                <div className="media">
+                    <div class="media-left media-top">
+                        <Image src={ceoImg} circle class="media-object" width="80" />
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Tej Narayan Shahu <small><i>Founder & Chief Executive Officer (CEO)</i></small></h4>   
+                        <p>Tej Narayan Shahu has been Chief Executive Officer of digitalbihar since June 2014. Prior to digitalbihar. He’s also worked as General Manager of Marketing and Innovation at digitalbihar and has also had multiple roles across Marketing, Brand Management and Sales at Hindustan Unilever. Prakash has completed his MBA from IIM Calcutta and also holds an Honours degree in Production Engineering from Mumbai University.</p>
+                        <p>Tej Narayan's vision is to reinvent bus travel in India through digitalbihar.com and in the process make the online portal the preferred choice for booking bus tickets where everyone admires the company for its performance, people and partnerships.</p>
+                    </div>
+                </div>
+                <div className="media">
+                    <div class="media-left media-top">
+                        <Image src={ceoImg} circle class="media-object" width="80" />
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Krishna Shingh <small><i>Chief Operating Officer & Chief Strategy Officer</i></small></h4>
+                        <p>Krishna is the Chief Operating Officer & Chief Strategy Officer of Digital bihar Private limited. Krishna joined digital bihar in Jan 2019, prior to that he has expended over nearly two decades in the Indian B2B media industry at a leadership position as the Vice President of one of India’s largest publishing house.</p>
+                        <p>Krishna brings in deep experience in business strategy, partnerships, sales & marketing and in running highly cost effective operations. Noted for a comprehensive, practical, management style focused on turnaround strategies and a stout boardroom presence, Biju Mathews is a growth oriented, focused leader with repeated success in sales & marketing, expanding service offerings, building shareholder value, driving vision and achieving critical strategic goals.</p>
+                        <p>Currently as Chief Operating Office at Digital bihar, Krishna leads major functions like business development, sales, marketing and operations, Working closely with the board and top management, Krishna ensures that both long term and short term strategic goals are implemented seamlessly at digital bihar.</p>
+                    </div>
+                </div>
+                <div className="media">
+                    <div class="media-left media-top">
+                        <Image src={ceoImg} circle class="media-object" width="80" />
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">S Kumar <small><i>Chief Technology Officer (CTO)</i></small></h4>
+                        <p>Anoop Menon serves as Chief Technology Officer for digital bihar India Pvt. Ltd. He is responsible
+                        for defining an integral role in setting the company’s strategic direction, development and deploying the technology
+                        future growth. At bigital bihar, he leads effective delivery 
+                        of scalable systems to the customers, agents and bus operators by incorporating the latest technology.
+                        A tech enthusiast, Satyam comes with over 6 years of extensive experience in building scalable and 
+                        high-performing products across telecom, internet and mobile ecommerce domains. Satyam strongly believes
+                        that hard work and commitment can overcome the barriers to success.</p>
+                    </div>
+                </div>              
             </Row>
         </Grid>
     );
