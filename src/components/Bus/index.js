@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
 import { Grid, Row, Col, Button } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 import "./index.scss";
 import LowerSeat from '../LowerSeat';
 import UpperSeat from '../UpperSeat';
@@ -34,7 +35,10 @@ export default class Bus extends Component {
             selectedSeat 
         })
     }
-
+    handleContinue = (e) => {
+        e.preventDefault();
+        this.context.router.history.push('/passenger');
+    }
     handleBoarding = (selectedBoardingPoint) => {
         this.setState({ selectedBoardingPoint });
     }
@@ -108,7 +112,7 @@ export default class Bus extends Component {
                         <Button
                             block
                             bsStyle="primary"
-                            onClick={this.handleSearch}
+                            onClick={this.handleContinue}
                             type="submit"
                             >
                                     Continue
@@ -121,3 +125,7 @@ export default class Bus extends Component {
         )
     }
 }
+
+Bus.contextTypes = {
+    router: PropTypes.object
+  };
