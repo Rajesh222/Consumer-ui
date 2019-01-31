@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { Grid, Row,Col,Label, Input,Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+
 import config from '../../config.js';
 import "./index.scss";
 import Axios from 'axios';
@@ -38,7 +39,7 @@ export default class Login extends Component {
     const loginUrl = `${baseUrl}auth/serviceLoginAuth`;
     Axios.post(loginUrl, body)
       .then(res => {
-        //showToastrOnSuccess('Success Message');
+        toastr.success('Success Message', 'Title', {displayDuration:3000});
         localStorage.setItem('loginData', JSON.stringify(res.data.data));
         if(res.data.data) {
           this.context.router.history.push('/dashboard');
@@ -49,40 +50,27 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div className="Login">
-        <form onSubmit={this.handleSubmit}>
-          <FormGroup controlId="email" bsSize="large">
-            <ControlLabel>Email</ControlLabel>
-            <FormControl
-              autoFocus
-              type="text"
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
-          </FormGroup>
-          <p onClick={()=>toastr.success('Success Message', 'Title', {displayDuration:3000})}>Show Success Message</p>
-          <FormGroup controlId="password" bsSize="large">
-            <ControlLabel>Password</ControlLabel>
-            <FormControl
-              value={this.state.password}
-              onChange={this.handleChange}
-              type="password"
-            />
-          </FormGroup>
-          <div className="forgot-password">
-            <a href="/forgotpassword">Forgot Password?</a>
-          </div>
-          <Button
-            block
-            bsStyle="primary"
-            bsSize="large"
-            disabled={!this.validateForm()}
-            type="submit"
-          >
-            Login
-          </Button>
+      <Grid className="loginContainer">
+        <h2>Sign In</h2>
+        <form onSubmit={this.handleSubmit} className="loginform">
+         <Col>
+            <FormGroup controlId="email">
+              <ControlLabel>Email</ControlLabel>
+              <FormControl autoFocus type="text" placeholder="Enter phone/email" value={this.state.email} onChange={this.handleChange} />
+            </FormGroup>
+          </Col>
+          <Col>
+            <FormGroup controlId="password">
+              <ControlLabel>Password</ControlLabel>
+              <FormControl value={this.state.password} onChange={this.handleChange} type="password" placeholder="********"/>
+            </FormGroup>
+          </Col>
+          <Col>
+             <div className="forgot-password"><a href="/forgotpassword">Forgot Password?</a> </div>
+          </Col>
+          <Button block bsStyle="primary" disabled={!this.validateForm()} type="submit">Login</Button>
         </form>
-      </div>
+      </Grid>
     );
   }
 }

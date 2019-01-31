@@ -31,6 +31,7 @@ class App extends Component {
               <div>
                 <Route exact path="/" component={Dashboard} />
                 <Route path="/login" component={Login} />
+                <Route path="/signup" component={Register}/>
                 <Route path='/about' component={About} />
                 <Route path='/privacypolicy' component={Privacy} />
                 <Route path="/termscondition" component={Terms} />
@@ -38,7 +39,6 @@ class App extends Component {
                 <Route path="/bus-booking" component={Dashboard} />
                 <Route path="/forgotpassword" component={Forgotpassword} />
                 <Route path="/resetpassword" component={Resetpassword} />
-                <Route path="/signup" component={Register}/>
                 <Route path='/faq' component={Faq} />
                 <Route path="/careers" component={Career}/>
                 <Route path="/cab-booking" component={Cabbooking}/>
