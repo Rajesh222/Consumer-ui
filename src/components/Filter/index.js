@@ -10,7 +10,7 @@ class Filter extends Component {
        const { handleCheck, filterValue } = this.props;
     return (
          <div>
-            <h4>Bus Type</h4>
+            <h4>Journey Class</h4>
             { filterValue ? <FormGroup>
                 <Checkbox checked={filterValue.includes("ac")} value="ac"
                 onChange={handleCheck}><span style={{marginLeft: 10, marginTop: 5}}>AC</span></Checkbox> 

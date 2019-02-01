@@ -25,9 +25,9 @@ export default class Bookbus extends Component {
                 <Row>
                     <Col xs={6} md={3}>{travelsName}</Col>
                     <Col xs={6} md={2}>{`${formatedDepartureDate.getHours()} : ${formatedDepartureDate.getMinutes()}`}</Col>
-                    <Col xs={6} md={1}>---></Col>
+                    <Col xs={6} md={1}><span className="glyphicon glyphicon-arrow-right"></span></Col>
                     <Col xs={6} md={2}>{`${formatedArrivalDate.getHours()} : ${formatedArrivalDate.getMinutes()}`}</Col>
-                    <Col xs={6} md={2}>{fare}</Col>
+                    <Col xs={6} md={2}>Starting from <br/>{fare}</Col>
                     <Col xs={6} md={2}>
                         <Button
                             bsStyle="primary"

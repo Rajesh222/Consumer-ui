@@ -1,14 +1,23 @@
 .bus {
+    margin: 10px 5px 5px 2px;
+    border-style: solid;
+    border-color: #87cefa;
+    border-width: 0px;
+    font-size: .84em;
+    font-weight: 400;
+    padding: 17px 10px 0;
+    box-shadow: 0 1px 7px 0 grey;
+    border-left: 0px solid #fff;
+    font-family: Body,Quicksand,sans-serif;
     margin-top: 20px;
     background-color: #F8F9FA;
     padding: 20px;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     .container {
         border-right: 2px #E3E6E6 solid;
         border-left: 2px #E3E6E6 solid;
         border-bottom: 2px #E3E6E6 solid;
     }
     .busrow-details {
-        color: #D3D3D3;
+        color: #7e7e8c;
     }
 }
