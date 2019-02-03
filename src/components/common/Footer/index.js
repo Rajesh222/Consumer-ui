@@ -15,7 +15,7 @@ class Footer extends React.Component {
   }
   
    render(){ return (
-    <footer className="" style={{marginTop: 100, backgroundColor: "whitesmoke", padding:30}}>
+    <footer className="myfooter">
        <Grid>
           <Row>
             <Col xs={12} sm={4} md={4}>
@@ -49,17 +49,15 @@ class Footer extends React.Component {
                   <NavItem href="https://www.icicilombard.com/" target="_blank">Agent Login</NavItem>
                 </Nav>                
             </Col>
-        </Row>       
+        </Row>              
       </Grid>
-      <div className="sub-footer">
-         <Grid>
-            <Row>
-              <Col sm={8}>
-              <p>Copyright &copy; {this.state.year}. All rights reserved</p>
-              </Col>
-            </Row>
-        </Grid>
-      </div>
+      <section className="copyright-box">
+            <div className="container">
+               <row>
+                <p style={{textAlign:"center"}}>Copyright &copy; {this.state.year}. All rights reserved</p>
+             </row>
+            </div>
+      </section>      
     </footer>
     );
    }
