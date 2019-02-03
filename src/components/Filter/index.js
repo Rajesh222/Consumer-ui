@@ -44,19 +44,19 @@ class Filter extends Component {
              <Row>
                  <h4>Arrival Times</h4>
                  <FormGroup>
-                    <span style={{marginLeft: 10, marginTop: 5}}>Fan</span><br/>
-                    <span style={{marginLeft: 10, marginTop: 5}}>Fan</span><br/>
-                    <span style={{marginLeft: 10, marginTop: 5}}>Fan</span> <br/>
-                    <span style={{marginLeft: 10, marginTop: 5}}>Fan</span><br/>
+                    <span style={{marginLeft: 10, marginTop: 5}}>Before 6 am</span><br/>
+                    <span style={{marginLeft: 10, marginTop: 5}}>6 am to 12 pm</span><br/>
+                    <span style={{marginLeft: 10, marginTop: 5}}>12 pm to 6 pm</span> <br/>
+                    <span style={{marginLeft: 10, marginTop: 5}}>After 6 pm</span><br/>
                 </FormGroup>
              </Row>
              <Row>
                  <h4>Departure Times</h4>
                  <FormGroup>
-                    <span style={{marginLeft: 10, marginTop: 5}}>Fan</span><br/>
-                    <span style={{marginLeft: 10, marginTop: 5}}>Fan</span><br/>
-                    <span style={{marginLeft: 10, marginTop: 5}}>Fan</span> <br/>
-                    <span style={{marginLeft: 10, marginTop: 5}}>Fan</span><br/>
+                    <span style={{marginLeft: 10, marginTop: 5}}>Before 6 am</span><br/>
+                    <span style={{marginLeft: 10, marginTop: 5}}>6 am to 12 pm</span><br/>
+                    <span style={{marginLeft: 10, marginTop: 5}}>12 pm to 6 pm</span> <br/>
+                    <span style={{marginLeft: 10, marginTop: 5}}>After 6 pm</span><br/>
                 </FormGroup>
              </Row>
              </Grid>
