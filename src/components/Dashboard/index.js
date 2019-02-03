@@ -504,6 +504,7 @@ export default class Dashboard extends Component {
                         <Col md={2} className="filter">
                             <Filter handleCheck={this.handleCheck} filterValue={this.state.filterValue}/>
                         </Col >
+                        <div className="clearfix visible-xs"></div>
                         <Col md={10}>
                             <Row>
                                 <Col md={3} className="head">Traveller</Col>
