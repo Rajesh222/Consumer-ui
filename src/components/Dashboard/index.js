@@ -464,7 +464,7 @@ export default class Dashboard extends Component {
             <div>
             <Grid>
                 <Row className="show-grid source">
-                    <Col xs={6} md={3}>
+                    <Col sm={4} md={4} xs={4}>
                         <Select
                             value={selectedSource}
                             onChange={this.handleSourceChange}
@@ -474,7 +474,7 @@ export default class Dashboard extends Component {
                         />
                        {sourceError && <span className="error-message">Please Select Source</span>}
                     </Col>
-                    <Col xs={6} md={3}>
+                    <Col sm={4} md={4} xs={4}>
                         <Select
                             value={selectedDestination}
                             onChange={this.handleDestinationChange}
@@ -485,14 +485,10 @@ export default class Dashboard extends Component {
                         </Select>
                         {destinationError &&<span className="error-message">Please Select Destination</span>}
                     </Col>
-                    <Col xs={6} md={3}>
-                    <DatePicker
-                        selected={searchDate}
-                        onChange={this.handleChange}
-                        placeholderText="Select a date"
-                    />
+                    <Col sm={2} md={2} xs={2}>
+                        <DatePicker selected={searchDate} onChange={this.handleChange} placeholderText="Select a date"/>
                     </Col>
-                    <Col xs={6} md={2}>
+                    <Col sm={2} md={2} xs={2}>
                     <Button
                     block
                     bsStyle="primary"

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import "./index.scss";
-import { FormGroup, Checkbox} from 'react-bootstrap';
+import { Grid, Row, FormGroup, Checkbox} from 'react-bootstrap';
 
 
 class Filter extends Component {
@@ -10,7 +10,9 @@ class Filter extends Component {
        const { handleCheck, filterValue } = this.props;
     return (
          <div>
-            <h4>Journey Class</h4>
+             <Grid>
+                 <Row>
+            <h4>Bus Type</h4>
             { filterValue ? <FormGroup>
                 <Checkbox checked={filterValue.includes("ac")} value="ac"
                 onChange={handleCheck}><span style={{marginLeft: 10, marginTop: 5}}>AC</span></Checkbox> 
@@ -28,6 +30,36 @@ class Filter extends Component {
                 ><span style={{marginLeft: 10, marginTop: 5}}>Sleeper</span></Checkbox> 
             </FormGroup>
              : <div></div>}
+             </Row>
+             <Row>
+                 <h4>Amenities</h4>
+                 <FormGroup>
+                    <Checkbox checked={false} value="sleeper"><span style={{marginLeft: 10, marginTop: 5}}>Fan</span></Checkbox> 
+                    <Checkbox checked={false} value="sleeper"><span style={{marginLeft: 10, marginTop: 5}}>Watter Bottle</span></Checkbox> 
+                    <Checkbox checked={false} value="sleeper"><span style={{marginLeft: 10, marginTop: 5}}>Heater</span></Checkbox> 
+                    <Checkbox checked={false} value="sleeper"><span style={{marginLeft: 10, marginTop: 5}}>Air Condition</span></Checkbox> 
+                    <Checkbox checked={false} value="sleeper"><span style={{marginLeft: 10, marginTop: 5}}>Snacks</span></Checkbox> 
+                 </FormGroup>
+             </Row>
+             <Row>
+                 <h4>Arrival Times</h4>
+                 <FormGroup>
+                    <span style={{marginLeft: 10, marginTop: 5}}>Fan</span><br/>
+                    <span style={{marginLeft: 10, marginTop: 5}}>Fan</span><br/>
+                    <span style={{marginLeft: 10, marginTop: 5}}>Fan</span> <br/>
+                    <span style={{marginLeft: 10, marginTop: 5}}>Fan</span><br/>
+                </FormGroup>
+             </Row>
+             <Row>
+                 <h4>Departure Times</h4>
+                 <FormGroup>
+                    <span style={{marginLeft: 10, marginTop: 5}}>Fan</span><br/>
+                    <span style={{marginLeft: 10, marginTop: 5}}>Fan</span><br/>
+                    <span style={{marginLeft: 10, marginTop: 5}}>Fan</span> <br/>
+                    <span style={{marginLeft: 10, marginTop: 5}}>Fan</span><br/>
+                </FormGroup>
+             </Row>
+             </Grid>
         </div>
     )
    }
