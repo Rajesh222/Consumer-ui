@@ -1,6 +1,5 @@
 .mynav {
     background-color: #bc3f3d !important;
-    height: 70px;
     color: #fff !important;
    .nav {
        li {
@@ -23,4 +22,12 @@
         color: #000;
        }
    }
+    .navbar-nav>.open>a, .navbar-nav>.open>a:focus, .navbar-nav>.open>a:hover {
+    color: #000;
+   }
+}
+@media all and (max-width: 767px) {
+    .mynav .navbar-nav .open .dropdown-menu>li>a {
+        color: #fff;
+    }
 }
