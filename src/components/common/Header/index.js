@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import "./index.scss";
 import Axios from 'axios';
 import config from '../../../config';
-import {  Navbar, Nav, NavItem, NavDropdown,MenuItem, NavbarBrand,Glyphicon } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-import logo from '../../../img/logo.png';
+import {  Navbar, Nav, NavItem, NavDropdown,MenuItem, NavbarBrand } from 'react-bootstrap';
+import Logo from '../../../img/logo.png';
 
 class Header extends React.Component {
  
@@ -29,15 +28,15 @@ class Header extends React.Component {
       <Navbar className="mynav">
           <Navbar.Header>
               <NavbarBrand>
-                <img src={logo} className="img-resposive" width={100} height={50}/>
+                <img src={Logo} className="img-resposive" width={100} height={50}/>
             </NavbarBrand>
             <Navbar.Toggle/>
           </Navbar.Header>
-          <Navbar.Collapse className="">
+          <Navbar.Collapse>
             <Nav>
               <NavItem eventKey={1} href="/"> Home </NavItem>
               <NavItem eventKey={2} href="/about">About Us</NavItem>
-              <NavDropdown eventKey={6} title="Services" className="navDropDown">
+              <NavDropdown eventKey={6} title="Services" id="id" className="navDropDown">
                   <MenuItem eventKey={6.1} href="/bus-booking">Bus Ticket</MenuItem>
                   <MenuItem eventKey={6.2} href="/cab-booking">Cab Booking</MenuItem>
                   <MenuItem eventKey={6.3} href="/hotel-booking">Hotal Booking</MenuItem>

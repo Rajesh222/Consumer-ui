@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styles from './index.scss';
-import { Grid, Row, Col } from 'react-bootstrap';
- 
-import {
-    Accordion,
-    AccordionItem,
-    AccordionItemTitle,
-    AccordionItemBody,
-} from 'react-accessible-accordion';
+import  './index.scss';
+import { Grid, Row } from 'react-bootstrap';
+import {Accordion,AccordionItem,AccordionItemTitle,AccordionItemBody,} from 'react-accessible-accordion';
 
 class Faq extends React.Component {
   render() {

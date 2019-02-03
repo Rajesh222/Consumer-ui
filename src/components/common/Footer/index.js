@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import "./index.scss";
-import config from '../../../config';
 import { Grid, Row, Col, Nav, NavItem } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 
 class Footer extends React.Component {
 
@@ -53,9 +49,9 @@ class Footer extends React.Component {
       </Grid>
       <section className="copyright-box">
             <div className="container">
-               <row>
+               <Row>
                 <p style={{textAlign:"center"}}>Copyright &copy; {this.state.year}. All rights reserved</p>
-             </row>
+             </Row>
             </div>
       </section>      
     </footer>
