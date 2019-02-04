@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import  './index.scss';
 import { Grid, Row } from 'react-bootstrap';
@@ -12,7 +13,7 @@ class Faq extends React.Component {
            <Accordion>
                 <AccordionItem>
                     <AccordionItemTitle>
-                        <span>GENERAL</span>
+                        <h3 className="u-position-relative">GENERAL<div class="accordion__arrow" role="presentation"/></h3>
                     </AccordionItemTitle>
                     <AccordionItemBody>
                         <strong>What are the advantages of purchasing a bus ticket with redBus?</strong>
@@ -29,7 +30,7 @@ class Faq extends React.Component {
                 </AccordionItem>
                 <AccordionItem>
                     <AccordionItemTitle>
-                        <span>TICKET-RELATED</span>
+                       <h3 className="u-position-relative">TICKET-RELATED<div class="accordion__arrow" role="presentation"/></h3>
                     </AccordionItemTitle>
                     <AccordionItemBody>
                         <strong>Is it mandatory to take a printout of the ticket?</strong><br/><br/>
@@ -39,7 +40,7 @@ class Faq extends React.Component {
                 </AccordionItem>
                 <AccordionItem>
                     <AccordionItemTitle>
-                        <span>PAYMENT-RELATED</span>
+                        <h3 className="u-position-relative">PAYMENT-RELATED<div class="accordion__arrow" role="presentation"/></h3>
                     </AccordionItemTitle>
                     <AccordionItemBody>
                         <strong>Does the owner of the credit card with which the ticket is purchased need to be one of the passengers?</strong><br/><br/>
@@ -56,7 +57,7 @@ class Faq extends React.Component {
                 </AccordionItem>
                 <AccordionItem>
                     <AccordionItemTitle>
-                        <span>CANCELLATION-RELATED</span>
+                        <h3 className="u-position-relative">CANCELLATION-RELATED<div class="accordion__arrow" role="presentation"/></h3>
                     </AccordionItemTitle>
                     <AccordionItemBody>
                      <strong>Can I cancel my ticket online?</strong>
@@ -68,7 +69,7 @@ class Faq extends React.Component {
                 </AccordionItem>
                 <AccordionItem>
                     <AccordionItemTitle>
-                        <span>REFUND-RELATED</span>
+                        <h3 className="u-position-relative">REFUND-RELATED<div class="accordion__arrow" role="presentation"/></h3>
                     </AccordionItemTitle>
                     <AccordionItemBody>
                       <strong> I missed the bus. Do I get a refund?<br/></strong>
