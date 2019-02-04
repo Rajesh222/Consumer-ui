@@ -8,23 +8,23 @@ export default class UpperSeat extends Component {
         const upperBerth = this.props.upperBerth;
         const row0 = upperBerth.filter((seatDetail)=>{
             return seatDetail.row === 0;
-        });
+        }).sort(function(a, b){return a.column - b.column});
 
         const row1 = upperBerth.filter((seatDetail)=>{
             return seatDetail.row === 1;
-        });
+        }).sort(function(a, b){return a.column - b.column});
 
         const row2 = upperBerth.filter((seatDetail)=>{
             return seatDetail.row === 2;
-        });
+        }).sort(function(a, b){return a.column - b.column});
 
         const row3 = upperBerth.filter((seatDetail)=>{
             return seatDetail.row === 3;
-        });
+        }).sort(function(a, b){return a.column - b.column});
 
         const row4 = upperBerth.filter((seatDetail)=>{
             return seatDetail.row === 4;
-        });
+        }).sort(function(a, b){return a.column - b.column});
         return (
             <div className="col-md-12 bus-detail">
                 <div className="row seat-row">

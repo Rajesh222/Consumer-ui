@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { Grid, Row, Col, Button } from 'react-bootstrap';
 import './index.scss';
+import Axios from 'axios';
 import Collapsible from '../common/Collapsible';
-import SeatJson from '../../utils/seat.json';
+// import SeatJson from '../../utils/seat.json';
+import config from '../../config.js';
 
 export default class Bookbus extends Component {
     constructor(props) {
@@ -13,7 +15,15 @@ export default class Bookbus extends Component {
     
     toggle() {
         this.setState({ collapse: !this.state.collapse });
-        this.setState({ seatDetails: SeatJson.body, metaData: SeatJson.meta })
+        const busId = 1;
+        const baseUrl= config.baseUrl;
+        const searchDate = "2019-01-31";
+        const url = `${baseUrl}${config.availableSeat}?busId=${busId}&date=${searchDate}`;
+        Axios.post(url).then((res) =>{
+           this.setState({seatDetails: res.data.data.busSeatDetails}) 
+        }).catch((error)=> {
+            console.log(error);
+        });
     }
 
     render() {

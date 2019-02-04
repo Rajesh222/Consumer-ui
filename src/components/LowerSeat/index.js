@@ -4,7 +4,7 @@ import Seat from '../Seat';
 import SleeperSeat from '../SleeperSeat';
 export default class LowerSeat extends Component {
     render () {
-        const lowerBerth = this.props.lowerBerth;
+        const lowerBerth = this.props.lowerBerth;   
         const sleeperSeat = lowerBerth.filter((seatDetail)=>{
             return seatDetail.length === 2;
         });
@@ -12,25 +12,25 @@ export default class LowerSeat extends Component {
             return seatDetail.length === 1;
         });
         
-        const row0 = lowerBerth.filter((seatDetail)=>{
+        let row0 = lowerBerth.filter((seatDetail)=>{
             return seatDetail.row === 0;
-        });
+        }).sort(function(a, b){return a.column - b.column});
 
         const row1 = lowerBerth.filter((seatDetail)=>{
             return seatDetail.row === 1;
-        });
+        }).sort(function(a, b){return a.column - b.column});
 
         const row2 = lowerBerth.filter((seatDetail)=>{
             return seatDetail.row === 2;
-        });
+        }).sort(function(a, b){return a.column - b.column});
 
         const row3 = lowerBerth.filter((seatDetail)=>{
             return seatDetail.row === 3;
-        });
+        }).sort(function(a, b){return a.column - b.column});
 
         const row4 = lowerBerth.filter((seatDetail)=>{
             return seatDetail.row === 4;
-        });
+        }).sort(function(a, b){return a.column - b.column});
         const rowMiddle = row0.filter((seatDetail, index)=> {
             return row0.length !== index + 1;
         });

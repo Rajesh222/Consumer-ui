@@ -5,7 +5,8 @@ const config = {
     resetPassword: 'auth/changePassword',
     logOut: 'auth/logout',
     availability: 'search/availableRouts',
-    cities: 'cities'
+    cities: 'cities',
+    availableSeat: 'search/availableSeats'
 }
 
 export default config;

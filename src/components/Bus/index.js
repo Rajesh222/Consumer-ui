@@ -52,10 +52,10 @@ export default class Bus extends Component {
         const droppingOptions = droppingPoints && droppingPoints.map(item => ({ label: item.locationName, value: item.locationName }));
         const { selectedDroppingPoint, selectedBoardingPoint, selectedSeat } = this.state;
         const upperBerth = seatDetails.filter((seatDetail)=>{
-            return !seatDetail.isLowerBerth;
+            return !seatDetail.lowerBerth;
         });
         const lowerBerth = seatDetails.filter((seatDetail)=>{
-            return seatDetail.isLowerBerth;
+            return seatDetail.lowerBerth;
         });
         return (
             <div className="">
