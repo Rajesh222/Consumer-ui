@@ -39,30 +39,15 @@ export default class Forgotpassword extends Component {
       <div className="forgot">
         <div className="forgot-form">
           <form onSubmit={this.handleSubmit}>
-            <FormGroup controlId="email" bsSize="large">
+            <FormGroup controlId="email">
             <div className="main-heading">
-            <h2>Forgot Password?</h2>
-            <h6 className="heading">You can reset your password here.</h6>
+              <h3>Forgot Password?</h3>
+              <h6 className="heading">You can reset your password here.</h6>
             </div>
-            
-              <ControlLabel>Email/Mobile</ControlLabel>
-              <FormControl
-                autoFocus
-                type="text"
-                value={this.state.email}
-                placeholder="Please Enter Email/Mobile"
-                onChange={this.handleChange}
-              />
-            </FormGroup>
-            <Button
-              block
-              bsStyle="primary"
-              bsSize="large"
-              disabled={!this.validateForm()}
-              type="submit"
-            >
-              Reset Password
-            </Button>
+             <ControlLabel>Email/Mobile</ControlLabel>
+                 <FormControl autoFocus type="text" value={this.state.email} placeholder="Please Enter Email/Mobile" onChange={this.handleChange}/>
+            </FormGroup><br/>
+            <Button block bsStyle="primary" disabled={!this.validateForm()} type="submit">Reset Password</Button>
           </form>
         </div>
       </div>
