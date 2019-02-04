@@ -9,7 +9,6 @@ import Collapsible from '../common/Collapsible';
 import Bookbus from '../Bookbus';
 import Filter from '../Filter';
 
-import "react-datepicker/dist/react-datepicker.css";
 export default class Dashboard extends Component {
     state = {
         selectedSource: null,
