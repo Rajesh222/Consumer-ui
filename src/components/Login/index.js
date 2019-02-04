@@ -42,7 +42,7 @@ export default class Login extends Component {
         toastr.success('Success Message', 'Title', {displayDuration:3000});
         localStorage.setItem('loginData', JSON.stringify(res.data.data));
         if(res.data.data) {
-          this.context.router.history.push('/dashboard');
+          this.context.router.history.push('/bus-booking');
         }
       })
 
@@ -51,24 +51,39 @@ export default class Login extends Component {
   render() {
     return (
       <Grid className="loginContainer">
-        <h2>Sign In</h2>
+        <h3 style={{textAlign:"center"}}>Sign In</h3>
         <form onSubmit={this.handleSubmit} className="loginform">
-         <Col>
+        <Row >
+        <Col md={2}></Col>
+        <Col md={8}>
             <FormGroup controlId="email">
               <ControlLabel>Email</ControlLabel>
               <FormControl autoFocus type="text" placeholder="Enter phone/email" value={this.state.email} onChange={this.handleChange} />
             </FormGroup>
           </Col>
-          <Col>
+        </Row>
+         <Row>
+         <Col md={2}></Col>
+        <Col md={8}>
             <FormGroup controlId="password">
               <ControlLabel>Password</ControlLabel>
               <FormControl value={this.state.password} onChange={this.handleChange} type="password" placeholder="********"/>
             </FormGroup>
           </Col>
-          <Col>
+         </Row>
+          <Row>
+          <Col md={2}></Col>
+        <Col md={8}>
              <div className="forgot-password"><a href="/forgotpassword">Forgot Password?</a> </div>
           </Col>
-          <Button block bsStyle="primary" disabled={!this.validateForm()} type="submit">Login</Button>
+          </Row>
+          <Row>
+          <Col md={2}></Col>
+        <Col md={8}>
+              <Button block bsStyle="primary" disabled={!this.validateForm()} type="submit">Login</Button>
+            </Col>
+          </Row>
+         
         </form>
       </Grid>
     );
