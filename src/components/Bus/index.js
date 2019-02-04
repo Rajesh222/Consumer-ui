@@ -68,7 +68,7 @@ export default class Bus extends Component {
                         }
                         <div className="col-md-12 seat-sign">
                             <Seat seatType="occupied" handleSeatClick={()=> false} /> <span style={{marginRight:33}}>Occupied Seat</span> <Seat handleSeatClick={()=> false} /> <span style={{marginRight:20}}>Available Seat</span> 
-                            <Seat seatType="selected" handleSeatClick={()=> false} /> <span>Selected Seat</span> <Seat seatType="reserved-by-lady" handleSeatClick={()=> false} /> <span style={{marginRight: 11}}>Booked By Ladies</span> <Seat handleSeatClick={()=> false} /> Reserved for Ladies
+                            <Seat seatType="selected" handleSeatClick={()=> false} /> <span>Selected Seat</span> <Seat seatType="reserved-by-lady" handleSeatClick={()=> false} /> <span style={{marginRight: 11}}>Booked By Ladies</span> <Seat seatType="reserved-for-lady" handleSeatClick={()=> false} /><span style={{marginRight: 11}}> Reserved for Ladies</span>
                         </div>
                     </div>
                     <div className="col-md-5">
