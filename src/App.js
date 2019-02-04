@@ -18,6 +18,7 @@ import Faq from './components/common/Faq'
 import Career from './components/common/Career';
 import Cabbooking from './components/Cabbooking';
 import PassengerInfo from './components/PassengerInfo';
+import RootPage from './components/RootPage';
 
 
 class App extends Component {
@@ -29,7 +30,7 @@ class App extends Component {
           <Home>
             <Route component={({ match }) =>
               <div>
-                <Route exact path="/" component={Dashboard} />
+                <Route exact path="/" component={RootPage} />
                 <Route path="/login" component={Login} />
                 <Route path="/signup" component={Register}/>
                 <Route path='/about' component={About} />
