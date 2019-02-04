@@ -50,7 +50,7 @@ class Footer extends React.Component {
       <section className="copyright-box">
             <div className="container">
                <Row>
-                <p style={{textAlign:"center"}}>Copyright &copy; {this.state.year}. All rights reserved</p>
+                <p style={{textAlign:"center"}}><strong>Copyright &copy; {this.state.year}. All rights reserved</strong></p>
              </Row>
             </div>
       </section>      
