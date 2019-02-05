@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import { Grid, Row, Col, Button } from 'react-bootstrap';
 import './index.scss';
 import Axios from 'axios';
-import Collapsible from '../common/Collapsible';
-// import SeatJson from '../../utils/seat.json';
-import config from '../../config.js';
+import Collapsible from '../Collapsible';
+import config from '../../../config.js';
 
 export default class Bookbus extends Component {
     constructor(props) {

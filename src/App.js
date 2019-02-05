@@ -4,20 +4,19 @@ import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 
 import Login from './components/Login';
-import Dashboard from './components/Dashboard';
+import Dashboard from './components/BusBooking/Dashboard';
 import Forgotpassword from './components/Forgotpassword';
 import Resetpassword from './components/Resetpassword';
 import HomeContainer from './components/HomeContainer';
 import About from './components/common/About';
 import Privacy from './components/common/Privacy';
 import Terms from './components/common/Terms';
-import Error from './components/common/Error';
 import Contact from './components/common/Contact';
 import Register from './components/Registation';
 import Faq from './components/common/Faq'
 import Career from './components/common/Career';
 import Cabbooking from './components/Cabbooking';
-import PassengerInfo from './components/PassengerInfo';
+import PassengerInfo from './components/BusBooking/PassengerInfo';
 import RootPage from './components/RootPage';
 
 

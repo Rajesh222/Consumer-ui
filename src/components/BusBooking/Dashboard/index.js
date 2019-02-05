@@ -4,8 +4,7 @@ import { Grid, Row, Col, Button } from 'react-bootstrap';
 import './index.scss';
 import Axios from 'axios';
 import DatePicker from "react-datepicker";
-import config from '../../config.js';
-import Collapsible from '../common/Collapsible';
+import config from '../../../config.js';
 import Bookbus from '../Bookbus';
 import Filter from '../Filter';
 

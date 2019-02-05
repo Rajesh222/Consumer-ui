@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import { Grid, Row, Col } from 'react-bootstrap';
-import Bus from '../../Bus';
+import Bus from '../Bus';
 class Collapsible extends Component {
 
   render() {
