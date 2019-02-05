@@ -17,6 +17,7 @@ import Faq from './components/common/Faq'
 import Career from './components/common/Career';
 import PassengerInfo from './components/BusBooking/PassengerInfo';
 import Dashboard from './components/Dashboard';
+import UserAgreement from './components/common/UserAgreement';
 
 
 class App extends Component {
@@ -41,6 +42,7 @@ class App extends Component {
                 <Route path='/faq' component={Faq} />
                 <Route path="/careers" component={Career}/>
                 <Route path="/passenger" component={PassengerInfo} />
+                <Route path="/user-agreement" component={UserAgreement} />                
               </div>
             }/>
           </HomeContainer>
