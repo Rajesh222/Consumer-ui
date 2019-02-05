@@ -42,7 +42,6 @@ class App extends Component {
                 <Route path='/faq' component={Faq} />
                 <Route path="/careers" component={Career}/>
                 <Route path="/cab-booking" component={Cabbooking}/>
-                <Route path="error" component={Error} />
                 <Route path="/passenger" component={PassengerInfo} />
               </div>
             }/>
