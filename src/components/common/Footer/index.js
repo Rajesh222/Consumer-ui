@@ -14,6 +14,17 @@ class Footer extends React.Component {
     <footer className="myfooter">
        <Grid>
           <Row>
+          <Col xs={12} sm={4} md={4}>
+                 <h4>Company</h4>
+                 <Nav className="list-unstyled">
+                  <NavItem href="/about">About Us</NavItem>
+                  <NavItem href="/via-gst-details">Via GST Details</NavItem>
+                  <NavItem href="/faq">FAQ</NavItem>
+                  <NavItem href="/privacypolicy">Privacy Policy</NavItem>
+                  <NavItem href="/termscondition">Terms & Conditions</NavItem>
+                  <NavItem href="https://www.icicilombard.com/" target="_blank">Insurance Partner</NavItem>
+                </Nav>
+            </Col>
             <Col xs={12} sm={4} md={4}>
                  <h4>Get in Touch</h4>
                  <p>Tell us what you think</p>

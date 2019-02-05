@@ -1,10 +1,13 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import One from '../../img/carouser/1.png';
+import Two from '../../img/carouser/2.jpg';
+import Three from '../../img/carouser/3.png';
+import Four from '../../img/carouser/4.jpg';
 
 export default class CarouselPage extends React.Component {
     constructor(props, context) {
-      super(props, context);
-  
+      super(props, context);  
       this.handleSelect = this.handleSelect.bind(this);
   
       this.state = {
@@ -24,34 +27,34 @@ export default class CarouselPage extends React.Component {
       const { index, direction } = this.state;
   
       return (
-        <Carousel
-          activeIndex={index}
-          direction={direction}
-          onSelect={this.handleSelect}
-        >
+        <Carousel activeIndex={index} direction={direction} onSelect={this.handleSelect} data-ride="carousel">
           <Carousel.Item>
-            <img
-              className=""
-              src="https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-              alt="First slide"
-              style={{width:"100%", height: "400px"}}
-            />
+            <img className="d-block w-100" src={One}/>
+            <Carousel.Caption>
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img
-              className=""
-              src="https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-              alt="Third slide"
-              style={{width:"100%", height: "400px"}}
-            />
+            <img className="d-block w-100" src={Two}/>
+            <Carousel.Caption>
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img
-              className=""
-              src="https://cdn.pixabay.com/photo/2016/06/18/17/42/image-1465348_960_720.jpg"
-              alt="Third slide"
-              style={{width:"100%", height: "400px"}}
-            />
+             <img className="d-block w-100" src={Three}/>
+            <Carousel.Caption>
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+             <img className="d-block w-100" src={Four}/>
+            <Carousel.Caption>
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
       );

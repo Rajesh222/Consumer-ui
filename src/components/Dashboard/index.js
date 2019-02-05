@@ -19,8 +19,7 @@ export default class Dashboard extends Component {
         filterValue: [], 
         searchDate: new Date(),
         newSearch: [],
-        searchResult: [
-            
+        searchResult: [   
           ]
     }
  
@@ -90,7 +89,6 @@ export default class Dashboard extends Component {
         } else {
             return;
         }
-        
     }
     render() {
         const { selectedSource , newSearch, selectedDestination, searchResult, searchDate, sourceError, destinationError } = this.state;

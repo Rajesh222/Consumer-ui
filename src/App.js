@@ -7,7 +7,7 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import Forgotpassword from './components/Forgotpassword';
 import Resetpassword from './components/Resetpassword';
-import Home from './components/Home';
+import HomeContainer from './components/HomeContainer';
 import About from './components/common/About';
 import Privacy from './components/common/Privacy';
 import Terms from './components/common/Terms';
@@ -27,7 +27,7 @@ class App extends Component {
      <Router>
        <div>
          <Switch>
-          <Home>
+          <HomeContainer>
             <Route component={({ match }) =>
               <div>
                 <Route exact path="/" component={RootPage} />
@@ -47,7 +47,7 @@ class App extends Component {
                 <Route path="/passenger" component={PassengerInfo} />
               </div>
             }/>
-          </Home>
+          </HomeContainer>
           </Switch>
        </div>
      </Router>
