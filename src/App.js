@@ -18,6 +18,7 @@ import Career from './components/common/Career';
 import PassengerInfo from './components/BusBooking/PassengerInfo';
 import Dashboard from './components/Dashboard';
 import UserAgreement from './components/common/Useragreement';
+import Gst from './components/common/Gst';
 
 
 class App extends Component {
@@ -42,7 +43,8 @@ class App extends Component {
                 <Route path='/faq' component={Faq} />
                 <Route path="/careers" component={Career}/>
                 <Route path="/passenger" component={PassengerInfo} />
-                <Route path="/user-agreement" component={UserAgreement} />                
+                <Route path="/user-agreement" component={UserAgreement} />    
+                <Route path="/via-gst-details" component={Gst}/>            
               </div>
             }/>
           </HomeContainer>

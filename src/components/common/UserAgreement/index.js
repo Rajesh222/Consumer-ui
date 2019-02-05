@@ -8,6 +8,7 @@ class UserAgreement extends React.Component {
     
   render() {
     return (
+        <div>
       <div class="bg_user_agr">
           <Grid>
               <h1>User Agreement</h1>
@@ -15,7 +16,7 @@ class UserAgreement extends React.Component {
       </div>
       <Grid>
         <Row>
-          <Col>
+          <Col className="userAgreement">
            <p>
             This user agreement integrates the terms and conditions for EaseMyTrip (Easy Trip Planners Pvt. Ltd) 
 			and its affiliate companies to provide services to the User(s) looking for purchasing any of the products and/ 
@@ -46,6 +47,7 @@ class UserAgreement extends React.Component {
          </Col>
       </Row>
     </Grid> 
+    </div>
     );
   }
 }
