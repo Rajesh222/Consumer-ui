@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Grid, Row,Col,Label, Input,Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 
-import config from '../../config.js';
+import config from '../../../config.js';
 import "./index.scss";
 import Axios from 'axios';
-import { showToastrOnSuccess } from '../../utils/common';
+//import { showToastrOnSuccess } from '../../../../utils/common';
 import PropTypes from 'prop-types';
 import toastr from 'reactjs-toastr';
 

@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel, Glyphicon } from "react-bootstrap";
 import "./index.scss";
 import Axios from 'axios';
-import { showToastrOnSuccess } from '../../utils/common';
+//import { showToastrOnSuccess } from '../../../../utils/common';
 import PropTypes from 'prop-types';
 import FontAwesome from 'react-fontawesome';
-import config from '../../config.js';
+import config from '../../../config.js';
 
 export default class Forgotpassword extends Component {
 

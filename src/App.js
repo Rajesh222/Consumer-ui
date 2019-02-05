@@ -3,16 +3,16 @@ import './App.scss';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 
-import Login from './components/Login';
+import Login from './components/UserManagement/Login';
 import BusDashboard from './components/BusBooking/Dashboard';
-import Forgotpassword from './components/Forgotpassword';
-import Resetpassword from './components/Resetpassword';
+import Forgotpassword from './components/UserManagement/Forgotpassword';
+import Resetpassword from './components/UserManagement/Resetpassword';
 import HomeContainer from './components/common/HomeContainer';
 import About from './components/common/About';
 import Privacy from './components/common/Privacy';
 import Terms from './components/common/Terms';
 import Contact from './components/common/Contact';
-import Register from './components/Registation';
+import Register from './components/UserManagement/Registation';
 import Faq from './components/common/Faq'
 import Career from './components/common/Career';
 import PassengerInfo from './components/BusBooking/PassengerInfo';
