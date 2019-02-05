@@ -1,0 +1,38 @@
+.testimonials{
+    background: #f1f1f1;
+    width: 980px;
+    margin: 20px auto;
+    overflow: hidden;
+    padding: 20px 10px 0;
+    .q-left{
+        font-size: 120px;
+        color: #ffa5ab;
+        float: left;
+        width: 60px;
+        display: block;
+        vertical-align: top;
+        line-height: 60px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        margin-top: 10px;
+    }
+    .q-right{
+        font-size: 120px;
+        color: #ffa5ab;
+        float: right;
+        width: 48px;
+        display: block;
+        vertical-align: top;
+        line-height: 38px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+    }
+    .q-mid {
+        width: 860px;
+        float: left;
+        color: #555;
+        font-style: italic;
+        .customer {
+            text-align: right;
+            color: #000;
+        }
+    }      
+}
