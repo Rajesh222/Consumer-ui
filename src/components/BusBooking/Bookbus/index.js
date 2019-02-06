@@ -38,11 +38,7 @@ export default class Bookbus extends Component {
                     <Col xs={6} md={2}>{`${formatedArrivalDate.getHours()} : ${formatedArrivalDate.getMinutes()}`}</Col>
                     <Col xs={6} md={2}>Starting from <br/>{fare}</Col>
                     <Col xs={6} md={2}>
-                        <Button
-                            bsStyle="primary"
-                            bsSize="sm"
-                            onClick={this.toggle}
-                            > Select Seats</Button>
+                        <Button bsStyle="primary" bsSize="sm" onClick={this.toggle}> Select Seats</Button>
                     </Col>
                 </Row>
                 <Row className="busrow-details">

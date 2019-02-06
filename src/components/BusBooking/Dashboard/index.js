@@ -133,19 +133,18 @@ export default class Dashboard extends Component {
                 </Row>
                 <Grid>
                     <Row>
-                        <Col md={2} className="filter">
+                        <Col xs={12} sm={2} lg={2} md={2} className="filter">
                             <Filter handleCheck={this.handleCheck} filterValue={this.state.filterValue}/>
                         </Col >
                         <div className="clearfix visible-xs"></div>
-                        <Col md={10}>
+                        <Col xs={12} sm={10} lg={10} md={10}>
                             <Row>
-                                <Col md={3} className="head">Traveller</Col>
-                                <Col md={3} className="head">Departure Time</Col>
-                                <Col md={2} className="head">Arrival Time</Col>
-                                <Col md={1} className="head">Fare</Col>
-                                <Col md={2} className="head">Availability</Col>
+                                <Col xs={3} sm={3} lg={3} md={3} className="head">Traveller</Col>
+                                <Col xs={3} sm={3} lg={3} md={3} className="head">Departure Time</Col>
+                                <Col xs={2} sm={2} lg={2} md={2} className="head">Arrival Time</Col>
+                                <Col xs={1} sm={1} lg={1} md={1} className="head">Fare</Col>
+                                <Col xs={3} sm={2} lg={2} md={2} className="head">Availability</Col>
                             </Row>
-                            
                             {newSearch.map((item, index)=>{
                             return <div>
                                 <Bookbus key={index} busDetails={item} />

@@ -8,7 +8,8 @@ class About extends React.Component {
   render() {
     return (
         <Grid>
-           <Row><h4>About us</h4>
+           <Row>
+               <Col xs={12} sm={12} lg={12} md={12}><h4>About us</h4>
            <p>digital bihar is India’s largest online bus ticketing platform that has transformed bus travel in the country by
               bringing ease and convenience to millions of Indians who travel using buses. Founded in 2014. By providing widest 
               choice, superior customer service, lowest prices and unmatched benefits, digital bihar has served over 8 million 
@@ -23,8 +24,10 @@ class About extends React.Component {
                  and innovation and a seasoned senior management team comprising of industry executives with deep roots
                   in the travel industry in India and abroad.</p>
               <hr/>
+              </Col>
              </Row>
             <Row className="team">
+               <Col xs={12} sm={12} lg={12} md={12}>
                 <h3>Management Team  </h3>
                 <div className="media">
                     <div class="media-left media-top">
@@ -61,7 +64,8 @@ class About extends React.Component {
                         high-performing products across telecom, internet and mobile ecommerce domains. Satyam strongly believes
                         that hard work and commitment can overcome the barriers to success.</p>
                     </div>
-                </div>              
+                </div>
+                </Col>              
             </Row>
         </Grid>
     );
