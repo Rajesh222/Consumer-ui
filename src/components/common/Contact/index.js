@@ -28,15 +28,21 @@ class Contact extends React.Component {
                 <FormGroup controlId="subject">
                   <ControlLabel>Subject</ControlLabel>
                   <select class="form-control" id="exampleFormControlSelect1">
-                    <option value="#">Seelct purpose</option>
+                    <option value="Web Design Development">Web Design Development</option>
+                    <option value="Web Hosting">Web Hosting</option>
+                    <option value="Domain Registration">Domain Registration</option>
+                    <option value="SEO Services">SEO Services</option>
+                    <option value="Bulk SMS Services">Bulk SMS Services</option>
+                    <option value="Software Development">Software Development</option>
+                    <option value="MLM Software Development">MLM Software Development</option>
+                    <option value="Email Marketing">Email Marketing</option>
+                    <option value="iPhone Application">iPhone Application</option>
+                    <option value="Android Application">Android Application</option>
+                    <option value="API Mobile Recharge">API Mobile Recharge</option>
                     <option value="Feedback">Feedback</option>  
                     <option value="Complaints">Complaints</option>  
                     <option value="Marketing">Marketing</option>  
-                    <option value="Agency Enquiry">Agency Enquiry</option>  
-                    <option value="Website Designing & Development">Website Designing & Development  </option>  
-                    <option value="Software Development">Software Development</option>
-                    <option value="Web Hosting">Web Hosting</option>
-                    <option value="Others">Others</option>
+                    <option value="Others">Others</option> 	    
                   </select>
                 </FormGroup>
                 <FormGroup controlId="comment">
