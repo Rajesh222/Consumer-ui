@@ -4,9 +4,8 @@ import { Grid, Row,Col,Label, Input,Button, FormGroup, FormControl, ControlLabel
 import config from '../../../config.js';
 import "./index.scss";
 import Axios from 'axios';
-//import { showToastrOnSuccess } from '../../../../utils/common';
+import { showToastrOnSuccess } from '../../../utils/common';
 import PropTypes from 'prop-types';
-import toastr from 'reactjs-toastr';
 
 
 export default class Login extends Component {
@@ -39,7 +38,7 @@ export default class Login extends Component {
     const loginUrl = `${baseUrl}auth/serviceLoginAuth`;
     Axios.post(loginUrl, body)
       .then(res => {
-        toastr.success('Success Message', 'Title', {displayDuration:3000});
+        showToastrOnSuccess('Success Message');
         localStorage.setItem('loginData', JSON.stringify(res.data.data));
         if(res.data.data) {
           this.context.router.history.push('/bus-booking');
