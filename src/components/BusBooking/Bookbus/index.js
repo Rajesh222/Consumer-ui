@@ -9,11 +9,14 @@ export default class Bookbus extends Component {
     constructor(props) {
         super(props);
         this.toggle = this.toggle.bind(this);
-        this.state = { collapse: false, seatDetails: [], metaData: {} }; 
+        this.handleReview = this.handleReview.bind(this);
+        this.handleBoardingDropping = this.handleBoardingDropping.bind(this);
+        this.handleCancelPolicy = this.handleCancelPolicy.bind(this);
+        this.state = { collapse: false, seatDetails: [], metaData: {}, collapseType: 'seatDetail' }; 
     }
-    
-    toggle() {
-        this.setState({ collapse: !this.state.collapse });
+
+    handleCancelPolicy() {
+        this.setState({ collapse: !this.state.collapse, collapseType: 'policyDetail' });
         const busId = 1;
         const baseUrl= config.baseUrl;
         const searchDate = "2019-01-31";
@@ -24,11 +27,40 @@ export default class Bookbus extends Component {
             console.log(error);
         });
     }
+    
+    handleBoardingDropping() {
+        this.setState({ collapse: !this.state.collapse, collapseType: 'boardingDropping' });
+        const busId = 1;
+        const baseUrl= config.baseUrl;
+        const searchDate = "2019-01-31";
+        const url = `${baseUrl}${config.availableSeat}?busId=${busId}&date=${searchDate}`;
+        Axios.post(url).then((res) =>{
+           this.setState({seatDetails: res.data.data.busSeatDetails}) 
+        }).catch((error)=> {
+            console.log(error);
+        });
+    }
+    toggle() {
+        this.setState({ collapse: !this.state.collapse, collapseType: 'seatDetail' });
+        const busId = 1;
+        const baseUrl= config.baseUrl;
+        const searchDate = "2019-01-31";
+        const url = `${baseUrl}${config.availableSeat}?busId=${busId}&date=${searchDate}`;
+        Axios.post(url).then((res) =>{
+           this.setState({seatDetails: res.data.data.busSeatDetails}) 
+        }).catch((error)=> {
+            console.log(error);
+        });
+    }
+    handleReview() {
+        this.setState({ collapse: true });
+     
+    }
 
     render() {
-        const { travelsName, source, destination, totalSeats, basefare, departureDate, arrivalDate, busType, fare } = this.props.busDetails;
+        const { travelsName, source, destination, totalSeats, basefare, departureDate, arrivalDate, busType, fare, cancellationPolicy } = this.props.busDetails;
         const formatedDepartureDate = new Date(departureDate);
-        const formatedArrivalDate = new Date(arrivalDate)
+        const formatedArrivalDate = new Date(arrivalDate);
         return (
         <div className="bus">
                 <Row>
@@ -46,7 +78,14 @@ export default class Bookbus extends Component {
                     <Col xs={6} md={3}>{source}</Col>
                     <Col xs={6} md={4}>{destination}</Col>
                 </Row>
-                <Collapsible collapse={this.state.collapse} seatDetails={this.state.seatDetails} metaData={this.state.metaData}/>
+                <Row className="amenity-row">
+                    <Col xs={6} md={2} style={{cursor:"pointer"}} onClick={this.handleReview}>Review</Col>
+                    <Col xs={6} md={3} style={{cursor:"pointer"}} onClick={this.handleBoardingDropping}>Boarding & Dropping Point</Col>
+                    <Col xs={6} md={2} style={{cursor:"pointer"}} onClick={this.handleCancelPolicy}>Cancellation Policy</Col>
+                    <Col xs={6} md={2} style={{cursor:"pointer"}} onClick={this.toggle}>Available Seats</Col>
+                </Row>
+
+                <Collapsible collapse={this.state.collapse} seatDetails={this.state.seatDetails} metaData={this.state.metaData} cancellationPolicy={cancellationPolicy} collapseType={this.state.collapseType} />
         </div>
         )
     }

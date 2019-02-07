@@ -58,7 +58,7 @@ export default class Bus extends Component {
             return seatDetail.lowerBerth;
         });
         return (
-            <div className="">
+            <div className="bus-collapse">
                 <div className="row">
                     <div className="col-md-7">
                         {lowerBerth.length ?<LowerSeat handleSeatClick={this.handleSeatClick} lowerBerth={lowerBerth} selectedSeat={this.state.selectedSeat}/>:<div></div>}

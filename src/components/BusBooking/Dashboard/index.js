@@ -17,7 +17,139 @@ export default class Dashboard extends Component {
         cities: [],
         filterValue: [], 
         searchDate: new Date(),
-        newSearch: [],
+        newSearch: [ {
+            "boardingLocations": [
+              {
+                "id": "5",
+                "cityName": "Delhi",
+                "locationName": "New Delhi",
+                "locationAddress": "New Delhi Metro Station",
+                "landmark": "Delhi",
+                "lat": 0.0,
+                "lng": 0.0,
+                "busid": "1",
+                "date": "2019-01-14",
+                "time": "00:00:00",
+                "contactNumber": "8130787891"
+              }
+            ],
+            "droppingLocations": [
+              {
+                "id": "1",
+                "cityName": "Gaya",
+                "locationName": "DELHA",
+                "locationAddress": "Postmaster, Post Office DELHA (SUB OFFICE), GAYA, BIHAR (BR), India (IN), Pin Code:- 823002",
+                "landmark": "GAYA",
+                "lat": 0.0,
+                "lng": 0.0,
+                "busid": "1",
+                "date": "2019-01-14",
+                "time": "13:30:00",
+                "contactNumber": "8130787891"
+              },
+              {
+                "id": "2",
+                "cityName": "Gaya",
+                "locationName": "AN COLLEGE",
+                "locationAddress": "AN COLLEGE, GAYA, BIHAR (BR), India (IN), Pin Code:- 823002",
+                "landmark": "GAYA",
+                "lat": 0.0,
+                "lng": 0.0,
+                "busid": "1",
+                "date": "2019-01-14",
+                "time": "13:30:00",
+                "contactNumber": "8130787891"
+              },
+              {
+                "id": "3",
+                "cityName": "Gaya",
+                "locationName": "MERZAGALI COLLEGE",
+                "locationAddress": "MIRZAGALI COLLEGE GAYA, BIHAR (BR), India (IN), Pin Code:- 823002",
+                "landmark": "GAYA",
+                "lat": 0.0,
+                "lng": 0.0,
+                "busid": "1",
+                "date": "2019-01-14",
+                "time": "13:30:00",
+                "contactNumber": "8130787891"
+              },
+              {
+                "id": "4",
+                "cityName": "Gaya",
+                "locationName": "AP COLONY GAYA",
+                "locationAddress": "AP COLONY GAYA",
+                "landmark": "GAYA",
+                "lat": 0.0,
+                "lng": 0.0,
+                "busid": "1",
+                "date": "2019-01-14",
+                "time": "13:30:00",
+                "contactNumber": "8130787891"
+              }
+            ],
+            "busInfo": [
+              
+            ],
+            "cancellationPolicy": [
+              {
+                "ruleId": "1",
+                "busid": "1",
+                "departureheading": "Hours before Departure",
+                "policyheading": "Refund Percentage"
+              },
+              {
+                "ruleId": "2",
+                "busid": "1",
+                "departureheading": "Between 0 Hrs. to 12 Hrs.",
+                "policyheading": "0%"
+              },
+              {
+                "ruleId": "3",
+                "busid": "1",
+                "departureheading": "Between 12 Hrs. to 24 Hrs.",
+                "policyheading": "50%"
+              },
+              {
+                "ruleId": "4",
+                "busid": "1",
+                "departureheading": "Before 24 Hrs.",
+                "policyheading": "90%"
+              }
+            ],
+            "amenities": [
+              2,
+              1
+            ],
+            "bustypes": [
+              
+            ],
+            "fares": [
+              300.0
+            ],
+            "inclTaxes": true,
+            "classType": "Normal",
+            "busId": "1",
+            "travelsName": "AJANTA TRAVELS PVT LTD",
+            "busType": "AC Sleeper/Seater TATA 2+2 Air Suspension",
+            "duration": 200.0,
+            "idProofRequired": true,
+            "rating": 4.0,
+            "routId": "6",
+            "totalSeats": 40.0,
+            "availableSeats": 0.0,
+            "distance": 0.0,
+            "arrivalDate": "2019-01-31",
+            "arrivalTime": "15:07:41",
+            "departureDate": "2019-01-31",
+            "departureTime": "15:07:21",
+            "seatType": null,
+            "source": "Delhi",
+            "destination": "Gaya",
+            "sleaper": true,
+            "refundable": true,
+            "seater": true,
+            "ac": true
+          }],
         searchResult: [   
           ]
     }
@@ -138,12 +270,12 @@ export default class Dashboard extends Component {
                         </Col >
                         <div className="clearfix visible-xs"></div>
                         <Col xs={12} sm={10} lg={10} md={10}>
-                            <Row>
-                                <Col xs={3} sm={3} lg={3} md={3} className="head">Traveller</Col>
+                            <Row style={{marginLeft:0}}>
+                                <Col xs={3} sm={3} lg={3} md={4} className="head">Traveller</Col>
                                 <Col xs={3} sm={3} lg={3} md={3} className="head">Departure Time</Col>
                                 <Col xs={2} sm={2} lg={2} md={2} className="head">Arrival Time</Col>
                                 <Col xs={1} sm={1} lg={1} md={1} className="head">Fare</Col>
-                                <Col xs={3} sm={2} lg={2} md={2} className="head">Availability</Col>
+                                <Col xs={3} sm={2} lg={2} md={3} className="head">Availability</Col>
                             </Row>
                             {newSearch.map((item, index)=>{
                             return <div>
