@@ -133,11 +133,11 @@ export default class Dashboard extends Component {
                 </Row>
                 <Grid>
                     <Row>
-                        <Col xs={12} sm={2} lg={2} md={2} className="filter">
+                        <Col xs={3} sm={2} lg={2} md={2} className="filter">
                             <Filter handleCheck={this.handleCheck} filterValue={this.state.filterValue}/>
                         </Col >
                         <div className="clearfix visible-xs"></div>
-                        <Col xs={12} sm={10} lg={10} md={10}>
+                        <Col xs={9} sm={10} lg={10} md={10}>
                             <Row>
                                 <Col xs={3} sm={3} lg={3} md={3} className="head">Traveller</Col>
                                 <Col xs={3} sm={3} lg={3} md={3} className="head">Departure Time</Col>
