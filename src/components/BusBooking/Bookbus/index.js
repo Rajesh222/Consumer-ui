@@ -33,8 +33,13 @@ export default class Bookbus extends Component {
         const busId = 1;
         const baseUrl= config.baseUrl;
         const searchDate = "2019-01-31";
-        const url = `${baseUrl}${config.availableSeat}?busId=${busId}&date=${searchDate}`;
-        Axios.post(url).then((res) =>{
+        const url = `${baseUrl}${config.searchTrip}`;
+        const body = {
+            journeyDate: searchDate,
+            operatorId: busId,
+            providerId:  '1'
+        }
+        Axios.post(url, body).then((res) =>{
            this.setState({seatDetails: res.data.data.busSeatDetails}) 
         }).catch((error)=> {
             console.log(error);
@@ -74,7 +79,7 @@ export default class Bookbus extends Component {
                     </Col>
                 </Row>
                 <Row className="busrow-details">
-                    <Col xs={6} md={3}>{busType}</Col>
+                    <Col xs={6} md={3} style={{fontSize:"12px"}}>{busType}</Col>
                     <Col xs={6} md={3}>{source}</Col>
                     <Col xs={6} md={4}>{destination}</Col>
                 </Row>

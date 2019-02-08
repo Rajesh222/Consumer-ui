@@ -1,16 +1,11 @@
 .bus {
-        /* margin: 10px 5px 5px 2px; */
-    /* border-style: solid; */
-    /* border-color: #87cefa; */
-    /* border-width: 0px; */
-     font-size: .84em; 
-    /* font-weight: 400; */
-    padding: 17px 10px 0;
-    box-shadow: 0 1px 7px 0 grey;
-    /* border-left: 0px solid #fff; */
-    font-family: Body,Quicksand,sans-serif;
-    margin-top: 10px;
-    background-color: #fff;
+    width: 100%;
+    float: left;
+    border: 1px solid #dadada;
+    height: auto;
+    background: #fff;
+    border-radius: 4px;
+    margin: 8px 0 2px 0;
     padding: 20px;
     .container {
         border-right: 2px #E3E6E6 solid;

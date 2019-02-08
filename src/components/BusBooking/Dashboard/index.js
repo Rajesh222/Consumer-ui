@@ -203,13 +203,10 @@ export default class Dashboard extends Component {
 
         if (selectedSource && selectedDestination && searchDate) {
             const baseUrl= config.baseUrl;
-            const url = `${baseUrl}${config.availability}`;
-            const body = {
-                date: this.state.searchDate,
-                destinationName: this.state.selectedDestination.value.toLowerCase(),
-                sourceName:  this.state.selectedSource.value.toLowerCase()
-            }
-            Axios.post(url, body).then((res)=> {
+            const source= this.state.selectedSource.value.toLowerCase();
+            const dest= this.state.selectedDestination.value.toLowerCase();
+            const url = `${baseUrl}${config.searchRoute}/${source}/${dest}/${this.state.searchDate}`;
+            Axios.get(url).then((res)=> {
                 console.log(res)
                 if(res.data) {
                 this.setState({searchResult: res.data.data.filterRouteList, newSearch: res.data.data.filterRouteList})
@@ -267,10 +264,10 @@ export default class Dashboard extends Component {
                 </Row>
                 <Grid>
                     <Row>
-                        <Col xs={3} sm={2} lg={2} md={2} className="filter">
+                        <Col xs={3} sm={2} lg={2} md={2} className="left_pannel">
                             <Filter handleCheck={this.handleCheck} filterValue={this.state.filterValue}/>
                         </Col >
-                        <Col xs={9} sm={10} lg={10} md={10}>
+                        <Col xs={9} sm={10} lg={10} md={10} className="right_pannel">
                             <Row className="businfo-header">
                                 <Col xs={3} sm={3} lg={3} md={3} className="head">Traveller</Col>
                                 <Col xs={3} sm={3} lg={3} md={3} className="head">Departure Time</Col>

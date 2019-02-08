@@ -4,9 +4,9 @@ const config = {
     login: 'auth/serviceLoginAuth',
     resetPassword: 'auth/changePassword',
     logOut: 'auth/logout',
-    availability: 'search/availableRouts',
+    searchRoute: 'bus/route',
     cities: 'cities',
-    availableSeat: 'search/availableSeats'
+    searchTrip: 'bus/trip'
 }
 
 export default config;
