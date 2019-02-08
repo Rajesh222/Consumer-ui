@@ -6,6 +6,7 @@ import "./index.scss";
 import LowerSeat from '../LowerSeat';
 import UpperSeat from '../UpperSeat';
 import Seat from '../Seat';
+import SymbolSeat from '../Seat';
 
 export default class Bus extends Component {
     state = {
@@ -67,8 +68,8 @@ export default class Bus extends Component {
                         : <div></div>
                         }
                         <div className="col-md-12 seat-sign">
-                            <Seat seatType="occupied" handleSeatClick={()=> false} /> <span style={{marginRight:33}}>Occupied Seat</span> <Seat handleSeatClick={()=> false} /> <span style={{marginRight:20}}>Available Seat</span> 
-                            <Seat seatType="selected" handleSeatClick={()=> false} /> <span>Selected Seat</span> <Seat seatType="reserved-by-lady" handleSeatClick={()=> false} /> <span style={{marginRight: 11}}>Booked By Ladies</span> <Seat seatType="reserved-for-lady" handleSeatClick={()=> false} /><span style={{marginRight: 11}}> Reserved for Ladies</span>
+                            <SymbolSeat seatType="occupied" handleSeatClick={()=> false} /> <span style={{marginRight:33}}>Occupied Seat</span> <SymbolSeat handleSeatClick={()=> false} /> <span style={{marginRight:20}}>Available Seat</span> 
+                            <SymbolSeat seatType="selected" handleSeatClick={()=> false} /> <span>Selected Seat</span> <SymbolSeat seatType="reserved-by-lady" handleSeatClick={()=> false} /> <span style={{marginRight: 11}}>Booked By Ladies</span> <SymbolSeat seatType="reserved-for-lady" handleSeatClick={()=> false} /><span style={{marginRight: 11}}> Reserved for Ladies</span>
                         </div>
                     </div>
                     <div className="col-md-5">

@@ -1,8 +1,7 @@
 .source {
     margin-top: 20px;
     margin-top: 20px;
-    border-radius: 10px;
-    background-color: beige;
+    background-color:#eee;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -12,16 +11,17 @@
 
 }
 .react-datepicker__input-container  input{
-     
+    width: 100%;
     height: 36px;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding-left: 10px; 
 }
 
-.head {
-    border: 1px solid #ccc;
-    padding: 6px;
-    margin-top: 20px;
-    margin-right: 15px;
+
+.businfo-header {
+    background:#efefef;
+    padding: 5px;
+    width: 100%;
+    margin: 7px 0;
 }

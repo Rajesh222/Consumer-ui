@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CarouselPage from '../CarouselPage';
 import "./index.scss";
 import { Grid, Row,Col,Label, Input,Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import Loader from '../common/Loader';
 
 
 export default class RootPage extends Component {
@@ -9,6 +10,7 @@ export default class RootPage extends Component {
     render() {
         return (
         <div className="container">
+        <Loader type={"balls"} color={"red"}/>
             <div className="row">
                 <div className="col-md-12">
                     <CarouselPage />

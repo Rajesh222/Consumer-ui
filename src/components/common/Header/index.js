@@ -7,14 +7,19 @@ import {  Navbar, Nav, NavItem, NavDropdown,MenuItem, NavbarBrand } from 'react-
 import Logo from '../../../img/logo.png';
 
 class Header extends React.Component {
- 
-  handleLogOut() {
+  constructor (props, context) {
+    super(props, context);
+    console.log(this);
+   // this.handleLogOut = this.handleLogOut.bind(this);
+}
+  handleLogOut = ()=> {
     const baseUrl =  config.baseUrl;
     const loginData = localStorage.getItem('loginData') && JSON.parse(localStorage.getItem('loginData'));
     const uid = loginData.userId;
     Axios.put(`${baseUrl}${config.logOut}/${uid}`).then( (res) => {
-      if(res) {
+      if(1) {
         localStorage.clear();
+        console.log('context: ', this)
         this.context.router.history.push('/login');
       }
     }

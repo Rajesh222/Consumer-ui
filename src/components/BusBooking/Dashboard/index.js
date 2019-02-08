@@ -226,41 +226,43 @@ export default class Dashboard extends Component {
         const citiesOptions = this.state.cities.map(item => ({ label: item.displayName, value: item.cityName }));
         return (
             <div>
-            <Grid>
+            <Grid style={{width:"100%"}}>
                 <Row className="show-grid source">
-                    <Col sm={4} md={4} xs={4}>
+                    <Col sm={6} md={4} xs={6} style={{paddingBottom:5}}>
                         <Select
                             value={selectedSource}
                             onChange={this.handleSourceChange}
+                            autosize={true}
                             options={citiesOptions}
                             isSearchable={true}
-                            placeholder="Select Source City"
+                            placeholder="Source City"
                         />
                        {sourceError && <span className="error-message">Please Select Source</span>}
                     </Col>
-                    <Col sm={4} md={4} xs={4}>
+                    <Col sm={6} md={4} xs={6} style={{paddingBottom:5}}>
                         <Select
                             value={selectedDestination}
                             onChange={this.handleDestinationChange}
                             options={citiesOptions}
-                            placeholder="Select Destination City"
+                            autosize={true}
+                            placeholder="Destination City"
                             isSearchable={true}
                         >
                         </Select>
                         {destinationError &&<span className="error-message">Please Select Destination</span>}
                     </Col>
-                    <Col sm={2} md={2} xs={2}>
-                        <DatePicker selected={searchDate} onChange={this.handleChange} placeholderText="Select a date"/>
+                    <Col sm={6} md={2} xs={6} style={{paddingBottom:5}}>
+                        <DatePicker selected={searchDate} onChange={this.handleChange} placeholderText="dd-mm-yyyy"/>
                     </Col>
-                    <Col sm={2} md={2} xs={2}>
-                    <Button
-                    block
-                    bsStyle="primary"
-                    onClick={this.handleSearch}
-                    type="submit"
-                    >
-                            Search
-                </Button>
+                    <Col sm={6} md={2} xs={6} style={{paddingBottom:5}}>
+                        <Button
+                            block
+                            bsStyle="primary"
+                            onClick={this.handleSearch}
+                            type="submit"
+                            >
+                                    Search
+                        </Button>
                     </Col>
                 </Row>
                 <Grid>
@@ -268,9 +270,8 @@ export default class Dashboard extends Component {
                         <Col xs={3} sm={2} lg={2} md={2} className="filter">
                             <Filter handleCheck={this.handleCheck} filterValue={this.state.filterValue}/>
                         </Col >
-                        <div className="clearfix visible-xs"></div>
                         <Col xs={9} sm={10} lg={10} md={10}>
-                            <Row>
+                            <Row className="businfo-header">
                                 <Col xs={3} sm={3} lg={3} md={3} className="head">Traveller</Col>
                                 <Col xs={3} sm={3} lg={3} md={3} className="head">Departure Time</Col>
                                 <Col xs={2} sm={2} lg={2} md={2} className="head">Arrival Time</Col>
