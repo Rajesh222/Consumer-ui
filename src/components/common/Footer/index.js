@@ -49,8 +49,7 @@ class Footer extends React.Component {
                  <Nav className="list-unstyled">
                    <NavItem href="/privacypolicy">Privacy Policy</NavItem>
                    <NavItem href="/termscondition">Terms & Conditions</NavItem>
-                   <NavItem href="/refundpolicy">Refund Policy</NavItem>
-                   <NavItem href="/grievancepolicy">Grievance Policy</NavItem>
+                   <NavItem href="/faq">Refund Policy</NavItem>                   
                  </Nav>                
             </Col>
            {/* <div className="clearfix visible-xs"></div>
