@@ -264,16 +264,16 @@ export default class Dashboard extends Component {
                 </Row>
                 <Grid>
                     <Row>
-                        <Col xs={3} sm={2} lg={2} md={2} className="left_pannel">
+                        <Col xs={3} className="left_pannel">
                             <Filter handleCheck={this.handleCheck} filterValue={this.state.filterValue}/>
                         </Col >
-                        <Col xs={9} sm={10} lg={10} md={10} className="right_pannel">
+                        <Col xs={9} className="right_pannel">
                             <Row className="businfo-header">
-                                <Col xs={3} sm={3} lg={3} md={3} className="head">Traveller</Col>
-                                <Col xs={3} sm={3} lg={3} md={3} className="head">Departure Time</Col>
-                                <Col xs={2} sm={2} lg={2} md={2} className="head">Arrival Time</Col>
-                                <Col xs={1} sm={1} lg={1} md={1} className="head">Fare</Col>
-                                <Col xs={3} sm={2} lg={2} md={3} className="head">Availability</Col>
+                                <Col xs={3} sm={3} lg={3} md={3}>Traveller</Col>
+                                <Col xs={3} sm={3} lg={3} md={3}>Departure Time</Col>
+                                <Col xs={2} sm={2} lg={2} md={2}>Arrival Time</Col>
+                                <Col xs={1} sm={1} lg={1} md={1}>Fare</Col>
+                                <Col xs={3} sm={2} lg={2} md={3}>Availability</Col>
                             </Row>
                             {newSearch.map((item, index)=>{
                             return <div>
