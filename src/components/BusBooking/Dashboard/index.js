@@ -224,68 +224,42 @@ export default class Dashboard extends Component {
         return (
             <div>
             <Grid style={{width:"100%"}}>
-                <Row className="show-grid source">
+                <Row className="search_pannel">
                     <Col sm={6} md={4} xs={6} style={{paddingBottom:5}}>
-                        <Select
-                            value={selectedSource}
-                            onChange={this.handleSourceChange}
-                            autosize={true}
-                            options={citiesOptions}
-                            isSearchable={true}
-                            placeholder="Source City"
-                        />
+                        <Select value={selectedSource} onChange={this.handleSourceChange} autosize={true} options={citiesOptions} isSearchable={true} placeholder="Source City"/>
                        {sourceError && <span className="error-message">Please Select Source</span>}
                     </Col>
                     <Col sm={6} md={4} xs={6} style={{paddingBottom:5}}>
-                        <Select
-                            value={selectedDestination}
-                            onChange={this.handleDestinationChange}
-                            options={citiesOptions}
-                            autosize={true}
-                            placeholder="Destination City"
-                            isSearchable={true}
-                        >
-                        </Select>
+                        <Select value={selectedDestination} onChange={this.handleDestinationChange} options={citiesOptions} autosize={true} placeholder="Destination City" isSearchable={true}/>
                         {destinationError &&<span className="error-message">Please Select Destination</span>}
                     </Col>
                     <Col sm={6} md={2} xs={6} style={{paddingBottom:5}}>
                         <DatePicker selected={searchDate} onChange={this.handleChange} placeholderText="dd-mm-yyyy"/>
                     </Col>
                     <Col sm={6} md={2} xs={6} style={{paddingBottom:5}}>
-                        <Button
-                            block
-                            bsStyle="primary"
-                            onClick={this.handleSearch}
-                            type="submit"
-                            >
-                                    Search
-                        </Button>
+                        <Button block bsStyle="primary" onClick={this.handleSearch} type="submit">Search</Button>
                     </Col>
                 </Row>
-                <Grid>
-                    <Row>
-                        <Col xs={3} className="left_pannel">
-                            <Filter handleCheck={this.handleCheck} filterValue={this.state.filterValue}/>
-                        </Col >
-                        <Col xs={9} className="right_pannel">
-                            <Row className="businfo-header">
-                                <Col xs={3} sm={3} lg={3} md={3}>Traveller</Col>
-                                <Col xs={3} sm={3} lg={3} md={3}>Departure Time</Col>
-                                <Col xs={2} sm={2} lg={2} md={2}>Arrival Time</Col>
-                                <Col xs={1} sm={1} lg={1} md={1}>Fare</Col>
-                                <Col xs={3} sm={2} lg={2} md={3}>Availability</Col>
-                            </Row>
-                            {newSearch.map((item, index)=>{
-                            return <div>
-                                <Bookbus key={index} busDetails={item} />
-                            </div>     
-                            })}
-                        </Col>
-                        
-                    </Row>
-                </Grid>
-            </Grid>
-        
+                <Row className="bus_pannel">
+                    <Col xs={3} className="left_pannel">
+                        <Filter handleCheck={this.handleCheck} filterValue={this.state.filterValue}/>
+                    </Col >
+                    <Col xs={9} className="right_pannel">
+                        <Row className="businfo">
+                            <Col xs={3} sm={3} lg={3} md={3}>Traveller</Col>
+                            <Col xs={3} sm={3} lg={3} md={3}>Departure Time</Col>
+                            <Col xs={2} sm={2} lg={2} md={2}>Arrival Time</Col>
+                            <Col xs={1} sm={1} lg={1} md={1}>Fare</Col>
+                            <Col xs={3} sm={2} lg={2} md={3}>Availability</Col>
+                        </Row>
+                        {newSearch.map((item, index)=>{
+                        return <div>
+                            <Bookbus key={index} busDetails={item} />
+                        </div>     
+                        })}
+                    </Col>                        
+                </Row>
+            </Grid>            
          </div>
         )
    }
