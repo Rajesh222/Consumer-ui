@@ -3,7 +3,7 @@
     margin-left: 1.5rem !important;
     margin-top: 20px;
     background-color:#eee;
-    padding: 18px 30px 20px;
+    padding: 15px 10px 10px;
     box-shadow: 0 2px 6px 0 hsla(0,0%,54%,.25);
     margin-bottom: 25px;
     border-radius: 4px;
@@ -19,10 +19,13 @@
         border-radius: 4px;
         padding-left: 10px; 
     }
+    .searchbtn,.searchbtn:active,.searchbtn:focus{
+        background: #ef6614;
+        border-color: #ef6614;
+        color: #fff;
+        border:0px       
+    }
 }
-
-
-
 .bus_pannel{
     box-sizing: border-box;
     display: -ms-flexbox;

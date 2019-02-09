@@ -237,7 +237,7 @@ export default class Dashboard extends Component {
                         <DatePicker selected={searchDate} onChange={this.handleChange} placeholderText="dd-mm-yyyy"/>
                     </Col>
                     <Col sm={6} md={2} xs={6} style={{paddingBottom:5}}>
-                        <Button block bsStyle="primary" onClick={this.handleSearch} type="submit">Search</Button>
+                        <Button block bsStyle="primary" className="searchbtn" onClick={this.handleSearch} type="submit">Search</Button>
                     </Col>
                 </Row>
                 <Row className="bus_pannel">
