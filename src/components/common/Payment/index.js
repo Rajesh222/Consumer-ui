@@ -1,38 +1,77 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import "./index.scss";
-import { Nav, NavItem, Tab, Col, Row } from 'react-bootstrap';
+import {Grid, Nav, NavItem, Tab, Col, Row } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Payment extends Component {
         
   render() {
     return (
-        <div>
-        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+        <Grid className="paymentSection">
+        <div className="payment-title clearfix">
+             PAYMENT OPTIONS          
+        </div>
+        <div className="securityinfoDiv" style={{float:"right"}}>
+             <span className="SecuredIcon"><FontAwesomeIcon icon="alarm-clock"/><span className="securedText">Safe &amp; secure<br/>  Online Payments</span></span>
+            <span className="_million_transaction"><span className="icon-million_transactions"></span><span className="million_transactionsText">60+ Million<br/> Transactions</span></span>
+            <span className="years_of_trust"><span className="icon-years_of_trust"><span className="years_of_trustText">10+ Years<br/> Trust</span></span></span>
+        </div>
+        <Tab.Container id="left-tabs-example" defaultActiveKey="debitcard">
          <Row>
             <Col sm={3}>
                 <Nav variant="pills" className="flex-column">
-                    <NavItem>
-                        <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                    <NavItem eventKey="debitcard">
+                        Debit Card
                     </NavItem>
-                    <NavItem>
-                        <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                    <NavItem eventKey="creditcard">
+                        Credit Card
+                    </NavItem>
+                    <NavItem eventKey="netbanking">
+                        Net Banking
+                    </NavItem>
+                    <NavItem eventKey="googlepay">
+                        Google Pay
+                    </NavItem>
+                    <NavItem eventKey="phonepay">
+                        Phone Pay
+                    </NavItem>
+                    <NavItem eventKey="otherwallet">
+                        Other Wallets
+                    </NavItem>
+                    <NavItem eventKey="upi">
+                        UPI
                     </NavItem>
                 </Nav>
             </Col>
             <Col sm={9}>
                 <Tab.Content>
-                    <Tab.Pane eventKey="first">
-                    Mine eye hath play'd the painter and hath stell'd, Thy beauty's form in table of my heart; My body is the frame wherein 'tis held, And perspective it is best painter's art. For through the painter must you see his skill, To find where your true image pictur'd lies, Which in my bosom's shop is hanging still, That hath his windows glazed with thine eyes. Now see what good turns eyes for eyes have done: Mine eyes have drawn thy shape, and thine for me
+                    <Tab.Pane eventKey="debitcard">
+                    debitcard
                     </Tab.Pane>
-                    <Tab.Pane eventKey="second">
-                    Mine eye hath play'd the painter and hath stell'd, Thy beauty's form in table of my heart; My body is the frame wherein 'tis held, And perspective it is best painter's art. For through the painter must you see his skill, To find where your true image pictur'd lies, Which in my bosom's shop is hanging still, That hath his windows glazed with thine eyes. Now see what good turns eyes for eyes have done: Mine eyes have drawn thy shape, and thine for me
+                    <Tab.Pane eventKey="creditcard">
+                    creditcard
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="netbanking">
+                    netbanking
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="googlepay">
+                    googlepay
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="phonepay">
+                    phonepay
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="otherwallet">
+                    otherwallet
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="upi">
+                    UPI
                     </Tab.Pane>
                 </Tab.Content>
             </Col>
         </Row>
      </Tab.Container>
-     </div>
+     </Grid>
     );
   }
 }

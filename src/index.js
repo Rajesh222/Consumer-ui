@@ -13,6 +13,7 @@ import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+library.add(faIgloo);
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
