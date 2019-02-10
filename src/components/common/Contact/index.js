@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import "./index.scss";
-import { Grid, Row,Col,Label, Input,Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { Grid, Row,Col, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 
 class Contact extends React.Component { 
     render () {                                   
         return (
           <Grid>
             <Row>
-              <Col md={1}></Col>
-              <Col md={6}>
+              <Col md={4}>
               <form onSubmit={this.handleSubmit} className="loginform">
-		            <h2>Contact Us</h2>
+		            <h3>Contact Us</h3>
                 <p>Use this contact form to send outsourcing request or feedback on this website.</p>
                 <FormGroup controlId="name">
                   <ControlLabel>Your Name </ControlLabel>
@@ -52,13 +51,12 @@ class Contact extends React.Component {
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>
             </Col>
-            <Col md={1}></Col>
             <Col md={3}>		
-              <h3>Call Center - 24/7</h3>
+              <h5>Call Center - 24/7</h5>
               <div className="r1"><p><span>Ph:</span> +91-8130787891 <br/></p></div>
-              <h3>Head Office</h3>
+              <h5>Head Office</h5>
               <div className="r1">
-                <h4>Digital Bihar India Pvt. Ltd.</h4>
+                <h5>Digital Bihar India Pvt. Ltd.</h5>
                 <p>604 Sharhaul Near Pooja Medical <br/>
                   Gurgaon Hariyana, India - 201301<br/>
                 <span>Ph:</span> +91-8130787891 <br/>
@@ -66,7 +64,9 @@ class Contact extends React.Component {
                 </p>
               </div>
             </Col>
-            <Col md={1}></Col>
+            <Col md={5}>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1860.764927101748!2d79.124592!3d21.131302!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaee006487af13f6e!2sMaster's+Software+Group!5e0!3m2!1sen!2sin!4v1438407555463" width="100%" height="500px" frameborder="0" allowfullscreen=""></iframe>
+            </Col>
           </Row>
         </Grid>
         );
