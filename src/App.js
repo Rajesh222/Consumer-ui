@@ -20,6 +20,7 @@ import Dashboard from './components/Dashboard';
 import UserAgreement from './components/common/Useragreement';
 import Gst from './components/common/Gst';
 import PaymentOption from './components/common/Paymentoption';
+import Payment from './components/common/Payment';
 
 
 class App extends Component {
@@ -46,7 +47,8 @@ class App extends Component {
                 <Route path="/passenger" component={PassengerInfo} />
                 <Route path="/user-agreement" component={UserAgreement} />    
                 <Route path="/via-gst-details" component={Gst}/> 
-                <Route path="/paymentoption" component={PaymentOption}/>            
+                <Route path="/paymentoption" component={PaymentOption}/>  
+                <Route path="/payment" component={Payment}/>          
               </div>
             }/>
           </HomeContainer>
