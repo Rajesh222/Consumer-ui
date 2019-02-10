@@ -19,7 +19,7 @@ class Payment extends Component {
         </div>
         <Tab.Container id="left-tabs-example" defaultActiveKey="debitcard">
          <Row>
-            <Col sm={3}>
+            <Col sm={2} xs={2} className="paymentmenu">
                 <Nav variant="pills" className="flex-column">
                     <NavItem eventKey="debitcard">
                         Debit Card
@@ -44,7 +44,7 @@ class Payment extends Component {
                     </NavItem>
                 </Nav>
             </Col>
-            <Col sm={9}>
+            <Col sm={5} xs={5}>
                 <Tab.Content>
                     <Tab.Pane eventKey="debitcard">
                     debitcard
