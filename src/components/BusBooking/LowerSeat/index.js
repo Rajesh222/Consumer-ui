@@ -34,6 +34,8 @@ export default class LowerSeat extends Component {
         const rowMiddle = row0.filter((seatDetail, index)=> {
             return row0.length !== index + 1;
         });
+        console.log('rowMiddle: ', rowMiddle)
+        console.log('row2: ', row2)
         return (
                 <div className="col-md-12 bus-detail">
                     <div className="row seat-row">
@@ -56,8 +58,8 @@ export default class LowerSeat extends Component {
                     </div> }
                     <div className="row seat-row">
                         { row2.map((seatDetail)=> {
-                                return <div> {rowMiddle.map((seatDetail)=> <Seat selectedSeat={this.props.selectedSeat} key={seatDetail.seatName} hidden="hidden" />)}<Seat handleSeatClick={this.props.handleSeatClick} 
-                                key={seatDetail.seatName} seatDetail={seatDetail}/></div>
+                                return <div> {rowMiddle.map((seatDetail)=> <Seat selectedSeat={this.props.selectedSeat} key={seatDetail.seatName} hiddenSeat="hidden-seat" />)}<Seat 
+                                selectedSeat={this.props.selectedSeat} handleSeatClick={this.props.handleSeatClick} key={seatDetail.seatName} seatDetail={seatDetail}/></div>
                             })}
                     </div>
                     {row3.length > 0 && <div className="row seat-row">

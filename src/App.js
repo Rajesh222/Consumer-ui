@@ -17,7 +17,7 @@ import Faq from './components/common/Faq'
 import Career from './components/common/Career';
 import PassengerInfo from './components/BusBooking/PassengerInfo';
 import Dashboard from './components/Dashboard';
-import UserAgreement from './components/common/Useragreement';
+import UserAgreement from './components/common/UserAgreement';
 import Gst from './components/common/Gst';
 import PaymentOption from './components/common/Paymentoption';
 import Payment from './components/common/Payment';

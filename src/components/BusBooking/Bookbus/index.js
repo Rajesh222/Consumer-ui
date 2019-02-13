@@ -4,6 +4,8 @@ import './index.scss';
 import Axios from 'axios';
 import Collapsible from '../Collapsible';
 import config from '../../../config.js';
+import { showToastrOnSuccess } from '../../../utils/common';
+
 
 export default class Bookbus extends Component {
     constructor(props) {
@@ -47,12 +49,25 @@ export default class Bookbus extends Component {
     }
     toggle() {
         this.setState({ collapse: !this.state.collapse, collapseType: 'seatDetail' });
-        const busId = 1;
+        const busId = "BUS1";
         const baseUrl= config.baseUrl;
         const searchDate = "2019-01-31";
-        const url = `${baseUrl}${config.availableSeat}?busId=${busId}&date=${searchDate}`;
-        Axios.post(url).then((res) =>{
-           this.setState({seatDetails: res.data.data.busSeatDetails}) 
+        const url = `${baseUrl}${config.searchTrip}`;
+        const body = {
+            journeyDate: searchDate,
+            operatorId: busId,
+            providerId:  '1'
+        }
+        Axios.post(url, body).then((res) =>{
+            console.log(res)
+            if(res.data.data.busSeatDetails !== null) {
+                this.setState({seatDetails: res.data.data.busSeatDetails}) 
+            }
+              
+            else {
+                showToastrOnSuccess(res.data.status.message);
+            }
+            
         }).catch((error)=> {
             console.log(error);
         });

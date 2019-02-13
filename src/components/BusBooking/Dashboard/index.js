@@ -240,7 +240,7 @@ export default class Dashboard extends Component {
                         <Button block bsStyle="primary" className="searchbtn" onClick={this.handleSearch} type="submit">Search</Button>
                     </Col>
                 </Row>
-                <Row className="bus_pannel">
+                {newSearch && newSearch.length > 0 ? <Row className="bus_pannel">
                     <Col xs={3} className="left_pannel">
                         <Filter handleCheck={this.handleCheck} filterValue={this.state.filterValue}/>
                     </Col >
@@ -257,8 +257,8 @@ export default class Dashboard extends Component {
                             <Bookbus key={index} busDetails={item} />
                         </div>     
                         })}
-                    </Col>                        
-                </Row>
+                    </Col>                      
+                </Row> : <div></div>} 
             </Grid>            
          </div>
         )
