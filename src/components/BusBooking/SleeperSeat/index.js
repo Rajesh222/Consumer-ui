@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import "./index.scss";
+import { Tooltip  ,OverlayTrigger } from 'react-bootstrap';
+
 
 export default class SleeperSeat extends Component {
 
@@ -9,10 +11,14 @@ export default class SleeperSeat extends Component {
         isSelected = selectedSeat && selectedSeat.includes(seatDetail.seatNumber);
         const selectedClass = isSelected ? 'selected' : ''
         return (
+            <OverlayTrigger trigger="hover" placement="right" overlay={<Tooltip  title={`Seat Information`}>
+            <strong>Seat No:</strong> {seatDetail && seatDetail.seatNumber} | <strong>Fare:</strong> INR {seatDetail && seatDetail.seatNumber}
+          </Tooltip >}>
             <div className={`sleeper-seat ${selectedClass}`} data-value={seatDetail}
                 onClick={() => handleSeatClick(seatDetail)}>
                 <span className="sleeper-seat-section"></span>
             </div>
+            </OverlayTrigger>
         )
     }
 }
