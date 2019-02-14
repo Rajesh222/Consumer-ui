@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 import "./index.scss";
 import {Grid, Nav, NavItem, Tab, Col, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Credit from './CreditCard';
+import GooglePay from './GooglePay';
+import NetBanking from './NetBanking';
+import OthersWallets from './OthersWallets';
+import UPI from './UPI';
 
 class Payment extends Component {
         
@@ -50,22 +55,22 @@ class Payment extends Component {
                     debitcard
                     </Tab.Pane>
                     <Tab.Pane eventKey="creditcard">
-                    creditcard
+                      <Credit></Credit>
                     </Tab.Pane>
                     <Tab.Pane eventKey="netbanking">
-                    netbanking
+                       <NetBanking></NetBanking>
                     </Tab.Pane>
                     <Tab.Pane eventKey="googlepay">
-                    googlepay
+                       <GooglePay></GooglePay>
                     </Tab.Pane>
                     <Tab.Pane eventKey="phonepay">
                     phonepay
                     </Tab.Pane>
                     <Tab.Pane eventKey="otherwallet">
-                    otherwallet
+                      <OthersWallets></OthersWallets>
                     </Tab.Pane>
                     <Tab.Pane eventKey="upi">
-                    UPI
+                       <UPI></UPI>
                     </Tab.Pane>
                 </Tab.Content>
             </Col>
