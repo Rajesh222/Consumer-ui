@@ -1,47 +1,33 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import "./index.scss";
-import {Grid, Nav, NavItem, Tab, Col, Row } from 'react-bootstrap';
+import {Grid, Button, Col, Row, Form, FormGroup, FormControl } from 'react-bootstrap';
 
 
-class UPI extends Component {
+export default class UPI extends React.Component {
 
     render() {
         return (
             <Grid>
-                <Row>
-                   <Col xs={12} md={12}> 
-                   <form autocomplete="off" name="upi-form" method="post" action="/theia/payment/request/submit?MID=Paybus82610812744593&amp;ORDER_ID=7356560197&amp;route=" id="card" className="upi-form validated">
-                    <input type="hidden" name="CSRF_PARAM" value=""/>
-                    <input type="hidden" name="txnMode" value="UPI"/>
-                    <input type="hidden" name="channelId" value=""/>
-                    <input type="hidden" name="AUTH_MODE" value="USRPWD"/>
-                    <input type="hidden" name="CARD_TYPE" id="cardType" value=""/>
-                    <input type="hidden" name="walletAmount" value="0"/>
-                    <ul className="grid">
-                        <li className="mb20 card-wrapper">
-                            <label className="mb10" for="VIRTUAL_PAYMENT_ADDRESS">Enter your Virtual Payment Address (<span>VPA</span>)</label>
-                            <p className="cd">           		
-                                <input type="text" name="VIRTUAL_PAYMENT_ADDRESS" className="upiPayMode text-input large-input required " placeholder="yourname@bank"/>
-                                <p>VPA is a unique payment address that can be linked to a person's bank accounts<br/> to make payments.</p>
-                            </p>                            
-                            <div class="clear"></div>
-                	   </li>		
-		            </ul>
-                     <div className="relative">
-                        <div className="btn-submit  fl">
-                        <button name="" type="submit" className="gry-btn blue-btn btn-normal btn-submit" id="upiSubmit" data-txnmode="BHIM_UPI" onclick="pushGAData(this, 'pay_now_clicked')">Pay now</button>
-                        </div>
-                        <div className="clear"></div>
-                    </div> 
-                    </form>
-                   </Col>
+                <Row> 
+                   <Form autoComplete="off" method="POST" action="/theia/payment/request/submit?MID=Paybus82610812744593&amp;ORDER_ID=7356560197&amp;route=">
+                    <FormControl type="hidden" name="CSRF_PARAM" value=""></FormControl>
+                    <FormControl type="hidden" name="CSRF_PARAM" value=""/>
+                    <FormControl type="hidden" name="txnMode" value="UPI"/>
+                    <FormControl type="hidden" name="channelId" value=""/>
+                    <FormControl type="hidden" name="AUTH_MODE" value="USRPWD"/>
+                    <FormControl type="hidden" name="CARD_TYPE" id="cardType" value=""/>
+                    <FormControl type="hidden" name="walletAmount" value="0"/> 
+                    <Col xs={5} md={5}>
+                       <FormGroup>
+                        <label >Enter your Virtual Payment Address (<span>VPA</span>)</label>
+                        <input type="text" name="VIRTUAL_PAYMENT_ADDRESS" className="upiPayMode text-input large-input required " placeholder="yourname@bank"/>
+                        <p>VPA is a unique payment address that can be linked to a person's bank accounts<br/> to make payments.</p>
+                      </FormGroup>                                         
+                    <Button variant="primary" size="lg" className="paynow"> Pay now </Button>
+                    </Col>  
+                    </Form>
                 </Row>
             </Grid>
         )
     };
 }
-export default UPI;
-UPI.contextTypes = {
-  router: PropTypes.object
-};

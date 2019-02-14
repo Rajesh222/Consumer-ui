@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import "./index.scss";
-import {Grid, Nav, NavItem, Tab, Col, Row } from 'react-bootstrap';
+import {Grid, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Col, Row } from 'react-bootstrap';
+
 
 
 class NetBanking extends Component {
