@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import "./index.scss";
+import DebitCard from './DebitCard';
 import {Grid, Nav, NavItem, Tab, Col, Row } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -9,13 +10,16 @@ class Payment extends Component {
   render() {
     return (
         <Grid className="paymentSection">
-        <div className="payment-title clearfix">
-             PAYMENT OPTIONS          
-        </div>
-        <div className="securityinfoDiv" style={{float:"right"}}>
-             <span className="SecuredIcon"><FontAwesomeIcon icon="alarm-clock"/><span className="securedText">Safe &amp; secure<br/>  Online Payments</span></span>
-            <span className="_million_transaction"><span className="icon-million_transactions"></span><span className="million_transactionsText">60+ Million<br/> Transactions</span></span>
-            <span className="years_of_trust"><span className="icon-years_of_trust"><span className="years_of_trustText">10+ Years<br/> Trust</span></span></span>
+        <div className="payment-title">
+             
+            <Row>
+                <Col xs={5}>
+                PAYMENT OPTIONS
+                </Col>
+                <Col xs={7}>
+                <i className="fa fa-lock" aria-hidden="true" style={{fontSize:40}}> <span style={{fontSize:14}}>Safe &amp; secure Online Payments</span></i>
+                </Col>
+            </Row>         
         </div>
         <Tab.Container id="left-tabs-example" defaultActiveKey="debitcard">
          <Row>
@@ -47,7 +51,7 @@ class Payment extends Component {
             <Col sm={5} xs={5}>
                 <Tab.Content>
                     <Tab.Pane eventKey="debitcard">
-                    debitcard
+                    <DebitCard />
                     </Tab.Pane>
                     <Tab.Pane eventKey="creditcard">
                     creditcard
