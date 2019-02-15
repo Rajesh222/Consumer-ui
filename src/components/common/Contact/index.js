@@ -6,12 +6,17 @@ import { Grid, Row,Col, FormGroup, FormControl, ControlLabel } from "react-boots
 class Contact extends React.Component { 
     render () {                                   
         return (
-          <Grid>
-            <Row>
-              <Col md={4}>
-              <form onSubmit={this.handleSubmit} className="loginform">
-		            <h3>Contact Us</h3>
-                <p>Use this contact form to send outsourcing request or feedback on this website.</p>
+          <Grid className="bg">            
+            <Row>              
+              <Col md={1}></Col>
+              <Col md={5}>
+                <div className="panel panel-primary">
+                  <div className="panel-heading">
+                    <h4>Contact Us</h4>
+                    <p>Use this contact form to send outsourcing request or feedback on this website.</p>
+                  </div>
+                  <div className="panel-body">
+               <form onSubmit={this.handleSubmit} className="loginform">
                 <FormGroup controlId="name">
                   <ControlLabel>Your Name </ControlLabel>
                   <FormControl autoFocus type="text" placeholder="Enter name"/>
@@ -50,8 +55,15 @@ class Contact extends React.Component {
                 </FormGroup>
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>
+              </div>
+              </div>
             </Col>
-            <Col md={3}>		
+            <Col md={5}>	
+            <div className="panel panel-primary">
+                  <div className="panel-heading">
+                    <h4>Help Desk</h4>
+                  </div>
+                  <div className="panel-body">	
               <h5>Call Center - 24/7</h5>
               <div className="r1"><p><span>Ph:</span> +91-8130787891 <br/></p></div>
               <h5>Head Office</h5>
@@ -63,10 +75,10 @@ class Contact extends React.Component {
                 <strong>email: </strong> support [AT] digitalbihar.com <br/>
                 </p>
               </div>
-            </Col>
-            <Col md={5}>
-               <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1860.764927101748!2d79.124592!3d21.131302!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaee006487af13f6e!2sMaster's+Software+Group!5e0!3m2!1sen!2sin!4v1438407555463" width="100%" height="500px" frameborder="0" allowfullscreen=""></iframe>
-            </Col>
+              </div>
+              </div>
+            </Col>  
+            <Col md={1}></Col>          
           </Row>
         </Grid>
         );

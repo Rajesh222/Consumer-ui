@@ -16,7 +16,7 @@ class Faq extends React.Component {
                         <h3 className="u-position-relative">GENERAL<div class="accordion__arrow" role="presentation"/></h3>
                     </AccordionItemTitle>
                     <AccordionItemBody>
-                        <strong>What are the advantages of purchasing a bus ticket with redBus?</strong>
+                        <strong>What are the advantages of purchasing a bus ticket with digital bihar?</strong>
                         <p> digital is India’s largest bus tickets company and therefore, you will find the largest option of bus seats on the site. Some of the advantages of dealing with us are: <br/> <br/>
                          -&nbsp;&nbsp;&nbsp; You can choose your seat<br/>
                          -&nbsp;&nbsp; &nbsp;You can book your bus tickets online, by phone, or in person<br/>
