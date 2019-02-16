@@ -9,7 +9,6 @@ import Logo from '../../../img/logo.png';
 class Header extends React.Component {
   constructor (props, context) {
     super(props, context);
-    console.log(this);
    // this.handleLogOut = this.handleLogOut.bind(this);
 }
   handleLogOut = ()=> {
@@ -19,7 +18,6 @@ class Header extends React.Component {
     Axios.put(`${baseUrl}${config.logOut}/${uid}`).then( (res) => {
       if(1) {
         localStorage.clear();
-        console.log('context: ', this)
         this.context.router.history.push('/login');
       }
     }

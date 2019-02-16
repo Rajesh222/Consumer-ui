@@ -24,7 +24,7 @@ export default class RootPage extends Component {
                   <h3>Top Bus Routes</h3>
                 </Col>
                 <Col xs={12}>
-                  <Table striped hover table table-condensed table-responsive="true">
+                  <Table hover responsive>
                     <thead>
                         <tr>
                             <th>Route</th>

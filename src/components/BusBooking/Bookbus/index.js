@@ -59,15 +59,11 @@ export default class Bookbus extends Component {
             providerId:  '1'
         }
         Axios.post(url, body).then((res) =>{
-            console.log(res)
             if(res.data.data.busSeatDetails !== null) {
                 this.setState({seatDetails: res.data.data.busSeatDetails}) 
-            }
-              
-            else {
+            }else {
                 showToastrOnSuccess(res.data.status.message);
             }
-            
         }).catch((error)=> {
             console.log(error);
         });

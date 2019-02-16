@@ -12,7 +12,7 @@ export default class Seat extends Component {
         const seatType = this.props.seatType || '';
 
         return (
-            <OverlayTrigger trigger="hover" placement="right" overlay={<Tooltip>
+            <OverlayTrigger trigger="focus" placement="right" overlay={<Tooltip id="seat">
                 <strong>Seat No:</strong> {seatDetail && seatDetail.seatNumber} | <strong>Fare:</strong> INR {seatDetail && seatDetail.seatNumber}
               </Tooltip >}>
             <div className={`seat ${selectedClass} ${seatType} ${hiddenSeat}`} data-value={seatDetail}

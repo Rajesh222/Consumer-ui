@@ -7,6 +7,7 @@
     border-radius: 4px;
     margin: 8px 0 2px 0;
     padding: 20px;
+    padding-bottom: 8px;
     .container {
         border-right: 2px #E3E6E6 solid;
         border-left: 2px #E3E6E6 solid;
@@ -17,11 +18,11 @@
     }
     .amenity-row {
         margin-top: 10px;
-        background-color: #EEEFFF;
+        background-color: #fafafa;
         padding: 10px;
         margin-left: -20px;
         margin-right: -20px;
-        font-size: 14px;
+        font-size: 10px;
         margin-bottom: -20px;
     }
    .btn,.btn:active,.btn:focus {
