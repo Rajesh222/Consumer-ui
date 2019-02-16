@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import "./index.scss";
-import {Grid, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Col, Row } from 'react-bootstrap';
+import {Grid, Form,Table, Col, Row } from 'react-bootstrap';
 
 
 
@@ -9,75 +9,18 @@ class NetBanking extends Component {
 
     render() {
         return (
-        <Grid>
+        <Grid>			
             <Row>
-               <Col xs={12} md={12}>
-               <form autocomplete="off" name="netbanking-form" method="post" action="/theia/payment/request/submit?MID=Paybus82610812744593&amp;ORDER_ID=7356560197&amp;route=" className="validated">
-                <input type="hidden" name="CSRF_PARAM" value=""/>
-                <input type="hidden" name="txnMode" value="NB"/>
-                <input type="hidden" name="channelId" value=""/>
-                <input type="hidden" name="AUTH_MODE" value="USRPWD"/>
-                <input type="hidden" name="bankCode" id="bankCode"/>
-                <input type="hidden" name="walletAmount" id="walletAmountNB" value="0"/>
-                <div id="popular-banks-wrapper">
-				<label className="mb10" for="submit-btn">SELECT FROM POPULAR BANKS</label>
-				<ul className="netbanking-panel pt20 pbanks grid banks-panel">						
-                    <li>
-                        <div id="ICICI" title="ICICI" className="radio">
-                            <input type="radio" className="bankRadio pcb checkbox fl" value="ICICI" data-bankid="8565557" name="bank" autocomplete="off"/>
-                            <span className="button-checkbox bootstrap-checkbox bankRadio pcb fl">
-                                <button type="button" className="btn-link">
-                                <span className="tick cb-icon-check"></span>
-                                <span className="tick cb-icon-check-empty"></span>
-                                </button>
-                            </span>
-                            <label className="fl">
-                                <span className="bank-logo" alt="ICICI"></span>
-                            </label>
-                        </div>
-                    </li>
-                    <li>
-                        <div id="SBI" title="SBI" class="radio">
-                            <input type="radio" className="bankRadio pcb checkbox fl" value="SBI" data-bankid="8565559" name="bank" autocomplete="off" />
-                            <span className="button-checkbox bootstrap-checkbox bankRadio pcb fl">
-                                <button type="button" className="btn-link">
-                                    <span className="tick cb-icon-check" ></span>
-                                    <span className="tick cb-icon-check-empty"></span>
-                                </button>
-                             </span>
-                            <label className="fl">
-                                <span className="bank-logo" alt="SBI"></span>
-                            </label>
-                        </div>
-                    </li>							
-                    <li>
-                        <div id="HDFC" title="HDFC" class="radio" >
-                            <input type="radio" class="bankRadio pcb checkbox fl" value="HDFC" data-bankid="8565560" name="bank" autocomplete="off" />
-                            <span className="button-checkbox bootstrap-checkbox bankRadio pcb fl">
-                            <button type="button" class="btn-link">
-                               <span class="tick cb-icon-check-empty"></span></button></span>
-                            <label className="fl">
-                                <span className="bank-logo" alt="HDFC" ></span>
-                            </label>
-                        </div>
-                    </li>
-					
-						</ul>
-				<div class="clear"></div>
-			</div>
-		
-			<div id="other-banks-wrapper">
-				<label className="mt20 mb10" for="submit-btn">
-					OR SELECT OTHER BANK
-				</label>
-				<div id="nbWrapper">
-                    <select className="nbSelect" id="nbSelect" data-size="5">
+			<form>
+				<div class="form-group">
+				<label for="sel1">Bank Name</label>
+					<select class="form-control" id="sel1" style={{ width: "400px"}}>     
 						<option value="-1">Select</option>
 						<option value="ICICI" data-bankid="8565557">ICICI Bank</option>
 						<option value="SBI" data-bankid="8565559">State Bank of India</option>
 						<option value="HDFC" data-bankid="8565560">HDFC Bank</option>
 						<option value="AXIS" data-bankid="8565566">Axis Bank</option>
-                        <option value="PNB" data-bankid="8565588">Punjab National Bank</option>
+						<option value="PNB" data-bankid="8565588">Punjab National Bank</option>
 						<option value="NKMB" data-bankid="8565585">Kotak Bank</option>
 						<option value="ANDB" data-bankid="8565565">Andhra Bank</option>
 						<option value="AAXISCORP" data-bankid="8566109">Axis Corporate</option>
@@ -124,26 +67,14 @@ class NetBanking extends Component {
 						<option value="TNMB" data-bankid="8565597">Tamilnad Mercantile Bank</option>
 						<option value="UNI" data-bankid="8565598">Union Bank of India</option>
 						<option value="USFB" data-bankid="8566013">Ujjivan Small Finance Bank</option>
-                        <option value="UBI" data-bankid="8565602">United Bank of India</option>
+						<option value="UBI" data-bankid="8565602">United Bank of India</option>
 						<option value="VJYA" data-bankid="8565600">Vijaya Bank</option>
 						<option value="YES" data-bankid="8565601">Yes Bank</option>
 						<option value="UCO" data-bankid="8565651">UCO Bank</option>
 						<option value="DBS" data-bankid="8565621">DBS BANK LTD</option>
 					</select>
-				</div>	
-			</div>
-			<div id="warningDiv" className="hide clear" >
-				<div id="errorMsg" className="mt10"></div>
-			</div>			
-			<div className="mt20 relative">
-				<div className="btn-submit  fl">
-					<button name="" type="submit" className="gry-btn blue-btn required btn-normal btn-submit" id="nbSubmit" data-txnmode="NB" onclick="pushGAData(this, 'pay_now_clicked')">Pay now</button>
-	           	</div>	           
-	           	<div className="clear"></div>
-	        </div>
-	       
-		</form>
-               </Col>
+				</div>
+				</form>
             </Row>
         </Grid>
         )
