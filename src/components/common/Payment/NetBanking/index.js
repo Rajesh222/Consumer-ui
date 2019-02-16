@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import "./index.scss";
-import {Grid, Form,Table, Col, Row } from 'react-bootstrap';
+import {Grid, Form,Button, Col, Row } from 'react-bootstrap';
 
 
 
@@ -11,7 +11,6 @@ class NetBanking extends Component {
         return (
         <Grid>			
             <Row>
-			  <form>
 				  <div className="netbanking">
 				  <h3 className="text-header">Popular banks </h3>
 				  <ul>					  
@@ -103,10 +102,14 @@ class NetBanking extends Component {
                         </select>
                     </td>
                   </tr>
-                </tbody></table>
+                  <tr>
+                    <td>                   <Button variant="primary" size="lg" className="paynow" style={{margin:10, textAlign:"center"}}> Pay now </Button>
+</td>
+                  </tr>
+                </tbody>
+                </table>
 				
 				</div>
-				</form>
             </Row>
         </Grid>
         )
