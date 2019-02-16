@@ -1,0 +1,68 @@
+.netbanking {
+    padding-left: 2px;
+    .text-header{
+        font-size: 13px;
+        font-weight: 700;
+        color: #555555;
+        margin-bottom: 15px;
+        margin-top: 5px;
+        display: block;
+    }
+    ul, li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: inline;
+    }    
+    ul li.bank1 label {
+        border: solid 1px #CCC;
+        width: 120px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        background: url(//static.abhibus.com/img/sprites-final1.png) no-repeat -137px -956px;
+        padding: 5px;
+        display: inline-block;
+    }
+    ul li.bank2 label {
+        border: solid 1px #CCC;
+        width: 120px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        background: url(//static.abhibus.com/img/sprites-final1.png) no-repeat -275px -957px;
+        padding: 5px;
+        display: inline-block;
+    }
+    ul li.bank3 label {
+        border: solid 1px #CCC;
+        width: 120px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        background: url(//static.abhibus.com/img/sprites-final1.png) no-repeat -682px -957px;
+        padding: 5px;
+        display: inline-block;
+    }
+    ul li.bank4 label {
+        border: solid 1px #CCC;
+        width: 120px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        background: url(//static.abhibus.com/img/sprites-final1.png) no-repeat -548px -957px;
+        padding: 5px;
+        display: inline-block;
+    }
+    ul li.bank5 label {
+        border: solid 1px #CCC;
+        width: 120px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        background: url(//static.abhibus.com/img/sprites-final1.png) no-repeat -407px -957px;
+        padding: 5px;
+        display: inline-block;
+    }
+    .dropdown_custom {
+        padding: 6px 54px 6px 10px;
+        border: solid 1px #bebebe;
+        background-color: #FFFFFF;
+        margin-top: 12px;
+    }
+}

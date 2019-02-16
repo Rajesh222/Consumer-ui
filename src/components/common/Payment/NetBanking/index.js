@@ -11,68 +11,100 @@ class NetBanking extends Component {
         return (
         <Grid>			
             <Row>
-			<form>
-				<div class="form-group">
-				<label for="sel1">Bank Name</label>
-					<select class="form-control" id="sel1" style={{ width: "400px"}}>     
-						<option value="-1">Select</option>
-						<option value="ICICI" data-bankid="8565557">ICICI Bank</option>
-						<option value="SBI" data-bankid="8565559">State Bank of India</option>
-						<option value="HDFC" data-bankid="8565560">HDFC Bank</option>
-						<option value="AXIS" data-bankid="8565566">Axis Bank</option>
-						<option value="PNB" data-bankid="8565588">Punjab National Bank</option>
-						<option value="NKMB" data-bankid="8565585">Kotak Bank</option>
-						<option value="ANDB" data-bankid="8565565">Andhra Bank</option>
-						<option value="AAXISCORP" data-bankid="8566109">Axis Corporate</option>
-						<option value="BBK" data-bankid="8565567">Bank of Bahrain and Kuwait</option>							
-						<option value="BBL" data-bankid="8565893">Bandhan Bank Ltd</option>							
-						<option value="BHARAT" data-bankid="8565738">Bharat Bank</option>
-						<option value="BOB" data-bankid="8565564">Bank of Baroda</option>
-						<option value="BOI" data-bankid="8565568">Bank of India</option>
-						<option value="BOM" data-bankid="8565569">Bank of Maharashtra</option>
-						<option value="AALDCORP" data-bankid="8566111">Allahabad Corporate</option>
-						<option value="ALH" data-bankid="8565576">Allahabad Bank</option>
-						<option value="CANARA" data-bankid="8565571">Canara Bank</option>
-						<option value="CSB" data-bankid="8565603">Catholic Syrian Bank</option>
-						<option value="CBI" data-bankid="8565616">Central Bank of India</option>
-						<option value="CITIUB" data-bankid="8565572">City Union Bank</option>
-						<option value="CORP" data-bankid="8565573">Corporation Bank</option>
-						<option value="COSMOS" data-bankid="8565628">Cosmos Bank</option>
-						<option value="DEUTS" data-bankid="8565574">Deutsche Bank</option>
-						<option value="FDEB" data-bankid="8565575">Federal Bank</option>
-						<option value="DCB" data-bankid="8565614">DCB Bank Ltd.</option>
-						<option value="DENA" data-bankid="8565705">Dena Bank</option>
-						<option value="DHAN" data-bankid="8565626">Dhanlaxmi Bank</option>
-						<option value="GPPB" data-bankid="8565818">Gopinath Patil Parsik Janata Sahakari Bank Ltd.</option>
-						<option value="IDBI" data-bankid="8565577">IDBI Bank</option>
-						<option value="IDFC" data-bankid="8565770">IDFC FIRST Bank</option>							
-						<option value="INDB" data-bankid="8565617">Indian Bank</option>							
-						<option value="IOB" data-bankid="8565578">Indian Overseas Bank</option>							
-						<option value="INDS" data-bankid="8565580">IndusInd Bank</option>							
-						<option value="JKB" data-bankid="8565582">Jammu and Kashmir Bank</option>						
-						<option value="JSB" data-bankid="8565758">Janata Sahakari Bank</option>							
-						<option value="KTKB" data-bankid="8565583">Karnataka Bank</option>							
-						<option value="KVB" data-bankid="8565584">Karur Vysya Bank</option>							
-						<option value="LVB" data-bankid="8565586">Lakhsmi Vilas Bank</option>							
-						<option value="OBPRF" data-bankid="8565587">Oriental Bank of Commerce</option>							
-						<option value="PMCB" data-bankid="8565858">Punjab &amp; Maharashtra Co-operative Bank Ltd</option>							
-						<option value="PSB" data-bankid="8565701">Punjab &amp; Sind Bank</option>							
-						<option value="RATN" data-bankid="8565615">RBL Bank</option>							
-						<option value="STB" data-bankid="8565662">Saraswat Co-operative Bank Ltd</option>
-						<option value="SIB" data-bankid="8565590">South Indian Bank</option>
-						<option value="SCB" data-bankid="8565591">Standard Chartered Bank</option>
-						<option value="SSFB" data-bankid="8566101">Suryoday Small Finance Bank</option>
-						<option value="SVC" data-bankid="8565742">SVC Cooperative Bank Ltd</option>
-						<option value="SYNBK" data-bankid="8565596">Syndicate Bank</option>
-						<option value="TNMB" data-bankid="8565597">Tamilnad Mercantile Bank</option>
-						<option value="UNI" data-bankid="8565598">Union Bank of India</option>
-						<option value="USFB" data-bankid="8566013">Ujjivan Small Finance Bank</option>
-						<option value="UBI" data-bankid="8565602">United Bank of India</option>
-						<option value="VJYA" data-bankid="8565600">Vijaya Bank</option>
-						<option value="YES" data-bankid="8565601">Yes Bank</option>
-						<option value="UCO" data-bankid="8565651">UCO Bank</option>
-						<option value="DBS" data-bankid="8565621">DBS BANK LTD</option>
-					</select>
+			  <form>
+				  <div className="netbanking">
+				  <h3 className="text-header">Popular banks </h3>
+				  <ul>					  
+					<li className="bank1">
+                      <label>
+                        <input name="major_nb" id="major_nb" type="radio" value="AXIB"/>
+                      </label>
+                    </li>                      
+					<li class="bank2">
+                      <label>
+                        <input name="major_nb" id="major_nb" type="radio" value="HDFB"/>
+                      </label>
+                    </li>                      
+					<li class="bank3">
+                      <label>
+                        <input name="major_nb" id="major_nb" type="radio" value="SBIB"/>
+                      </label>
+                    </li>                      
+					<li class="bank4">
+                      <label>
+                        <input name="major_nb" id="major_nb" type="radio" value="162B"/>
+                      </label>
+                    </li>                      
+					<li class="bank5">
+                      <label>
+                        <input name="major_nb" id="major_nb" type="radio" value="ICIB"/>
+                      </label>
+                    </li>
+                </ul>
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody><tr height="32">
+                    <td width="20%">Bank Name </td>
+                    <td width="80%">
+					<select name="nb_BankName" id="nb_BankName" className="dropdown_custom">
+                        <option value="">--Please select your bank --</option>
+                            <option value="NB_ALLB">Allahabad Bank</option>
+                            <option value="ADBB">Andhra Bank</option>
+                            <option value="AXIB">Axis Bank</option>
+                            <option value="NB_BBKM">Bank of Bahrain and Kuwait</option>
+                            <option value="NB_BOB">Bank of Baroda</option>
+                            <option value="NB_BOBCORP">Bank of Baroda Corporate</option>
+                            <option value="NB_BOI">Bank of India</option>
+                            <option value="NB_BOM">Bank of Maharashtra</option>
+                            <option value="CABB">Canara Bank</option>
+                            <option value="NB_CBI">Central Bank Of India</option>
+                            <option value="NB_CITI">Citi Bank NetBanking</option>
+                            <option value="CUBB">City Union Bank</option>
+                            <option value="NB_CORP">Corporation Bank</option>
+                            <option value="NB_COSMOS">Cosmos Bank</option>
+                            <option value="NB_DBS">DBS Bank Ltd</option>
+                            <option value="NB_DCB">DCB Bank</option>
+                            <option value="NB_DCBB">DCB BANK Business</option>
+                            <option value="NB_DEUT">Deutsche Bank</option>
+                            <option value="NB_FED">Federal Bank</option>
+                            <option value="HDFB">HDFC Bank</option>
+                            <option value="ICIB">ICICI Netbanking</option>
+                            <option value="NB_IDBI">IDBI Bank</option>
+                            <option value="IDFCNB">IDFC</option>
+                            <option value="INDB">Indian Bank</option>
+                            <option value="INOB">Indian Overseas Bank</option>
+                            <option value="INIB">IndusInd Bank</option>
+                            <option value="NB_JNK">Jammu and Kashmir Bank</option>
+                            <option value="NB_KARN">Karnataka Bank</option>
+                            <option value="NB_KVB">Karur Vysya Bank</option>
+                            <option value="162B">Kotak Bank</option>
+                            <option value="NB_LVB">Lakshmi Vilas Bank</option>
+                            <option value="OBCB">Oriental Bank of commerce</option>
+                            <option value="NB_PNJSB">Punjab and Sind Bank</option>
+                            <option value="NB_PNB">Punjab National Bank</option>
+                            <option value="NB_PNBCORP">Punjab National Bank CORPORATE</option>
+                            <option value="NBK_RBS_N">Royal Bank Of Scotland</option>
+                            <option value="NB_SARASB">Saraswat Bank</option>
+                            <option value="SVCNB">Shamrao Vithal Co-operative Bank Ltd</option>
+                            <option value="NBK_SIB_N">South Indian Bank</option>
+                            <option value="NB_SCB">Standard Chartered Bank</option>
+                            <option value="NB_SBBJ">State Bank of Bikaner and Jaipur</option>
+                            <option value="NB_SBH">State Bank of Hyderabad</option>
+                            <option value="SBIB">State Bank of India</option>
+                            <option value="NB_SBM">State Bank of Mysore</option>
+                            <option value="NB_SBP">State Bank of Patiala</option>
+                            <option value="NB_SBT">State Bank of Travancore</option>
+                            <option value="SYNDB">Syndicate Bank</option>
+                            <option value="TMBB">Tamilnad Mercantile Bank</option>
+                            <option value="UCOB">UCO Bank</option>
+                            <option value="UBIB">Union Bank Of India</option>
+                            <option value="UNIB">United Bank of India</option>
+                            <option value="VJYB">Vijaya Bank</option>
+                            <option value="YESB">Yes Bank</option>
+                        </select>
+                    </td>
+                  </tr>
+                </tbody></table>
+				
 				</div>
 				</form>
             </Row>
