@@ -31,7 +31,7 @@ class Header extends React.Component {
       <Navbar className="mynav">
           <Navbar.Header>
               <NavbarBrand>
-                <img src={Logo} className="img-resposive" width={100} height={50}/>
+                <img src={Logo} className="img-resposive" width={200} height={300} style={{height:70}}/>
             </NavbarBrand>
             <Navbar.Toggle/>
           </Navbar.Header>
