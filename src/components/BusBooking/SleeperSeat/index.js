@@ -11,7 +11,7 @@ export default class SleeperSeat extends Component {
         isSelected = selectedSeat && selectedSeat.includes(seatDetail.seatNumber);
         const selectedClass = isSelected ? 'selected' : ''
         return (
-            <OverlayTrigger trigger="focus" placement="right" overlay={<Tooltip id="sleaper">
+            <OverlayTrigger placement="right" overlay={<Tooltip id="sleaper">
               <strong>Seat No:</strong> {seatDetail && seatDetail.seatNumber} | <strong>Fare:</strong> INR {seatDetail && seatDetail.seatNumber}
           </Tooltip >}>
             <div className={`sleeper-seat ${selectedClass}`} data-value={seatDetail}
