@@ -209,7 +209,7 @@ export default class Dashboard extends Component {
             Axios.get(url).then((res)=> {
                 console.log(res)
                 if(res.data) {
-                this.setState({searchResult: res.data.data.filterRouteList, newSearch: res.data.data.filterRouteList})
+                this.setState({searchResult: res.data.data.availableRoutes, newSearch: res.data.data.availableRoutes})
                 }
             }).catch((error) => {
                 console.log(error);
