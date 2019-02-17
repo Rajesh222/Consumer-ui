@@ -56,7 +56,7 @@ class About extends React.Component {
                     </div>
                     <div className="media-body">
                         <h4 className="media-heading">Satyam Kumar <small><i>Chief Technology Officer (CTO)</i></small></h4>
-                        <p>Satyam Kumar serves as Chief Technology Officer for digital bihar India Pvt. Ltd. He is responsible
+                        <p>Satyam Kumar serves as Chief Technology Officer for digital bihar Pvt. Ltd. He is responsible
                         for defining an integral role in setting the company’s strategic direction, development and deploying the technology
                         future growth. At bigital bihar, he leads effective delivery 
                         of scalable systems to the customers, agents and bus operators by incorporating the latest technology.

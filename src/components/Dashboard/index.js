@@ -97,7 +97,7 @@ export default class RootPage extends Component {
                             <img src={VOLVO} className="img-responsive grayscale" style={{height:"100%"}}/>                          
                         </div>
                         <div className="panel-footer">
-                            <a id="btnvalvo" href="#">
+                            <a id="btnvalvo" href="/bus-booking">
                                 <span className="pull-left">View Details</span> 
                                 <span className="pull-right"><i className="fa fa-arrow-circle-right"></i></span>
                             </a>
@@ -114,7 +114,7 @@ export default class RootPage extends Component {
                             <img src={AC} className="img-responsive grayscale" style={{height:"100%"}}/>                          
                         </div>
                         <div className="panel-footer">
-                            <a id="btnvalvo" href="#">
+                            <a id="btnvalvo" href="/bus-booking">
                                 <span className="pull-left">View Details</span> 
                                 <span className="pull-right"><i className="fa fa-arrow-circle-right"></i></span>
                             </a>
@@ -130,7 +130,7 @@ export default class RootPage extends Component {
                             <img src={Delux} className="img-responsive grayscale" style={{height:"100%"}}/>                          
                         </div>
                         <div className="panel-footer">
-                            <a id="btnvalvo" href="#">
+                            <a id="btnvalvo" href="/bus-booking">
                                 <span className="pull-left">View Details</span> 
                                 <span className="pull-right"><i className="fa fa-arrow-circle-right"></i></span>
                             </a>
@@ -146,7 +146,7 @@ export default class RootPage extends Component {
                             <img src={O1} className="img-responsive grayscale" style={{height:"100%"}}/>                          
                         </div>
                         <div className="panel-footer">
-                            <a id="btnvalvo" href="#">
+                            <a id="btnvalvo" href="/bus-booking">
                                 <span className="pull-left">View Details</span> 
                                 <span className="pull-right"><i className="fa fa-arrow-circle-right"></i></span>
                             </a>
