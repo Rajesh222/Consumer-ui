@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./index.scss";
 import Header from '../Header';
 import Footer from '../Footer';
+import ScrollButton from '../ScrollButton';
 
 class Home extends React.Component {
  
@@ -11,9 +12,7 @@ class Home extends React.Component {
       <div>
         <Header/>
           {this.props.children}
-          <div>
-            <a href="#" id="toTop" style={{display:"inline"}}><span id="toTopHover"></span>To Top</a>
-          </div>
+          <ScrollButton scrollStepInPx="50" delayInMs="16.66"/>
         <Footer />
       </div>     
     );
