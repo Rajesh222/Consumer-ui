@@ -19,7 +19,7 @@ class Payment extends Component {
              
             <Row>
                 <Col xs={5}>
-                PAYMENT OPTIONS
+                Make Payment 
                 </Col>
                 <Col xs={7}>
                 <i className="fa fa-lock" aria-hidden="true" style={{fontSize:40}}> <span style={{fontSize:14}}>Safe &amp; secure Online Payments</span></i>
@@ -39,15 +39,15 @@ class Payment extends Component {
                     <NavItem eventKey="netbanking">
                         Net Banking
                     </NavItem>
-                    <NavItem eventKey="googlepay">
+                   <NavItem eventKey="googlepay">
                         Google Pay
                     </NavItem>
-                    <NavItem eventKey="phonepay">
+                    {/**  <NavItem eventKey="phonepay">
                         Phone Pay
                     </NavItem>
                     <NavItem eventKey="otherwallet">
                         Other Wallets
-                    </NavItem>
+                    </NavItem>*/}
                     <NavItem eventKey="upi">
                         UPI
                     </NavItem>

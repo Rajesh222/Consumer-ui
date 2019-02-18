@@ -9,7 +9,6 @@ import Logo from '../../../img/logo.png';
 class Header extends React.Component {
   constructor (props, context) {
     super(props, context);
-    console.log(this);
    // this.handleLogOut = this.handleLogOut.bind(this);
 }
   handleLogOut = ()=> {
@@ -19,7 +18,6 @@ class Header extends React.Component {
     Axios.put(`${baseUrl}${config.logOut}/${uid}`).then( (res) => {
       if(1) {
         localStorage.clear();
-        console.log('context: ', this)
         this.context.router.history.push('/login');
       }
     }
@@ -33,7 +31,7 @@ class Header extends React.Component {
       <Navbar className="mynav">
           <Navbar.Header>
               <NavbarBrand>
-                <img src={Logo} className="img-resposive" width={100} height={50}/>
+                <img src={Logo} className="img-resposive" width={200} height={300} style={{height:70}}/>
             </NavbarBrand>
             <Navbar.Toggle/>
           </Navbar.Header>
@@ -43,8 +41,8 @@ class Header extends React.Component {
               <NavItem eventKey={2} href="/about">About Us</NavItem>
               <NavDropdown eventKey={6} title="Services" id="id" className="navDropDown">
                   <MenuItem eventKey={6.1} href="/bus-booking">Bus Ticket</MenuItem>
-                  <MenuItem eventKey={6.2} href="/cab-booking">Cab Booking</MenuItem>
-                  <MenuItem eventKey={6.3} href="/hotel-booking">Hotal Booking</MenuItem>
+                  <MenuItem eventKey={6.2} href="/ticket-status">My Ticket</MenuItem>
+                  <MenuItem eventKey={6.3} href="/cancel-ticket">Cancel Ticket</MenuItem>
               </NavDropdown>
               {/* <NavItem eventKey={3} href="/privacypolicy">Privacy</NavItem>
               <NavItem eventKey={5} href="/faq"> FAQs </NavItem>  

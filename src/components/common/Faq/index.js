@@ -16,7 +16,7 @@ class Faq extends React.Component {
                         <h3 className="u-position-relative">GENERAL<div class="accordion__arrow" role="presentation"/></h3>
                     </AccordionItemTitle>
                     <AccordionItemBody>
-                        <strong>What are the advantages of purchasing a bus ticket with redBus?</strong>
+                        <strong>What are the advantages of purchasing a bus ticket with digital bihar?</strong>
                         <p> digital is India’s largest bus tickets company and therefore, you will find the largest option of bus seats on the site. Some of the advantages of dealing with us are: <br/> <br/>
                          -&nbsp;&nbsp;&nbsp; You can choose your seat<br/>
                          -&nbsp;&nbsp; &nbsp;You can book your bus tickets online, by phone, or in person<br/>
@@ -34,7 +34,7 @@ class Faq extends React.Component {
                     </AccordionItemTitle>
                     <AccordionItemBody>
                         <strong>Is it mandatory to take a printout of the ticket?</strong><br/><br/>
-                        <p> It depends on the bus operator you have booked your ticket with. Even mTickets are available on redBus. For operators that support mTickets, the SMS that is sent to your mobile can be produced at the time of boarding and you will be allowed to travel. </p>
+                        <p> It depends on the bus operator you have booked your ticket with. Even mTickets are available on digital bihar. For operators that support mTickets, the SMS that is sent to your mobile can be produced at the time of boarding and you will be allowed to travel. </p>
                         <p>For operators that do not support mTickets it is a must to take a printout of the e-ticket and produce it at the time of boarding. The e-ticket is sent to the e-mail ID provided at the time of boarding.</p>
                     </AccordionItemBody>
                 </AccordionItem>
@@ -73,9 +73,9 @@ class Faq extends React.Component {
                     </AccordionItemTitle>
                     <AccordionItemBody>
                       <strong> I missed the bus. Do I get a refund?<br/></strong>
-                      <p> digital bihar provides a 100% refund if the bus is missed due to either digtal bihar or its’ partner company's fault. However, if the bus is missed due to any other reason not directly related to redBus no refund is provided. <br/> <br/> </p>
+                      <p> digital bihar provides a 100% refund if the bus is missed due to either digtal bihar or its’ partner company's fault. However, if the bus is missed due to any other reason not directly related to digital bihar no refund is provided. <br/> <br/> </p>
                       <strong>How can I get a refund in case I cancel my ticket?</strong>
-                      <p> The refund is provided as per with our cancellation policy. The refund can be credited to the source of payment (Example: debit card, credit card, net banking) or credited to redBus wallet. Wallet credit can be used for bus booking in future (within 6 months of cancellation).<br/> </p>
+                      <p> The refund is provided as per with our cancellation policy. The refund can be credited to the source of payment (Example: debit card, credit card, net banking) or credited to digital bihar wallet. Wallet credit can be used for bus booking in future (within 6 months of cancellation).<br/> </p>
                      </AccordionItemBody>
                 </AccordionItem>
            </Accordion>

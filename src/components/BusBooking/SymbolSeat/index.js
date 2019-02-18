@@ -11,10 +11,7 @@ export default class SymbolSeat extends Component {
         const seatType = this.props.seatType;
 
         return (
-            <div className={`seat ${selectedClass} ${seatType}`} data-value={seatDetail} 
-                >
-
-            </div>
+            <div className={`seat ${selectedClass} ${seatType}`} data-value={seatDetail} />
         )
     }
 }

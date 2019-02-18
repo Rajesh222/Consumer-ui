@@ -33,9 +33,7 @@ export default class LowerSeat extends Component {
         }).sort(function(a, b){return a.column - b.column});
         const rowMiddle = row0.filter((seatDetail, index)=> {
             return row0.length !== index + 1;
-        });
-        console.log('rowMiddle: ', rowMiddle)
-        console.log('row2: ', row2)
+        });        
         return (
                 <div className="col-md-12 bus-detail">
                     <div className="row seat-row">

@@ -3,6 +3,10 @@ import CarouselPage from '../CarouselPage';
 import "./index.scss";
 import { Grid, Row,Col,Label, Input,Button, FormGroup, FormControl, Table } from "react-bootstrap";
 import Loader from '../common/Loader';
+import VOLVO from '../../img/bus/busvolvo1.jpg';
+import AC from '../../img/bus/busAc2.jpg';
+import Delux from '../../img/bus/busDelux1.jpg';
+import O1 from '../../img/bus/busO1.jpg';
 
 
 export default class RootPage extends Component {
@@ -15,12 +19,12 @@ export default class RootPage extends Component {
                     <CarouselPage />
                 </Col>
             </Row>
-            <Row>
+            <Row className="topbusroute">
                 <Col xs={12} >
                   <h3>Top Bus Routes</h3>
                 </Col>
                 <Col xs={12}>
-                  <Table striped bordered hover table table-condensed table-responsive>
+                  <Table hover responsive>
                     <thead>
                         <tr>
                             <th>Route</th>
@@ -78,21 +82,79 @@ export default class RootPage extends Component {
                 </Col>
             </Row>
             <Row>
-              <div className="testimonials">
-                <div className="q-left">“</div>
-                    <div className="q-mid">
-                        <p> Kudos to RTC for the initiative taken in providing Wi-fi internet facility in
-                            major Bus Stations. Frequent travelers like me are now able to use the waiting
-                                time productively. Request the RTC authorities to examine the possibility of
-                                providing this facility in all remaining major Bus Stations.
-                        </p>
-                        <div className="customer">
-                            Suresh<br/> <span>Marketing Executive</span>
+              <Row className="text-center" style={{marginTop:"75px",marginBottom:"15px"}}>
+                   <Col md={8}  className="col-md-offset-2">
+                     <h2>Our Bus Services</h2>
+                   </Col>
+              </Row>
+              <Row className="text-center">
+                  <Col md={3} sm={3}>                 
+                    <div className="panel panel-primary" style={{height: 302}}>
+                        <div className="panel-heading">
+                            <h4>VOLVO</h4>
                         </div>
-                    </div>
-                  
-                <div className="q-right"> ”</div>
-               </div>
+                        <div className="panel-body" style={{height:200}}>
+                            <img src={VOLVO} className="img-responsive grayscale" style={{height:"100%"}}/>                          
+                        </div>
+                        <div className="panel-footer">
+                            <a id="btnvalvo" href="/bus-booking">
+                                <span className="pull-left">View Details</span> 
+                                <span className="pull-right"><i className="fa fa-arrow-circle-right"></i></span>
+                            </a>
+                            <div className="clearfix"></div>
+                        </div>
+                    </div>                  
+                  </Col>
+                  <Col md={3} sm={3}>                 
+                    <div className="panel panel-primary" style={{height: 302}}>
+                        <div className="panel-heading">
+                            <h4>AC</h4>
+                        </div>
+                        <div className="panel-body" style={{height:200}}>
+                            <img src={AC} className="img-responsive grayscale" style={{height:"100%"}}/>                          
+                        </div>
+                        <div className="panel-footer">
+                            <a id="btnvalvo" href="/bus-booking">
+                                <span className="pull-left">View Details</span> 
+                                <span className="pull-right"><i className="fa fa-arrow-circle-right"></i></span>
+                            </a>
+                            <div className="clearfix"></div>
+                        </div> 
+                    </div>                  
+                  </Col><Col md={3} sm={3}>                 
+                    <div className="panel panel-primary" style={{height: 302}}>
+                        <div className="panel-heading">
+                            <h4>Non A/C</h4>
+                        </div>
+                        <div className="panel-body" style={{height:200}}>
+                            <img src={Delux} className="img-responsive grayscale" style={{height:"100%"}}/>                          
+                        </div>
+                        <div className="panel-footer">
+                            <a id="btnvalvo" href="/bus-booking">
+                                <span className="pull-left">View Details</span> 
+                                <span className="pull-right"><i className="fa fa-arrow-circle-right"></i></span>
+                            </a>
+                            <div className="clearfix"></div>
+                        </div>
+                    </div>                  
+                  </Col><Col md={3} sm={3}>                 
+                    <div className="panel panel-primary" style={{height: 302}}>
+                        <div className="panel-heading">
+                            <h4>SEMIDELUX</h4>
+                        </div>
+                        <div className="panel-body" style={{height:200}}>
+                            <img src={O1} className="img-responsive grayscale" style={{height:"100%"}}/>                          
+                        </div>
+                        <div className="panel-footer">
+                            <a id="btnvalvo" href="/bus-booking">
+                                <span className="pull-left">View Details</span> 
+                                <span className="pull-right"><i className="fa fa-arrow-circle-right"></i></span>
+                            </a>
+                            <div className="clearfix"></div>
+                        </div>
+                    </div>                  
+                  </Col>
+              </Row>
            </Row>   
         </Grid>
         );

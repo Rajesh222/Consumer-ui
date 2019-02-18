@@ -30,33 +30,33 @@ class About extends React.Component {
                <Col xs={12} sm={12} lg={12} md={12}>
                 <h3>Management Team  </h3>
                 <div className="media">
-                    <div class="media-left media-top">
-                        <Image src={ceoImg} circle class="media-object" width="80" />
+                    <div className="media-left media-top">
+                        <Image src={ceoImg} circle className="media-object" width="80" />
                     </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">Tej Narayan Shahu <small><i>Founder & Chief Executive Officer (CEO)</i></small></h4>   
+                    <div className="media-body">
+                        <h4 className="media-heading">Tej Narayan Shahu <small><i>Founder & Chief Executive Officer (CEO)</i></small></h4>   
                         <p>Tej Narayan Shahu has been Chief Executive Officer of digitalbihar since June 2014. Prior to digitalbihar. He’s also worked as General Manager of Marketing and Innovation at digitalbihar and has also had multiple roles across Marketing, Brand Management and Sales at Hindustan Unilever. Prakash has completed his MBA from IIM Calcutta and also holds an Honours degree in Production Engineering from Mumbai University.</p>
                         <p>Tej Narayan's vision is to reinvent bus travel in India through digitalbihar.com and in the process make the online portal the preferred choice for booking bus tickets where everyone admires the company for its performance, people and partnerships.</p>
                     </div>
                 </div>
                 <div className="media">
-                    <div class="media-left media-top">
-                        <Image src={ceoImg} circle class="media-object" width="80" />
+                    <div className="media-left media-top">
+                        <Image src={ceoImg} circle className="media-object" width="80" />
                     </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">Krishna Kumar <small><i>Chief Operating Officer & Chief Strategy Officer</i></small></h4>
+                    <div className="media-body">
+                        <h4 className="media-heading">Krishna Kumar <small><i>Chief Operating Officer & Chief Strategy Officer</i></small></h4>
                         <p>Krishna is the Chief Operating Officer & Chief Strategy Officer of Digital bihar Private limited. Krishna joined digital bihar in Jan 2019, prior to that he has expended over nearly two decades in the Indian B2B media industry at a leadership position as the Vice President of one of India’s largest publishing house.</p>
                         <p>Krishna brings in deep experience in business strategy, partnerships, sales & marketing and in running highly cost effective operations. Noted for a comprehensive, practical, management style focused on turnaround strategies and a stout boardroom presence, Biju Mathews is a growth oriented, focused leader with repeated success in sales & marketing, expanding service offerings, building shareholder value, driving vision and achieving critical strategic goals.</p>
                         <p>Currently as Chief Operating Office at Digital bihar, Krishna leads major functions like business development, sales, marketing and operations, Working closely with the board and top management, Krishna ensures that both long term and short term strategic goals are implemented seamlessly at digital bihar.</p>
                     </div>
                 </div>
                 <div className="media">
-                    <div class="media-left media-top">
-                        <Image src={ceoImg} circle class="media-object" width="80" />
+                    <div className="media-left media-top">
+                        <Image src={ceoImg} circle className="media-object" width="80" />
                     </div>
-                    <div class="media-body">
-                        <h4 class="media-heading">S Kumar <small><i>Chief Technology Officer (CTO)</i></small></h4>
-                        <p>S Kumar serves as Chief Technology Officer for digital bihar India Pvt. Ltd. He is responsible
+                    <div className="media-body">
+                        <h4 className="media-heading">Satyam Kumar <small><i>Chief Technology Officer (CTO)</i></small></h4>
+                        <p>Satyam Kumar serves as Chief Technology Officer for digital bihar Pvt. Ltd. He is responsible
                         for defining an integral role in setting the company’s strategic direction, development and deploying the technology
                         future growth. At bigital bihar, he leads effective delivery 
                         of scalable systems to the customers, agents and bus operators by incorporating the latest technology.
