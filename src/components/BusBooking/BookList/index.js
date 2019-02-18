@@ -95,10 +95,10 @@ export default class Bookbus extends Component {
                     <Col xs={6} md={4}>{destination}</Col>
                 </Row>
                 <Row className="amenity-row">
-                    <Col xs={6} md={2} style={{cursor:"pointer"}} onClick={this.handleReview}>Review</Col>
-                    <Col xs={6} md={3} style={{cursor:"pointer"}} onClick={this.handleBoardingDropping}>Boarding & Dropping Point</Col>
-                    <Col xs={6} md={2} style={{cursor:"pointer"}} onClick={this.handleCancelPolicy}>Cancellation Policy</Col>
-                    <Col xs={6} md={2} style={{cursor:"pointer"}} onClick={this.toggle}>Available Seats</Col>
+                    <Col xs={6} md={2} style={{cursor:"pointer"}} onClick={this.handleReview}><span>Review </span></Col>
+                    <Col xs={6} md={3} style={{cursor:"pointer"}} onClick={this.handleBoardingDropping}><span>Boarding & Dropping Point</span></Col>
+                    <Col xs={6} md={2} style={{cursor:"pointer"}} onClick={this.handleCancelPolicy}><span>Cancellation Policy</span></Col>
+                    <Col xs={6} md={2} style={{cursor:"pointer"}} onClick={this.toggle}><span>Available Seats</span></Col>
                 </Row>
 
                 <Collapsible collapse={this.state.collapse} seatDetails={this.state.seatDetails} metaData={this.state.metaData} cancellationPolicy={cancellationPolicy} collapseType={this.state.collapseType} />

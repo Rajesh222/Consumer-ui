@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
-import { Grid, Row, Col, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import "./index.scss";
 import LowerSeat from '../LowerSeat';
 import UpperSeat from '../UpperSeat';
-import Seat from '../Seat';
 import SymbolSeat from '../Seat';
 
 export default class Bus extends Component {
