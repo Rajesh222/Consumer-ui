@@ -28,9 +28,9 @@ class Footer extends React.Component {
                  <h4 className="heading">Product Services</h4>
                <Nav className="list-unstyled">
                   <NavItem href="/bus-booking">Bus Ticket</NavItem>
-                  <NavItem href="/cab-ticket">Cab Booking</NavItem>
-                  <NavItem href="/hotel-booking">Hotals Booking</NavItem>
-                  <NavItem href="https://www.icicilombard.com/" target="_blank">Agent Login</NavItem>
+                  <NavItem href="/ticket-status">Ticket Status</NavItem>
+                  <NavItem href="/cancel-ticket">Cancel Ticket</NavItem>
+                  <NavItem href="#" target="_blank">Agent Login</NavItem>
                 </Nav>                
             </Col>
             <div className="clearfix visible-xs"></div>
@@ -48,7 +48,8 @@ class Footer extends React.Component {
                  <Nav className="list-unstyled">
                    <NavItem href="/privacypolicy">Privacy Policy</NavItem>
                    <NavItem href="/termscondition">Terms & Conditions</NavItem>
-                   <NavItem href="/faq">Refund Policy</NavItem>                   
+                   <NavItem href="/faq">Refund Policy</NavItem> 
+                   <NavItem href="https://www.icicilombard.com/" target="_blank">Insurance Partner</NavItem>                  
                  </Nav>                
             </Col>
                
@@ -57,7 +58,7 @@ class Footer extends React.Component {
       <section className="copyright-box">
             <div className="container">
                <Row>
-                <p style={{textAlign:"center"}}><strong>Copyright &copy; {this.state.year}. All rights reserved</strong></p>
+                <p style={{textAlign:"center"}}><strong>Copyright &copy; {this.state.year} Digital Bihar Pvt Ltd. All rights reserved</strong></p>
              </Row>
             </div>
       </section>      
