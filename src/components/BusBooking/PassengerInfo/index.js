@@ -71,7 +71,14 @@ export default class PassengerInfo extends Component {
                             </Col> 
                         </Row>
                     </Col>
-                    <Col md={3}>AB</Col>
+                    <Col md={3}>
+                      <Row>
+                          <h6>Onward Journey Details</h6>
+                          <Col xs={12}>Delhi to Patna</Col>
+                          <p>on  21 February, 2019 at  21:00</p>
+                          <p>Boarding Point: <strong> Akshardham metro statos </strong></p>
+                      </Row>
+                    </Col>
                 </Row>
             </Grid>
             
