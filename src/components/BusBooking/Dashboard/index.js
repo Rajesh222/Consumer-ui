@@ -5,7 +5,7 @@ import './index.scss';
 import Axios from 'axios';
 import DatePicker from "react-datepicker";
 import config from '../../../config.js';
-import BookList from '../BookList';
+import BusList from '../BusList';
 import Filter from '../Filter';
 
 export default class Dashboard extends Component {
@@ -122,7 +122,7 @@ export default class Dashboard extends Component {
                         </Row>
                         {newSearch.map((item, index)=>{
                         return <div>
-                            <BookList key={index} busDetails={item} />
+                            <BusList key={index} busDetails={item} />
                         </div>     
                         })}
                     </Col>                      

@@ -7,11 +7,12 @@ import config from '../../../config.js';
 import { showToastrOnSuccess } from '../../../utils/common';
 
 
-export default class Bookbus extends Component {
+export default class BusList extends Component {
     constructor(props) {
         super(props);
         this.toggle = this.toggle.bind(this);
         this.handleReview = this.handleReview.bind(this);
+        this.handleAmenities = this.handleAmenities.bind(this);
         this.handleBoardingDropping = this.handleBoardingDropping.bind(this);
         this.handleCancelPolicy = this.handleCancelPolicy.bind(this);
         this.state = { collapse: false, seatDetails: [], metaData: {}, collapseType: 'seatDetail' }; 
@@ -73,6 +74,10 @@ export default class Bookbus extends Component {
      
     }
 
+    handleAmenities(){
+        this.setState({ collapse: !this.state.collapse, collapseType: 'Amenities' });
+    }
+
     render() {
         const { travelsName, source, destination, totalSeats, basefare, departureDate, arrivalDate, busType, fare, cancellationPolicy } = this.props.busDetails;
         const formatedDepartureDate = new Date(departureDate);
@@ -95,10 +100,11 @@ export default class Bookbus extends Component {
                     <Col xs={6} md={4}>{destination}</Col>
                 </Row>
                 <Row className="amenity-row">
-                    <Col xs={6} md={2} style={{cursor:"pointer"}} onClick={this.handleReview}><span>Review </span></Col>
-                    <Col xs={6} md={3} style={{cursor:"pointer"}} onClick={this.handleBoardingDropping}><span>Boarding & Dropping Point</span></Col>
-                    <Col xs={6} md={2} style={{cursor:"pointer"}} onClick={this.handleCancelPolicy}><span>Cancellation Policy</span></Col>
-                    <Col xs={6} md={2} style={{cursor:"pointer"}} onClick={this.toggle}><span>Available Seats</span></Col>
+                    <Col xs={3} md={2} style={{cursor:"pointer"}} onClick={this.handleReview}><span>Reviews </span></Col>
+                    <Col xs={3} md={2} style={{cursor:"pointer"}} onClick={this.handleAmenities}><span>Amenities </span></Col>
+                    <Col xs={3} md={3} style={{cursor:"pointer"}} onClick={this.handleBoardingDropping}><span>Boarding & Dropping Point</span></Col>
+                    <Col xs={3} md={2} style={{cursor:"pointer"}} onClick={this.handleCancelPolicy}><span>Cancellation Policy</span></Col>
+                    <Col xs={3} md={2} style={{cursor:"pointer"}} onClick={this.toggle}><span>Available Seats</span></Col>
                 </Row>
 
                 <Collapsible collapse={this.state.collapse} seatDetails={this.state.seatDetails} metaData={this.state.metaData} cancellationPolicy={cancellationPolicy} collapseType={this.state.collapseType} />
