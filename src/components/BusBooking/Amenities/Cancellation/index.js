@@ -10,7 +10,7 @@ export default class Cancellation extends Component {
         const cancellationPolicy = this.props.cancellationPolicy;
         return (
             <Grid>          
-                <Row className="cheader">
+                <Row>
                     <Col xs={6}>Departure Heading</Col>
                     <Col xs={6}>Policy Heading</Col>
                 </Row>
