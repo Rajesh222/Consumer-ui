@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row,Col } from 'react-bootstrap';
+import { Table, Row,Col } from 'react-bootstrap';
 import "./index.scss";
 
 
@@ -9,20 +9,24 @@ export default class Cancellation extends Component {
         console.log('', this.props.cancellationPolicy)
         const cancellationPolicy = this.props.cancellationPolicy;
         return (
-            <Grid>          
-                <Row>
-                    <Col xs={6}>Departure Heading</Col>
-                    <Col xs={6}>Policy Heading</Col>
-                </Row>
+             <Table striped bordered hover>
+                <thead>
+                    <tr>
+                        <th>Hours before Departure</th>
+                        <th>Refund Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
                 {cancellationPolicy && cancellationPolicy.map((item)=>{
                     return (
-                        <Row>
-                            <Col xs={6}>{item.departureheading}</Col>
-                            <Col xs={6}>{item.policyheading}</Col>
-                        </Row>
+                        <tr>
+                            <td>{item.departureheading}</td>
+                            <td>{item.policyheading}</td>
+                        </tr>
                     )
                 })}
-           </Grid>
+            </tbody>
+        </Table>
         )        
     }
 
