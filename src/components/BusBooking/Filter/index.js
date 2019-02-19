@@ -15,7 +15,7 @@ class Filter extends Component {
             <div className="filterColumn">
                 <h4 className="filterColumnHeader">Bus Type</h4>
                 { filterValue ? <FormGroup>
-                    <Checkbox checked={filterValue.includes("ac")} value="ac"
+                    <Checkbox checked={filterValue.includes("a/c")} value="a/c"
                     onChange={handleCheck}><span style={{marginLeft: 10, marginTop: 5}}>AC</span></Checkbox> 
                     <Checkbox checked={filterValue.includes("nonac")} value="nonac"
                     onChange={handleCheck}
