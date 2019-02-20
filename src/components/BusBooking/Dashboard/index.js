@@ -73,6 +73,7 @@ export default class Dashboard extends Component {
             const baseUrl= config.baseUrl;
             const source= this.state.selectedSource.value.toLowerCase();
             const dest= this.state.selectedDestination.value.toLowerCase();
+            this.state.searchDate=  this.state.searchDate.getFullYear() + '-' + (this.state.searchDate.getMonth()+1) + '-' + this.state.searchDate.getDate();
             const url = `${baseUrl}${config.searchRoute}/${source}/${dest}/${this.state.searchDate}`;
             Axios.get(url).then((res)=> {
                 console.log(res)
