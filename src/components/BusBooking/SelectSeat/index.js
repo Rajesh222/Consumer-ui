@@ -6,7 +6,6 @@ import "./index.scss";
 import LowerSeat from '../LowerSeat';
 import UpperSeat from '../UpperSeat';
 import SymbolSeat from '../SymbolSeat';
-
 export default class Bus extends Component {
     state = {
         seatNumber: '',
@@ -46,8 +45,8 @@ export default class Bus extends Component {
         this.setState({ selectedDroppingPoint });
     }
     render () {
-        const { seatDetails, metaData } = this.props
-        const { boardingPoints, droppingPoints } = metaData
+        const { seatDetails, boardingPoints, droppingPoints } = this.props
+        console.log(' this.props: ', this.props)
         const boardingOptions = boardingPoints && boardingPoints.map(item => ({ label: item.locationName, value: item.locationName }));
         const droppingOptions = droppingPoints && droppingPoints.map(item => ({ label: item.locationName, value: item.locationName }));
         const { selectedDroppingPoint, selectedBoardingPoint, selectedSeat } = this.state;

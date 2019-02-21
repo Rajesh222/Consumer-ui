@@ -6,8 +6,7 @@ import "./index.scss";
 export default class BoadingPoint extends Component {
 
     render() {
-        console.log('', this.props.cancellationPolicy)
-        const cancellationPolicy = this.props.cancellationPolicy;
+        console.log('proooooo: ', this.props)
         return (
              <Table striped bordered hover>
                 <thead>
@@ -17,14 +16,14 @@ export default class BoadingPoint extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                {cancellationPolicy && cancellationPolicy.map((item)=>{
+                {/* {cancellationPolicy && cancellationPolicy.map((item)=>{
                     return (
                         <tr>
                             <td>{item.departureheading}</td>
                             <td>{item.policyheading}</td>
                         </tr>
                     )
-                })}
+                })} */}
             </tbody>
         </Table>
         )        

@@ -15,7 +15,7 @@ export default class BusList extends Component {
         this.handleAmenities = this.handleAmenities.bind(this);
         this.handleBoardingDropping = this.handleBoardingDropping.bind(this);
         this.handleCancelPolicy = this.handleCancelPolicy.bind(this);
-        this.state = { collapse: false, seatDetails: [], metaData: {}, collapseType: 'seatDetail' }; 
+        this.state = { collapse: false, seatDetails: [], collapseType: 'seatDetail', boardingPoints: [], droppingPoints: [] }; 
     }
 
     handleCancelPolicy() {
@@ -33,35 +33,20 @@ export default class BusList extends Component {
     
     handleBoardingDropping() {
         this.setState({ collapse: !this.state.collapse, collapseType: 'boardingDropping' });
-        const busId = 1;
-        const baseUrl= config.baseUrl;
-        const searchDate = "2019-01-31";
-        const url = `${baseUrl}${config.searchTrip}`;
-        const body = {
-            journeyDate: searchDate,
-            operatorId: busId,
-            providerId:  '1'
-        }
-        Axios.post(url, body).then((res) =>{
-           this.setState({seatDetails: res.data.data.busSeatDetails}) 
-        }).catch((error)=> {
-            console.log(error);
-        });
     }
     toggle() {
         this.setState({ collapse: !this.state.collapse, collapseType: 'seatDetail' });
-        const busId = "BUS1";
+
         const baseUrl= config.baseUrl;
-        const searchDate = "2019-01-31";
         const url = `${baseUrl}${config.searchTrip}`;
         const body = {
-            journeyDate: searchDate,
-            operatorId: busId,
-            providerId:  '1'
+            operatorId: this.props.busDetails.operatorId,
+            providerId:  this.props.busDetails.providerId,
+            tripId: this.props.busDetails.tripid
         }
         Axios.post(url, body).then((res) =>{
             if(res.data.data.busSeatDetails !== null) {
-                this.setState({seatDetails: res.data.data.busSeatDetails}) 
+                this.setState({seatDetails: res.data.data.busSeatDetails, boardingPoints: res.data.data.boardingPoints, droppingPoints: res.data.data.droppingPoints}) 
             }else {
                 showToastrOnSuccess(res.data.status.message);
             }
@@ -79,7 +64,7 @@ export default class BusList extends Component {
     }
 
     render() {
-        const { travelsName, source, destination, totalSeats, basefare, departureDate, arrivalDate, busType, fare, cancellationPolicy } = this.props.busDetails;
+        const { travelsName, source, destination, totalSeats, basefare, departureDate, arrivalDate, busType, fare, cancellationPolicy, droppingLocations, boardingLocations } = this.props.busDetails;
         const formatedDepartureDate = new Date(departureDate);
         const formatedArrivalDate = new Date(arrivalDate);
         return (
@@ -104,10 +89,10 @@ export default class BusList extends Component {
                     <Col xs={3} md={2} style={{cursor:"pointer"}} onClick={this.handleAmenities}><span>Amenities </span></Col>
                     <Col xs={3} md={3} style={{cursor:"pointer"}} onClick={this.handleBoardingDropping}><span>Boarding & Dropping Point</span></Col>
                     <Col xs={3} md={2} style={{cursor:"pointer"}} onClick={this.handleCancelPolicy}><span>Cancellation Policy</span></Col>
-                    <Col xs={3} md={2} style={{cursor:"pointer"}} onClick={this.toggle}><span>Available Seats</span></Col>
                 </Row>
 
-                <Collapsible collapse={this.state.collapse} seatDetails={this.state.seatDetails} metaData={this.state.metaData} cancellationPolicy={cancellationPolicy} collapseType={this.state.collapseType} />
+                <Collapsible collapse={this.state.collapse} seatDetails={this.state.seatDetails}
+                 droppingPoints={this.state.droppingPoints} boardingPoints={this.state.boardingPoints} cancellationPolicy={cancellationPolicy} collapseType={this.state.collapseType} droppingLocations={droppingLocations} boardingLocations={boardingLocations}/>
         </div>
         )
     }

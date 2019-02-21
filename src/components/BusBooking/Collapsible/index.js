@@ -32,9 +32,9 @@ class Collapsible extends Component {
         <Collapse isOpen={this.props.collapse} onEntering={this.onPeninging} onEntered={this.onEntered}>
           <Card>
             <CardBody>
-             {collapseType === 'seatDetail' && <SelectSeat seatDetails={this.props.seatDetails} metaData={this.props.metaData}/>}
+             {collapseType === 'seatDetail' && <SelectSeat seatDetails={this.props.seatDetails}  droppingPoints={this.props.droppingPoints} boardingPoints={this.props.boardingPoints} />}
              {collapseType === 'policyDetail' && <Cancellation cancellationPolicy={cancellationPolicy} />}
-             {collapseType === 'boardingDropping' && <BoadingPoint />}
+             {collapseType === 'boardingDropping' && <BoadingPoint droppingPoints={this.props.droppingPoints} boardingPoints={this.props.boardingPoints} />}
              {collapseType === 'review' && <Review />}
              {collapseType === 'Amenities' && <Amenity />}
             </CardBody>
