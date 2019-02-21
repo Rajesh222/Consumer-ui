@@ -6,7 +6,7 @@ import "./index.scss";
 export default class BoadingPoint extends Component {
 
     render() {
-        console.log('proooooo: ', this.props)
+        console.log('proooooo: ', this.props.droppingLocations)
         const droppingLocations = this.props.droppingLocations;
         const boardingLocations = this.props.boardingLocations;
         return (
@@ -21,8 +21,8 @@ export default class BoadingPoint extends Component {
                  {droppingLocations && droppingLocations.map((item)=>{
                     return (
                         <tr>
-                            <td>{item.departureheading}</td>
-                            <td>{item.policyheading}</td>
+                            <td>{item.locationName}</td>
+                            <td>{item.locationName}</td>
                         </tr>
                     )
                 })} 
