@@ -20,15 +20,6 @@ export default class BusList extends Component {
 
     handleCancelPolicy() {
         this.setState({ collapse: !this.state.collapse, collapseType: 'policyDetail' });
-        // const busId = 1;
-        // const baseUrl= config.baseUrl;
-        // const searchDate = "2019-01-31";
-        // const url = `${baseUrl}${config.availableSeat}?busId=${busId}&date=${searchDate}`;
-        // Axios.post(url).then((res) =>{
-        //    this.setState({seatDetails: res.data.data.busSeatDetails}) 
-        // }).catch((error)=> {
-        //     console.log(error);
-        // });
     }
     
     handleBoardingDropping() {
