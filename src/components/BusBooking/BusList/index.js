@@ -42,8 +42,7 @@ export default class BusList extends Component {
         const body = {
             operatorId: this.props.busDetails.operatorId,
             providerId:  this.props.busDetails.providerId,
-            tripId: this.props.busDetails.tripid,
-            fare: this.props.busDetails.fares[0]
+            tripId: this.props.busDetails.tripid
         }
         Axios.post(url, body).then((res) =>{
             if(res.data.data.busSeatDetails !== null) {

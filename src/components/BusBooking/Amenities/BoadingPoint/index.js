@@ -7,6 +7,8 @@ export default class BoadingPoint extends Component {
 
     render() {
         console.log('proooooo: ', this.props)
+        const droppingLocations = this.props.droppingLocations;
+        const boardingLocations = this.props.boardingLocations;
         return (
              <Table striped bordered hover>
                 <thead>
@@ -16,14 +18,14 @@ export default class BoadingPoint extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                {/* {cancellationPolicy && cancellationPolicy.map((item)=>{
+                 {droppingLocations && droppingLocations.map((item)=>{
                     return (
                         <tr>
                             <td>{item.departureheading}</td>
                             <td>{item.policyheading}</td>
                         </tr>
                     )
-                })} */}
+                })} 
             </tbody>
         </Table>
         )        
