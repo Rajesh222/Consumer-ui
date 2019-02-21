@@ -6,7 +6,8 @@ import "./index.scss";
 import LowerSeat from '../LowerSeat';
 import UpperSeat from '../UpperSeat';
 import SymbolSeat from '../SymbolSeat';
-export default class Bus extends Component {
+
+export default class SelectSeat extends Component {
     state = {
         seatNumber: '',
         fare: 0,
@@ -125,6 +126,6 @@ export default class Bus extends Component {
     }
 }
 
-Bus.contextTypes = {
+SelectSeat.contextTypes = {
     router: PropTypes.object
-  };
+};
