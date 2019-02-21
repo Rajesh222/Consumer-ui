@@ -16,13 +16,12 @@ class Payment extends Component {
     return (
         <Grid className="paymentSection">
         <div className="payment-title">
-             
             <Row>
                 <Col xs={5}>
                 Make Payment 
                 </Col>
                 <Col xs={7}>
-                <i className="fa fa-lock" aria-hidden="true" style={{fontSize:40}}> <span style={{fontSize:14}}>Safe &amp; secure Online Payments</span></i>
+                   <i className="fa fa-lock" aria-hidden="true" style={{fontSize:40}}> <span style={{fontSize:14}}>Safe &amp; secure Online Payments</span></i>
                 </Col>
             </Row>         
         </div>
