@@ -13,7 +13,7 @@ export default class Seat extends Component {
 
         return (
             <OverlayTrigger placement="right" overlay={<Tooltip id="seat">
-                <strong>Seat No:</strong> {seatDetail && seatDetail.seatNumber} | <strong>Fare:</strong> INR {seatDetail && seatDetail.seatNumber}
+                <strong>Seat No:</strong> {seatDetail && seatDetail.seatNumber} | <strong>Fare:</strong> INR {seatDetail && seatDetail.fare}
               </Tooltip >}>
             <div className={`seat ${selectedClass} ${seatType} ${hiddenSeat}`} data-value={seatDetail}
                 onClick={() => handleSeatClick(seatDetail)}>

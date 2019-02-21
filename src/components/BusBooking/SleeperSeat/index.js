@@ -12,7 +12,7 @@ export default class SleeperSeat extends Component {
         const selectedClass = isSelected ? 'selected' : ''
         return (
             <OverlayTrigger placement="right" overlay={<Tooltip id="sleaper">
-              <strong>Seat No:</strong> {seatDetail && seatDetail.seatNumber} | <strong>Fare:</strong> INR {seatDetail && seatDetail.seatNumber}
+              <strong>Seat No:</strong> {seatDetail && seatDetail.seatNumber} | <strong>Fare:</strong> INR {seatDetail && seatDetail.fare}
           </Tooltip >}>
             <div className={`sleeper-seat ${selectedClass}`} data-value={seatDetail}
                 onClick={() => handleSeatClick(seatDetail)}>
