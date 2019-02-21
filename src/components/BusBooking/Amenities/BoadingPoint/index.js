@@ -11,8 +11,8 @@ export default class BoadingPoint extends Component {
              <Table striped bordered hover>
                 <thead>
                     <tr>
-                        <th>Hours before Departure</th>
-                        <th>Refund Percentage</th>
+                        <th>Boading Points</th>
+                        <th>Dropping Points</th>
                     </tr>
                 </thead>
                 <tbody>
