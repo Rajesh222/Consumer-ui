@@ -41,7 +41,7 @@ class Header extends React.Component {
               <NavItem eventKey={2} href="/about">About Us</NavItem>
               <NavDropdown eventKey={6} title="Services" id="id" className="navDropDown">
                   <MenuItem eventKey={6.1} href="/bus-booking">Bus Ticket</MenuItem>
-                  <MenuItem eventKey={6.2} href="/ticket-status">My Ticket</MenuItem>
+                  <MenuItem eventKey={6.2} href="/ticket-status">Print Ticket</MenuItem>
                   <MenuItem eventKey={6.3} href="/cancel-ticket">Cancel Ticket</MenuItem>
               </NavDropdown>
               {/* <NavItem eventKey={3} href="/privacypolicy">Privacy</NavItem>

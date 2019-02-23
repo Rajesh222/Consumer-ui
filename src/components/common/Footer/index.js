@@ -28,7 +28,7 @@ class Footer extends React.Component {
                  <h4 className="heading">Product Services</h4>
                <Nav className="list-unstyled">
                   <NavItem href="/bus-booking">Bus Ticket</NavItem>
-                  <NavItem href="/ticket-status">Ticket Status</NavItem>
+                  <NavItem href="/ticket-status">Print Ticket</NavItem>
                   <NavItem href="/cancel-ticket">Cancel Ticket</NavItem>
                   <NavItem href="#" target="_blank">Agent Login</NavItem>
                 </Nav>                
