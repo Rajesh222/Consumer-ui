@@ -108,10 +108,10 @@ export default class Dashboard extends Component {
                     </Col>
                 </Row>
                 {newSearch && newSearch.length > 0 ? <Row className="bus_pannel">
-                    <Col xs={3} className="left_pannel">
+                    <Col xs={12} sm={12} md={3} className="left_pannel">
                         <Filter handleCheck={this.handleCheck} filterValue={this.state.filterValue}/>
                     </Col >
-                    <Col xs={9} className="right_pannel">
+                    <Col xs={12} sm={12} md={9} className="right_pannel">
                         <Row className="businfo">
                             <Col xs={3} sm={3} lg={3} md={3}>Traveller</Col>
                             <Col xs={3} sm={3} lg={3} md={3}>Departure Time</Col>
