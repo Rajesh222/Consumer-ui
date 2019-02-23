@@ -38,11 +38,17 @@ class Header extends React.Component {
           <Navbar.Collapse>
             <Nav>
               <NavItem eventKey={1} href="/"> Home </NavItem>
-              <NavItem eventKey={2} href="/about">About Us</NavItem>
+              <NavItem eventKey={2} href="/bus-booking">Bus Ticket</NavItem>
+              <NavItem eventKey={2} href="/ticket-status">Print Ticket</NavItem>
+              <NavItem eventKey={2} href="/cancel-ticket">Cancel Ticket</NavItem>
               <NavDropdown eventKey={6} title="Services" id="id" className="navDropDown">
-                  <MenuItem eventKey={6.1} href="/bus-booking">Bus Ticket</MenuItem>
-                  <MenuItem eventKey={6.2} href="/ticket-status">Print Ticket</MenuItem>
-                  <MenuItem eventKey={6.3} href="/cancel-ticket">Cancel Ticket</MenuItem>
+                  <MenuItem eventKey={6.1} href="/contact-us">Software Development</MenuItem>
+                  <MenuItem eventKey={6.2} href="/contact-us">Web Design Development</MenuItem>
+                  <MenuItem eventKey={6.3} href="/contact-us">iPhone Application</MenuItem>
+                  <MenuItem eventKey={6.3} href="/contact-us">Web Hosting</MenuItem>
+                  <MenuItem eventKey={6.3} href="/contact-us">Domain Registration</MenuItem>
+                  <MenuItem eventKey={6.3} href="/contact-us">Bulk SMS Services</MenuItem>
+                  <MenuItem eventKey={6.3} href="/contact-us">Android Application</MenuItem>
               </NavDropdown>
               {/* <NavItem eventKey={3} href="/privacypolicy">Privacy</NavItem>
               <NavItem eventKey={5} href="/faq"> FAQs </NavItem>  
