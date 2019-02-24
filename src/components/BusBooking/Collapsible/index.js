@@ -9,28 +9,15 @@ import BoadingPoint from '../Amenities/BoadingPoint';
 class Collapsible extends Component {
   constructor(props) {
     super(props);
-    this.onPeninging = this.onOPeninging.bind(this);
-    this.onEntered = this.onEntered.bind(this);
-  }
-
-  onOPeninging() {
-    setTimeout(function() {
-      console.log("opening....")
-  }.bind(this), 1000) 
-  }
-
-  onEntered() {
-    setTimeout(function() {
-      console.log("opened....")
-  }.bind(this), 1000)   
+   
   }
 
   render() {
     const { cancellationPolicy, collapseType } = this.props;
     
     return (
-      <div style={{display:"flex",width:"100%"}}>
-        <Collapse isOpen={this.props.collapse} style={{width:"100%"}}>
+      <>
+        <Collapse isOpen={this.props.collapse} style={{width:"100%", marginTop:"30px"}}>
           <Card>
             <CardBody>
              {collapseType === 'seatDetail' && <SelectSeat seatDetails={this.props.seatDetails}  droppingPoints={this.props.droppingPoints} boardingPoints={this.props.boardingPoints} />}
@@ -41,7 +28,7 @@ class Collapsible extends Component {
             </CardBody>
           </Card>
         </Collapse>
-      </div>
+      </>
     );
   }
 }

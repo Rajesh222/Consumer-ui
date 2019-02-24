@@ -16,16 +16,16 @@
     .busrow-details {
         color: #7e7e8c;
     }
-    .amenity-row {
+    .searchBusTabs {
         margin-top: 10px;
         background-color: #fafafa;
         padding: 10px;
         margin-left: -20px;
         margin-right: -20px;
         font-size: 10px;
-        margin-bottom: -20px;
+        margin-bottom: -10px;
     }
-    .amenity-row:hover span {
+    .searchBusTabs:hover span {
         color: #00b9f5;
     }
    .btn,.btn:active,.btn:focus {
@@ -44,5 +44,7 @@
         font-weight: 600;
         color: #4a4a4a;
         margin-bottom: 20px;
+        padding: 15px 25px;
     }
+   
 }

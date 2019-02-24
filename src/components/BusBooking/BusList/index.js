@@ -75,16 +75,16 @@ export default class BusList extends Component {
                 <Col xs={6} md={3}>{source}</Col>
                 <Col xs={6} md={4}>{destination}</Col>
             </Row>
-            <Row className="amenity-row">
+            <Row className="searchBusTabs">
                 <Col xs={3} md={2} style={{cursor:"pointer"}} onClick={this.handleReview}><span>Reviews </span></Col>
                 <Col xs={3} md={2} style={{cursor:"pointer"}} onClick={this.handleAmenities}><span>Amenities </span></Col>
                 <Col xs={3} md={3} style={{cursor:"pointer"}} onClick={this.handleBoardingDropping}><span>Boarding & Dropping Point</span></Col>
                 <Col xs={3} md={2} style={{cursor:"pointer"}} onClick={this.handleCancelPolicy}><span>Cancellation Policy</span></Col>
             </Row>
-
             <Collapsible collapse={this.state.collapse} seatDetails={this.state.seatDetails}
                 droppingPoints={this.state.droppingPoints} boardingPoints={this.state.boardingPoints} cancellationPolicy={cancellationPolicy} collapseType={this.state.collapseType} droppingLocations={droppingLocations} boardingLocations={boardingLocations}/>
-        </div>
+        
+            </div>
         )
     }
 }

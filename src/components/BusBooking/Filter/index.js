@@ -41,24 +41,7 @@ class Filter extends Component {
                     <Checkbox checked={false} value="sleeper"><span style={{marginLeft: 10, marginTop: 5}}>Snacks</span></Checkbox> 
                  </FormGroup>
              </div>
-             <div className="filterColumn">
-                 <h4 className="filterColumnHeader"> Arrival Times</h4>
-                 <FormGroup>
-                    <span style={{marginLeft: 10, marginTop: 5}}>Before 6 am</span><br/>
-                    <span style={{marginLeft: 10, marginTop: 5}}>6 am to 12 pm</span><br/>
-                    <span style={{marginLeft: 10, marginTop: 5}}>12 pm to 6 pm</span> <br/>
-                    <span style={{marginLeft: 10, marginTop: 5}}>After 6 pm</span><br/>
-                </FormGroup>
-             </div>
-             <div className="filterColumn">
-                 <h4 className="filterColumnHeader">Departure Times</h4>
-                 <FormGroup>
-                    <span style={{marginLeft: 10, marginTop: 5}}>Before 6 am</span><br/>
-                    <span style={{marginLeft: 10, marginTop: 5}}>6 am to 12 pm</span><br/>
-                    <span style={{marginLeft: 10, marginTop: 5}}>12 pm to 6 pm</span> <br/>
-                    <span style={{marginLeft: 10, marginTop: 5}}>After 6 pm</span><br/>
-                </FormGroup>
-            </div>
+             
              </Row>
         </div>
     )

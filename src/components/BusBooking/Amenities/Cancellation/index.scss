@@ -1,4 +1,15 @@
-.cheader{
+.am_header{
+    font-size: 12px;
+    font-weight: 600;
+    color: #4a4a4a;
+}
+.am_header,.am_headerv{
     margin: 0;
     border-bottom: 1px solid #ebebeb;
+    div{
+        padding: 15px 30px;
+    }
+}
+.am_headerv_cal{
+    border-right: 1px solid #ebebeb;
 }

@@ -10,23 +10,34 @@ export default class BoadingPoint extends Component {
         const droppingLocations = this.props.droppingLocations;
         const boardingLocations = this.props.boardingLocations;
         return (
-                <Row className="rowBox"> 
-                    <Col md={6} lg={6} xs={6}>
-                    <div className="rowBoxHeader">Boarding Points</div>
-                    {boardingLocations && boardingLocations.map((item)=>{
-                            return (                   
-                                <p> {item.departureheading}</p>
+             <div className="rowBox">
+                <Row> 
+                    <Col md={6} lg={6} xs={6} className="rowCol">
+                         <div className="rowBoxHeader">Boarding Points</div>
+                       {boardingLocations && boardingLocations.map((item)=>{
+                            return (   
+                                <div className="_2MtA"> 
+                                   <div className="LETL">
+                                        <span className="_3flX"> {item.departureheading}</span>
+                                   </div>
+                                </div>                
                             )
                         })}
                     </Col>
-                    <Col md={6} lg={6} xs={6}><div className="rowBoxHeader">Dropping Points</div>
-                    {droppingLocations && droppingLocations.map((item)=>{
+                    <Col md={6} lg={6} xs={6}>
+                        <div className="rowBoxHeader">Dropping Points</div>
+                        {droppingLocations && droppingLocations.map((item)=>{
                             return (                   
-                                <p> {item.departureheading}</p>
+                                <div className="_2MtA"> 
+                                   <div className="LETL">
+                                        <span className="_3flX"> {item.departureheading}</span>
+                                   </div>
+                                </div>
                             )
                         })}
                     </Col>            
-             </Row>
+                </Row>
+             </div>
         )        
     }
 
