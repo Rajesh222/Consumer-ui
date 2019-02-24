@@ -11,10 +11,11 @@ export default class CancelTicket extends Component {
             <Grid>
             <Row>
                 <div className="custheader">
-                    <h4>CANCELLATION</h4>
-                    <p>Verify your details, and <span style={{color: "#da4d52;"}}>Cancel</span> your tickets</p>
+                    <h4>Cancel Ticket</h4>
+                    <p style={{color: "gray"}}>Verify your details, and <span style={{color: "#da4d52"}}>Cancel</span> your tickets</p>
 				 </div>
                <Form>
+                   <Col md={1} xs={1}></Col>
                    <Col md={4} lg={4} xs={12} >
                         <FormGroup row>
                             <Label for="ticket" sm={3} style={{fontWeight:"lighter"}}>Ticket No</Label>
@@ -31,7 +32,7 @@ export default class CancelTicket extends Component {
                             </Col>
                         </FormGroup>
                    </Col>
-                   <Col md={4} lg={4} xs={12} >
+                   <Col md={3} lg={3} xs={12} >
                             <Button bsStyle="primary" className="submitBtn"> Search </Button>
                             <Button bsStyle="primary" className="submitBtn"> Reset </Button>
                     </Col>                   
