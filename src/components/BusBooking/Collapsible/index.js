@@ -13,11 +13,10 @@ class Collapsible extends Component {
   }
 
   render() {
-    const { cancellationPolicy, collapseType } = this.props;
-    
+    const { cancellationPolicy, collapseType } = this.props;    
     return (
       <>
-        <Collapse isOpen={this.props.collapse} style={{width:"100%", marginTop:"30px"}}>
+        <Collapse isOpen={this.props.collapse} style={{width:"100%"}}>
           <Card>
             <CardBody>
              {collapseType === 'seatDetail' && <SelectSeat seatDetails={this.props.seatDetails}  droppingPoints={this.props.droppingPoints} boardingPoints={this.props.boardingPoints} />}
