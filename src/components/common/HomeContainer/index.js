@@ -9,12 +9,12 @@ class Home extends React.Component {
   render() {
    
     return (
-      <div>
+      <>
         <Header/>
           {this.props.children}
           <ScrollButton scrollStepInPx="50" delayInMs="16.66"/>
         <Footer />
-      </div>     
+      </>     
     );
   }
 }

@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Row, Col, Button, Image } from 'react-bootstrap';
+import { Grid, Row, Col } from 'react-bootstrap';
 import "./index.scss";
 import CareerImg from '../../../img/career.jpg';
 

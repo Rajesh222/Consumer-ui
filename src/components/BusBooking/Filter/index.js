@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import "./index.scss";
-import { Grid, Row, FormGroup, Checkbox} from 'react-bootstrap';
+import { Row, FormGroup, Checkbox} from 'react-bootstrap';
 
 
 class Filter extends Component {

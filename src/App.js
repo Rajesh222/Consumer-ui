@@ -29,11 +29,11 @@ class App extends Component {
   render() {
     return (
      <Router>
-       <div>
+       <>
          <Switch>
           <HomeContainer>
             <Route component={({ match }) =>
-              <div>
+              <>
                 <Route exact path="/" component={Dashboard} />
                 <Route path="/login" component={Login} />
                 <Route path="/signup" component={Register}/>
@@ -53,11 +53,11 @@ class App extends Component {
                 <Route path="/payment" component={Payment}/> 
                 <Route path="/ticket-status" component={TicketStatus}/> 
                 <Route path="/cancel-ticket" component={CancelTicket}/> 
-              </div>
+              </>
             }/>
           </HomeContainer>
           </Switch>
-       </div>
+       </>
      </Router>
     );
   }

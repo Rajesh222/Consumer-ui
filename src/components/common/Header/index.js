@@ -28,6 +28,7 @@ class Header extends React.Component {
   render() {
     const loginData = localStorage.getItem('loginData') && JSON.parse(localStorage.getItem('loginData')) ;
     return (
+      <header className="header">
       <Navbar className="mynav">
           <Navbar.Header>
               <NavbarBrand>
@@ -64,6 +65,7 @@ class Header extends React.Component {
           </Nav>}
        </Navbar.Collapse>
        </Navbar>
+       </header>
     );
   }
 }
