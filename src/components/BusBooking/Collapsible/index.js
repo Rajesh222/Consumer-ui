@@ -30,7 +30,7 @@ class Collapsible extends Component {
     
     return (
       <div style={{display:"flex",width:"100%"}}>
-        <Collapse isOpen={this.props.collapse} style={{width:"100%",marginTop:"12px"}}>
+        <Collapse isOpen={this.props.collapse} style={{width:"100%"}}>
           <Card>
             <CardBody>
              {collapseType === 'seatDetail' && <SelectSeat seatDetails={this.props.seatDetails}  droppingPoints={this.props.droppingPoints} boardingPoints={this.props.boardingPoints} />}
