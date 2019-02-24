@@ -6,7 +6,6 @@ import "./index.scss";
 export default class Cancellation extends Component {
 
     render() {
-        console.log('', this.props.cancellationPolicy)
         const cancellationPolicy = this.props.cancellationPolicy;
         return (
             <div className="rowBox">

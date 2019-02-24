@@ -11,7 +11,7 @@ export default class Review extends Component {
         return (
              <Grid>
                  <Row>
-                     <Col>
+                     <Col md={2} lg={2} xs={2}>
                         <h4>Overall Rating</h4>
                      </Col>
                  </Row>

@@ -82,7 +82,9 @@ export default class BusList extends Component {
                 <Col xs={3} md={2} style={{cursor:"pointer"}} onClick={this.handleCancelPolicy}><span>Cancellation Policy</span></Col>
             </Row>
             <Collapsible collapse={this.state.collapse} seatDetails={this.state.seatDetails}
-                droppingPoints={this.state.droppingPoints} boardingPoints={this.state.boardingPoints} cancellationPolicy={cancellationPolicy} collapseType={this.state.collapseType} droppingLocations={droppingLocations} boardingLocations={boardingLocations}/>
+                droppingPoints={this.state.droppingPoints} boardingPoints={this.state.boardingPoints}
+                cancellationPolicy={cancellationPolicy} collapseType={this.state.collapseType} 
+                droppingLocations={droppingLocations} boardingLocations={boardingLocations}/>
         
             </div>
         )
