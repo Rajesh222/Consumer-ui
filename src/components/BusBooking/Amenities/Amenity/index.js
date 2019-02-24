@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table, Row,Col } from 'react-bootstrap';
+import { Grid, Row,Col } from 'react-bootstrap';
 import "./index.scss";
 
 
@@ -9,24 +9,17 @@ export default class Amenity extends Component {
         console.log('', this.props.cancellationPolicy)
         const cancellationPolicy = this.props.cancellationPolicy;
         return (
-             <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>Hours before Departure</th>
-                        <th>Refund Percentage</th>
-                    </tr>
-                </thead>
-                <tbody>
+            <Grid>
                 {cancellationPolicy && cancellationPolicy.map((item)=>{
-                    return (
-                        <tr>
-                            <td>{item.departureheading}</td>
-                            <td>{item.policyheading}</td>
-                        </tr>
-                    )
-                })}
-            </tbody>
-        </Table>
+                return (
+                    <Row>
+                        <Col md={3} lg={3} xs={3}>{item.departureheading}</Col>
+                        <Col md={3} lg={3} xs={3}>{item.policyheading}</Col>
+                   </Row>
+                )
+            })}
+            
+        </Grid>
         )        
     }
 
