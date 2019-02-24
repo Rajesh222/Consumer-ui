@@ -46,7 +46,7 @@ export default class BusList extends Component {
         });
     }
     handleReview() {
-        this.setState({ collapse: true });
+        this.setState({ collapse: true , collapseType:'review'});
      
     }
 
