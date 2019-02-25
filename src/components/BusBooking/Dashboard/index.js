@@ -41,6 +41,7 @@ export default class Dashboard extends Component {
         if (filterValue.length === 0) {
             newSearch = searchResult;
         }
+        console.log('newSearch: ',newSearch)
         this.setState({ newSearch });
     }
 
