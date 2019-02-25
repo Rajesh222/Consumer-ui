@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Select from 'react-select';
 import { Grid, Row, Col, Button } from 'react-bootstrap';
 import "./index.scss";
+import Traveller from '../PassengerInfo/TravellerForm';
 
 export default class PassengerInfo extends Component {
    
@@ -18,25 +19,8 @@ export default class PassengerInfo extends Component {
                                 <h4>Traveller Information</h4>
                             </Col>
                         </Row>
-                        <Row style={{marginTop:20}}>                             
-                            <Col md={4} lg={4} xs={4}>
-                                <input placeholder="First Name" class="form-control input-sm"/>
-                            </Col>
-                            <Col md={3} lg={3} xs={3}>
-                                <input placeholder="Last Name" class="form-control input-sm" />
-                            </Col>
-                            <Col md={3} lg={3} xs={3}>
-                                <input type="number" placeholder="Age" class="form-control input-sm" />
-                            </Col>  
-                            <Col md={2} lg={2} xs={2}>
-                                <select name="" className="form-control input-sm" id="sel1">
-                                    <option value="">Gender</option>
-                                    <option value="M">Male</option>
-                                    <option value="F">Female</option>
-                                    <option value="T">Transgender</option>
-                                </select>
-                            </Col>
-                        </Row>
+                        <Traveller></Traveller>
+                        <Traveller></Traveller>
                         <Row style={{marginLeft:0, marginTop: 20, fontWeight:"bolder"}}>
                            <h5 style={{fontWeight:"600"}}>Contact Details  <span style={{color:"#949494",fontSize:"12px",lineHeight:"12px",backgroundColor:"#fff181"}}>(Your booking details will be sent to your email address and contact no. )</span></h5>
                         </Row>
