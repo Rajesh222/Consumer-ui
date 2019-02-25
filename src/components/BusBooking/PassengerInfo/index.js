@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
-import { Grid, Row, Col, Form } from 'react-bootstrap';
+import { Grid, Row, Col, Button } from 'react-bootstrap';
 import "./index.scss";
 
 export default class PassengerInfo extends Component {
    
+    handlePayment = ()=> {
+        console.log("continue................")
+    }
     render () {
         return (
             <Grid>
                 <Row>
-                <Col md={9} className="passenger-info">
-                        <Row className="header-tab">
+                   <Col md={9} lg={9} xs={9} sm={12} className="passenger-info">
+                       <Row className="header-tab">
                             <Col md={4}>
-                                <h4>Passenger Information</h4>
+                                <h4>Traveller Information</h4>
                             </Col>
                         </Row>
                         <Row style={{marginTop:20}}>                             
@@ -50,49 +53,32 @@ export default class PassengerInfo extends Component {
                             <div className="radio">
                                 <label> <input type="radio" name="optradio" checked/>Yes, secure my trip with insurance. I agree to the 
                                   <a style={{color:"deeppink"}} href="insurance-terms.html" target="_blank"> Terms and Conditions</a></label>
+                            </div>                                 
+                            </Col>
+                            <Col md={12} lg={12} xs={12}>
+                            <div className="radio">
+                                <label> <input type="radio" name="optradio1" checked/>I agree to all the <a href="tandc" target="_blank" rel="noopener noreferrer"> Terms and Conditions</a></label>
                             </div>
-                                 
                             </Col>
                         </Row>
                     </Col>
-                    
-                    <Col md={9} className="passenger-info">
-                        <Row className="header-tab">
-                            <Col md={4}>
-                                <h4>Passenger Information</h4>
-                            </Col>
-                        </Row>
-                        <Row style={{marginTop:20}}> 
-                            <Col md={4}>
-                                <input placeholder="First Name" />
-                            </Col>
-                            <Col md={4}>
-                                <input placeholder="Last Name" />
-                            </Col>
-                            <Col md={4}>
-                                <input type="number" placeholder="Age" />
-                            </Col>  
-                        </Row>
-                        <Row style={{marginLeft:0, marginTop: 20, fontWeight:"bolder"}}>
-                            <h5>Contact Information</h5>
-                            <h6>Your ticket and PNR Info will be sent to these.</h6>
-                        </Row>
-                        <Row style={{marginBottom:20}}> 
-                            <Col md={4}>
-                                <input type="email" placeholder="Email ID" />
-                            </Col>
-                            <Col md={4}>
-                                <input type="number" placeholder="Mobile Number" />
-                            </Col> 
-                        </Row>
-                    </Col>
-                    <Col md={3}>
-                      <Row>
-                          <h6>Onward Journey Details</h6>
-                          <Col xs={12}>Delhi to Patna</Col>
-                          <p>on  21 February, 2019 at  21:00</p>
-                          <p>Boarding Point: <strong> Akshardham metro statos </strong></p>
-                      </Row>
+                    <Col xs={3} md={3} sm={12} lg={3}>
+                      <div className="rowBox" style={{padding: "20px"}}>
+                        <h4 style={{fontWeight:"400"}}>Fare Details</h4>
+                        <div style={{borderBottom:"1px solid #ebebeb",padding:"15px 5px",fontSize:"14px",color:"#4a4a4a"}}>
+                          <h4 style={{marginBottom:"7px", fontSize:"15px", fontWeight:"600 "}}>ONWARD FARE</h4>
+                           <div style={{marginBottom:"14px"}}>Fare : <span style={{fontSize:"1.8rem",fontWeight:"600",float:"right",verticalAlign:"middle"}}><span>₹ </span>5000</span></div>
+                        </div>
+                        <div style={{borderBottom:"1px solid #ebebeb",padding:"15px 5px",fontSize:"14px",color:"#4a4a4a"}}>
+                           <div style={{marginBottom:"14px"}}>Insurance <span style={{fontSize:"1.8rem",fontWeight:"600",float:"right",verticalAlign:"middle"}}><span>₹ </span>120</span></div>
+                        </div>
+                        <div style={{borderBottom:"1px solid #ebebeb",padding:"15px 5px",fontSize:"14px",color:"#4a4a4a",backgroundColor:"#f5f5f5"}}>
+                           <div style={{marginBottom:"14px"}}>Total: <span style={{fontSize:"1.8rem",fontWeight:"600",float:"right",verticalAlign:"middle"}}><span>₹ </span>5000</span></div>
+                        </div>
+                        <div>
+                        <Button className="submitBtn" style={{marginTop:"15px",width:"220px"}} onClick={this.handlePayment} type="submit">Processed to pay</Button>
+                        </div>
+                      </div>
                     </Col>
                 </Row>
             </Grid>

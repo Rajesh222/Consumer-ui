@@ -58,7 +58,6 @@ export default class BusList extends Component {
         const { travelsName, source, destination, totalSeats, basefare, departureDate, arrivalDate, busType, fares, cancellationPolicy, droppingLocations, boardingLocations } = this.props.busDetails;
         const formatedDepartureDate = new Date(departureDate);
         const formatedArrivalDate = new Date(arrivalDate);
-        console.log("::::",droppingLocations, boardingLocations)
         return (
         <div className="bus">
             <Row>
