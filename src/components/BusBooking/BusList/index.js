@@ -55,10 +55,10 @@ export default class BusList extends Component {
     }
 
     render() {
-        const { travelsName, source, destination, totalSeats, basefare, departureDate, arrivalDate, busType, fare, cancellationPolicy, droppingLocations, boardingLocations } = this.props.busDetails;
+        const { travelsName, source, destination, totalSeats, basefare, departureDate, arrivalDate, busType, fares, cancellationPolicy, droppingLocations, boardingLocations } = this.props.busDetails;
         const formatedDepartureDate = new Date(departureDate);
         const formatedArrivalDate = new Date(arrivalDate);
-        console.log("::::",fare)
+        console.log("::::",fares)
         return (
         <div className="bus">
             <Row>
@@ -66,7 +66,7 @@ export default class BusList extends Component {
                 <Col xs={6} md={2}>{`${formatedDepartureDate.getHours()} : ${formatedDepartureDate.getMinutes()}`}</Col>
                 <Col xs={6} md={1}><span className="glyphicon glyphicon-arrow-right"></span></Col>
                 <Col xs={6} md={2}>{`${formatedArrivalDate.getHours()} : ${formatedArrivalDate.getMinutes()}`}</Col>
-                <Col xs={6} md={2}>Starting from <br/>{fare}</Col>
+                <Col xs={6} md={2}>Starting from <br/>{fares[0]}</Col>
                 <Col xs={6} md={2}>
                     <Button bsStyle="primary" bsSize="sm" onClick={this.toggle}> Select Seats</Button>
                 </Col>
