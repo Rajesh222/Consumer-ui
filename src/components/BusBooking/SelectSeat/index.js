@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
-import { Button } from 'react-bootstrap';
+import { Button,Row,Col } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import "./index.scss";
 import LowerSeat from '../LowerSeat';
@@ -47,7 +47,6 @@ export default class SelectSeat extends Component {
     }
     render () {
         const { seatDetails, boardingPoints, droppingPoints } = this.props
-        console.log(' this.props: ', this.props)
         const boardingOptions = boardingPoints && boardingPoints.map(item => ({ label: item.locationName, value: item.locationName }));
         const droppingOptions = droppingPoints && droppingPoints.map(item => ({ label: item.locationName, value: item.locationName }));
         const { selectedDroppingPoint, selectedBoardingPoint, selectedSeat } = this.state;
@@ -59,35 +58,43 @@ export default class SelectSeat extends Component {
         });
         return (
             <div className="bus-collapse">
-                <div className="row">
-                    <div className="col-md-7">
+                <Row>
+                    <Col md={7} lg={7} xs={7} sm={7}>
                         {lowerBerth.length ?<LowerSeat handleSeatClick={this.handleSeatClick} lowerBerth={lowerBerth} selectedSeat={this.state.selectedSeat}/>:<div></div>}
                         {
                         upperBerth.length ?<UpperSeat selectedSeat={this.state.selectedSeat} handleSeatClick={this.handleSeatClick} upperBerth={upperBerth}/>
                         : <div></div>
                         }
-                        <div className="col-md-12 seat-sign">
+                        <Col md={12}  className="seat-sign">
                             <SymbolSeat seatType="occupied" handleSeatClick={()=> false} /> <span style={{marginRight:5}}>Occupied</span> <SymbolSeat handleSeatClick={()=> false} /> <span style={{marginRight:5}}>Available</span> 
                             <SymbolSeat seatType="selected" handleSeatClick={()=> false} /> <span>Selected</span> <SymbolSeat seatType="reserved-by-lady" handleSeatClick={()=> false} /> <span style={{marginRight: 5}}>Booked By Ladies</span> <SymbolSeat seatType="reserved-for-lady" handleSeatClick={()=> false} /><span style={{marginRight: 5}}> Reserved for Ladies</span>
-                        </div>
-                    </div>
-                    <div className="col-md-5">
-                        {selectedSeat.length ? <div className="col-md-12">
-                            <div className="col-md-12"> Seats : {selectedSeat && selectedSeat.map((selected, index)=>{
-                                const last = selectedSeat.length - 1 === index;
-                                const separator = last ? '' : ', ';
-                                return <span key={selected} style={{fontWeight : 600, float: "right"}}>{`${separator} ${selected}`}</span>
-                            })} 
-                            </div>
-                            <div className="col-md-12">
-                                Fare : <span style={{fontWeight : 600, float: "right"}}>{this.state.fare}</span>
-                            </div>
-                            <div className="col-md-12 total">
-                                Total : <span style={{fontWeight : 600, float: "right"}}>{this.state.total}</span>
-                            </div>
-                            </div> : <div className="col-md-12">Please select seat(s), boarding & dropping points to continue</div>}
+                        </Col>
+                    </Col>
+                    <Col md={5} lg={5} xs={5} sm={5}>
+                        <div className="aGYy">
+                        {selectedSeat.length ? <>
+                             <Row style={{margin: "15px 0"}}>
+                               <Col md={4} lg={4} sm={4} xs={4}> Seat(s) :</Col> 
+                               <Col md={8} lg={8} sm={8} xs={8} style={{fontWeight : 600, textAlign: "right",color: "#000"}}>
+                                   {selectedSeat && selectedSeat.map((selected, index)=>{
+                                    const last = selectedSeat.length - 1 === index;
+                                    console.log("Last   :: ",last)
+                                    const separator = last ? '' : ', ';
+                                    return <>{`${separator} ${selected}`}</>
+                                 })} 
+                            </Col>
+                            </Row>
+                            <Row style={{margin: "15px 0"}}>
+                                <Col md={4} lg={4} sm={4} xs={4}>Fare :</Col>
+                                <Col md={8} lg={8} sm={8} xs={8} style={{fontWeight : 600, textAlign: "right",color: "#000"}}>{this.state.fare}</Col>
+                            </Row>
+                            <Row style={{margin: "15px 0"}}>
+                                <Col md={4} lg={4} sm={4} xs={4}>Total :</Col>
+                                <Col md={8} lg={8} sm={8} xs={8} style={{fontWeight : 600, textAlign: "right",color: "#000"}}>{this.state.total}</Col>
+                            </Row>                           
+                            </> : <div className="col-md-12">Please select seat(s), boarding & dropping points to continue</div>}
                             
-                        <div className="col-md-12">
+                       
                             <div className="boarding-point">
                                 <Select
                                     value={selectedBoardingPoint}
@@ -107,19 +114,17 @@ export default class SelectSeat extends Component {
                                 >
                                 </Select>
                             </div>
+                            <Button
+                                block
+                                bsStyle="primary"
+                                onClick={this.handleContinue}
+                                type="submit"
+                                >
+                                        Continue
+                            </Button>
                         </div>
-                        <div className="col-md-12">
-                        <Button
-                            block
-                            bsStyle="primary"
-                            onClick={this.handleContinue}
-                            type="submit"
-                            >
-                                    Continue
-                        </Button>
-                        </div>
-                    </div>  
-                </div> 
+                    </Col>  
+                </Row> 
             </div>
             
         )
