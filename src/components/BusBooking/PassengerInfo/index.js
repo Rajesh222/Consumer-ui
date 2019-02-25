@@ -22,7 +22,7 @@ export default class PassengerInfo extends Component {
                         <Traveller></Traveller>
                         <Traveller></Traveller>
                         <Row style={{marginLeft:0, marginTop: 20, fontWeight:"bolder"}}>
-                           <h5 style={{fontWeight:"600"}}>Contact Details  <span style={{color:"#949494",fontSize:"12px",lineHeight:"12px",backgroundColor:"#fff181"}}>(Your booking details will be sent to your email address and contact no. )</span></h5>
+                           <h5 style={{fontWeight:"600"}}>Contact Details  <span style={{color:"#949494",fontSize:"12px",lineHeight:"12px"}}>(Your booking details will be sent to your email address and contact no. )</span></h5>
                         </Row>
                         <Row style={{marginBottom:20}}> 
                             <Col md={4}>
@@ -41,7 +41,7 @@ export default class PassengerInfo extends Component {
                             </Col>
                             <Col md={12} lg={12} xs={12}>
                             <div className="radio">
-                                <label> <input type="radio" name="optradio1" checked/>I agree to all the <a href="tandc" target="_blank" rel="noopener noreferrer"> Terms and Conditions</a></label>
+                                <label> <input type="radio" name="optradio1" checked/>I agree to all the <a href="termscondition" style={{color:"deeppink"}} target="_blank" rel="noopener noreferrer"> Terms and Conditions</a></label>
                             </div>
                             </Col>
                         </Row>
