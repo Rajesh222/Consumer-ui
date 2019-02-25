@@ -6,6 +6,7 @@ import { faIgloo } from '@fortawesome/free-solid-svg-icons'
 import 'react-accessible-accordion/dist/fancy-example.css';
 import "react-datepicker/dist/react-datepicker.css";
 import 'toastr/build/toastr.min.css';
+//import 'bootstrap/dist/css/bootstrap.css';
 
 import $ from 'jquery';
 import Popper from 'popper.js';

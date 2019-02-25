@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
-import { Grid, Row, Col } from 'react-bootstrap';
-
+import { Grid, Row, Col, Form } from 'react-bootstrap';
 import "./index.scss";
 
 export default class PassengerInfo extends Component {
@@ -16,16 +15,24 @@ export default class PassengerInfo extends Component {
                                 <h4>Passenger Information</h4>
                             </Col>
                         </Row>
-                        <Row style={{marginTop:20}}> 
-                            <Col md={4}>
-                                <input placeholder="First Name" />
+                        <Row style={{marginTop:20}}>                             
+                            <Col md={4} lg={4} xs={4}>
+                                <input placeholder="First Name" class="form-control"/>
                             </Col>
-                            <Col md={4}>
-                                <input placeholder="Last Name" />
+                            <Col md={3} lg={3} xs={3}>
+                                <input placeholder="Last Name" class="form-control" />
                             </Col>
-                            <Col md={4}>
-                                <input type="number" placeholder="Age" />
+                            <Col md={3} lg={3} xs={3}>
+                                <input type="number" placeholder="Age" class="form-control" />
                             </Col>  
+                            <Col md={2} lg={2} xs={2}>
+                                <select name="" style={{height:"30px"}} className="form-control" id="sel1">
+                                    <option value="">Gender</option>
+                                    <option value="M">Male</option>
+                                    <option value="F">Female</option>
+                                    <option value="T">Transgender</option>
+                                </select>
+                            </Col>
                         </Row>
                         <Row style={{marginLeft:0, marginTop: 20, fontWeight:"bolder"}}>
                             <h5>Contact Information</h5>
@@ -33,10 +40,10 @@ export default class PassengerInfo extends Component {
                         </Row>
                         <Row style={{marginBottom:20}}> 
                             <Col md={4}>
-                                <input type="email" placeholder="Email ID" />
+                                <input type="email" placeholder="Email ID" class="form-control"/>
                             </Col>
                             <Col md={4}>
-                                <input type="number" placeholder="Mobile Number" />
+                                <input type="number" placeholder="Mobile Number" class="form-control"/>
                             </Col> 
                         </Row>
                     </Col>
