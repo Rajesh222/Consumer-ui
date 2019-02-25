@@ -17,16 +17,16 @@ export default class PassengerInfo extends Component {
                         </Row>
                         <Row style={{marginTop:20}}>                             
                             <Col md={4} lg={4} xs={4}>
-                                <input placeholder="First Name" class="form-control"/>
+                                <input placeholder="First Name" class="form-control input-sm"/>
                             </Col>
                             <Col md={3} lg={3} xs={3}>
-                                <input placeholder="Last Name" class="form-control" />
+                                <input placeholder="Last Name" class="form-control input-sm" />
                             </Col>
                             <Col md={3} lg={3} xs={3}>
-                                <input type="number" placeholder="Age" class="form-control" />
+                                <input type="number" placeholder="Age" class="form-control input-sm" />
                             </Col>  
                             <Col md={2} lg={2} xs={2}>
-                                <select name="" style={{height:"30px"}} className="form-control" id="sel1">
+                                <select name="" className="form-control input-sm" id="sel1">
                                     <option value="">Gender</option>
                                     <option value="M">Male</option>
                                     <option value="F">Female</option>
@@ -35,16 +35,24 @@ export default class PassengerInfo extends Component {
                             </Col>
                         </Row>
                         <Row style={{marginLeft:0, marginTop: 20, fontWeight:"bolder"}}>
-                            <h5>Contact Information</h5>
-                            <h6>Your ticket and PNR Info will be sent to these.</h6>
+                           <h5 style={{fontWeight:"600"}}>Contact Details  <span style={{color:"#949494",fontSize:"12px",lineHeight:"12px",backgroundColor:"#fff181"}}>(Your booking details will be sent to your email address and contact no. )</span></h5>
                         </Row>
                         <Row style={{marginBottom:20}}> 
                             <Col md={4}>
-                                <input type="email" placeholder="Email ID" class="form-control"/>
+                                <input type="email" placeholder="Email ID" class="form-control input-sm"/>
                             </Col>
                             <Col md={4}>
-                                <input type="number" placeholder="Mobile Number" class="form-control"/>
+                                <input type="number" placeholder="Mobile Number" class="form-control input-sm"/>
                             </Col> 
+                        </Row>
+                        <Row>
+                            <Col md={12} lg={12} xs={12}>
+                            <div className="radio">
+                                <label> <input type="radio" name="optradio" checked/>Yes, secure my trip with insurance. I agree to the 
+                                  <a style={{color:"deeppink"}} href="insurance-terms.html" target="_blank"> Terms and Conditions</a></label>
+                            </div>
+                                 
+                            </Col>
                         </Row>
                     </Col>
                     
