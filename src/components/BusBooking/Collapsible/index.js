@@ -13,7 +13,8 @@ class Collapsible extends Component {
   }
 
   render() {
-    const { cancellationPolicy,droppingPoints,boardingPoints, collapseType } = this.props;    
+    const { cancellationPolicy,droppingPoints,boardingPoints, collapseType,droppingLocations, boardingLocations } = this.props;  
+    console.log("::::",droppingLocations, boardingLocations)  
     return (
       <>
         <Collapse isOpen={this.props.collapse} style={{width:"100%"}}>
@@ -21,7 +22,7 @@ class Collapsible extends Component {
             <CardBody>
              {collapseType === 'seatDetail' && <SelectSeat seatDetails={this.props.seatDetails}  droppingPoints={this.props.droppingPoints} boardingPoints={this.props.boardingPoints} />}
              {collapseType === 'policyDetail' && <Cancellation cancellationPolicy={cancellationPolicy} />}
-             {collapseType === 'boardingDropping' && <BoadingPoint droppingPoints={droppingPoints} boardingPoints={boardingPoints} />}
+             {collapseType === 'boardingDropping' && <BoadingPoint droppingPoints={droppingPoints} boardingPoints={boardingPoints} droppingLocations={droppingLocations} boardingLocations={boardingLocations}/>}
              {collapseType === 'review' && <Review />}
              {collapseType === 'Amenities' && <Amenity />}
             </CardBody>
