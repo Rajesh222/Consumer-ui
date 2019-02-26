@@ -6,7 +6,7 @@ export default class TravellerForm extends Component {
     render () {
         return (
             <div className="travellerFormContainer">
-                <div className="travellerFormHeading">Traveller 1</div>
+                <div className="travellerFormHeading">Traveller {this.props.index + 1}</div>
                 <Row style={{marginTop:20}} className="travellerFormContent">                             
                     <Col md={4} lg={4} xs={4}>
                         <input placeholder="First Name" class="form-control input-sm"/>

@@ -7,6 +7,7 @@ class Filter extends Component {
 
    render() {
        const { handleCheck, filterValue } = this.props;
+       console.log('filterValue',filterValue)
     return (
          <div>
            <Row className="filterRow">

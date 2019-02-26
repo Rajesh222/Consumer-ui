@@ -34,6 +34,7 @@ export default class SelectSeat extends Component {
             total:fare,
             selectedSeat 
         })
+        localStorage.setItem('selectedSeat',JSON.stringify(selectedSeat));
     }
     handleContinue = (e) => {
         e.preventDefault();
@@ -80,7 +81,7 @@ export default class SelectSeat extends Component {
                                     const last = selectedSeat.length - 1 === index;
                                     console.log("Last   :: ",last)
                                     const separator = last ? '' : ', ';
-                                    return <>{`${separator} ${selected}`}</>
+                                    return <>{`${selected} ${separator}`}</>
                                  })} 
                             </Col>
                             </Row>

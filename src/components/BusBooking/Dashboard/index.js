@@ -9,6 +9,10 @@ import BusList from '../BusList';
 import Filter from '../Filter';
 
 export default class Dashboard extends Component {
+    constructor(props) {
+        super(props);
+        this.handleCheck = this.handleCheck.bind(this);
+    }
     state = {
         selectedSource: null,
         selectedDestination: null,
@@ -24,6 +28,7 @@ export default class Dashboard extends Component {
  
     handleCheck = (e) => {
         const filterValue = this.state.filterValue;
+        console.log('filterValue::::',filterValue, e.target.value)
         const index = filterValue.indexOf(e.target.value);
         if (index > -1) {
             filterValue.splice(index, 1);
@@ -31,13 +36,17 @@ export default class Dashboard extends Component {
             filterValue.push(e.target.value)
         }
         this.setState({ filterValue });
+        console.log('filterValue::::----',filterValue)
         const searchResult = this.state.searchResult;
+        console.log('searchResult::::----',searchResult)
         let newSearch = [];
         filterValue.forEach(element => {
             newSearch.push(... searchResult.filter((result)=>{
+                console.log('result: ',result)
                 return result.busType.toLowerCase().indexOf(element.toLowerCase()) > -1;
             }))
         });
+        console.log('newSearch0000: ',newSearch)
         if (filterValue.length === 0) {
             newSearch = searchResult;
         }
@@ -62,6 +71,7 @@ export default class Dashboard extends Component {
         });
     }
     handleSearch = ()=> {
+        localStorage.setItem('selectedSeat',JSON.stringify([]));
         const { selectedSource, selectedDestination, searchDate } = this.state;
         if (!selectedSource) {
            this.setState({sourceError: true}); 

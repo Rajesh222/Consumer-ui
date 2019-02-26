@@ -9,7 +9,10 @@ export default class PassengerInfo extends Component {
     handlePayment = ()=> {
         console.log("continue................")
     }
+
     render () {
+        const selectedSeat = localStorage.getItem('selectedSeat') ? JSON.parse(localStorage.getItem('selectedSeat')) : [];
+
         return (
             <Grid>
                 <Row>
@@ -19,8 +22,9 @@ export default class PassengerInfo extends Component {
                                 <h4>Traveller Information</h4>
                             </Col>
                         </Row>
-                        <Traveller></Traveller>
-                        <Traveller></Traveller>
+                        {selectedSeat && selectedSeat.map((item , index)=>{
+                            return <Traveller key={index} passengerInfo={item} index={index}/>
+                        })}
                         <Row style={{marginLeft:0, marginTop: 20, fontWeight:"bolder"}}>
                            <h5 style={{fontWeight:"600"}}>Contact Details  <span style={{color:"#949494",fontSize:"12px",lineHeight:"12px"}}>(Your booking details will be sent to your email address and contact no. )</span></h5>
                         </Row>
