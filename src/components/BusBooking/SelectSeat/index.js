@@ -109,7 +109,7 @@ export default class SelectSeat extends Component {
                                 <Col md={4} lg={4} sm={4} xs={4}>Total :</Col>
                                 <Col md={8} lg={8} sm={8} xs={8} style={{fontWeight : 600, textAlign: "right",color: "#000"}}>{this.state.total}</Col>
                             </Row>                           
-                            </> : <div className="col-md-12"> 
+                            </> : <div className="col-md-12" style={{paddingLeft:"0px"}}> 
                                               <div style={{textAlign:"center",marginBottom:"10px",paddingLeft:"0px"}}>
                                                  Please select seat(s), boarding & dropping points to continue
                                               </div>

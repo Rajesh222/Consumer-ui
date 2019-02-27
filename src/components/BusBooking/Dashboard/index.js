@@ -100,7 +100,7 @@ export default class Dashboard extends Component {
         const { selectedSource , newSearch, selectedDestination, searchResult, searchDate, sourceError, destinationError } = this.state;
         const citiesOptions = this.state.cities.map(item => ({ label: item.displayName, value: item.cityName }));
         return (
-               <Grid style={{width:"100%"}}>
+               <Grid style={{width:"100%", minHeight:"30%"}}>
                 <Row className="search_pannel">
                     <Col sm={6} md={4} xs={6} style={{paddingBottom:5}}>
                         <Select value={selectedSource} onChange={this.handleSourceChange} autosize={true} options={citiesOptions} isSearchable={true} placeholder="Source City"/>
