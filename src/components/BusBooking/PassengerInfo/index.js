@@ -13,7 +13,7 @@ export default class PassengerInfo extends Component {
 
     render () {
         const selectedSeat = localStorage.getItem('selectedSeat') ? JSON.parse(localStorage.getItem('selectedSeat')) : [];
-
+console.log(":::", selectedSeat);
         return (
             <Grid>
                 <Row>
