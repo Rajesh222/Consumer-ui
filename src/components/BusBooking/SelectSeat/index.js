@@ -14,7 +14,10 @@ export default class SelectSeat extends Component {
         total: '',
         selectedBoardingPoint: null,
         selectedDroppingPoint: null,
-        selectedSeat: []
+        selectedSeat: [],
+        selectedBoardingPointError: false,
+        selectedDroppingPointError: false,
+        selectedSeatError:false
     }
     handleSeatClick = (data)=> {
         const selectedSeat = this.state.selectedSeat;
@@ -38,19 +41,32 @@ export default class SelectSeat extends Component {
     }
     handleContinue = (e) => {
         e.preventDefault();
-        this.context.router.history.push('/passenger');
+        const { selectedBoardingPoint, selectedDroppingPoint, selectedSeat } = this.state;
+        if (!selectedBoardingPoint) {
+            this.setState({selectedBoardingPointError: true}); 
+         }
+        if (!selectedDroppingPoint) {
+             this.setState({selectedDroppingPointError: true}); 
+        } else if(selectedSeat.length==0){
+              this.setState({selectedSeatError:true});
+        }
+        if (selectedBoardingPoint && selectedDroppingPoint && (selectedSeat.length != 0)) {
+            this.context.router.history.push('/passenger');
+        }
     }
     handleBoarding = (selectedBoardingPoint) => {
         this.setState({ selectedBoardingPoint });
+        this.setState({selectedBoardingPointError:false});
     }
     handleDropping = (selectedDroppingPoint) => {
         this.setState({ selectedDroppingPoint });
+        this.setState({selectedDroppingPointError:false});
     }
     render () {
         const { seatDetails, boardingPoints, droppingPoints } = this.props
         const boardingOptions = boardingPoints && boardingPoints.map(item => ({ label: item.locationName, value: item.locationName }));
         const droppingOptions = droppingPoints && droppingPoints.map(item => ({ label: item.locationName, value: item.locationName }));
-        const { selectedDroppingPoint, selectedBoardingPoint, selectedSeat } = this.state;
+        const { selectedDroppingPoint, selectedBoardingPoint,selectedBoardingPointError,selectedDroppingPointError, selectedSeat,selectedSeatError } = this.state;
         const upperBerth = seatDetails.filter((seatDetail)=>{
             return !seatDetail.lowerBerth;
         });
@@ -93,9 +109,14 @@ export default class SelectSeat extends Component {
                                 <Col md={4} lg={4} sm={4} xs={4}>Total :</Col>
                                 <Col md={8} lg={8} sm={8} xs={8} style={{fontWeight : 600, textAlign: "right",color: "#000"}}>{this.state.total}</Col>
                             </Row>                           
-                            </> : <div className="col-md-12">Please select seat(s), boarding & dropping points to continue</div>}
+                            </> : <div className="col-md-12"> 
+                                              <div style={{textAlign:"center",marginBottom:"10px",paddingLeft:"0px"}}>
+                                                 Please select seat(s), boarding & dropping points to continue
+                                              </div>
+                                              {(selectedBoardingPointError || selectedDroppingPointError) && <span className="error-message">Please select boarding and dropping point to continue</span>}
+                                              {selectedSeatError && <span className="error-message">Please select seat(s) to continue</span>}
+                                   </div>}
                             
-                       
                             <div className="boarding-point">
                                 <Select
                                     value={selectedBoardingPoint}

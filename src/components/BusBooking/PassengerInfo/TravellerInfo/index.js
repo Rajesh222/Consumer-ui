@@ -24,7 +24,7 @@ export default class TravellerInfo extends Component {
                 <Col md={3} lg={3} xs={3} sm={3}>
                     <div style={{fontWeight:"600"}}>
                       <span style={{fontWeight:"700",fontSize:"1.8rem"}}>7:00 AM</span>
-                      <span> Delhi</span>
+                      <span> Gaya</span>
                    </div>
                    <div style={{color:"#909090", fontSize:"1.1rem",marginBottom:"5px"}}>Thu, 28 February</div>
                    <div style={{fontSize:"1rem",color:"#4a4a4a",textTransform:"capitalize"}}><span style={{fontWeight:"700"}}>Delhi to varanasi r k ashram  metro station pillar no 10</span></div>
