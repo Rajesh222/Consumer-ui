@@ -9,7 +9,6 @@ import Logo from '../../../img/logo.png';
 class Header extends React.Component {
   constructor (props, context) {
     super(props, context);
-   // this.handleLogOut = this.handleLogOut.bind(this);
 }
   handleLogOut = ()=> {
     const baseUrl =  config.baseUrl;
@@ -32,7 +31,8 @@ class Header extends React.Component {
       <Navbar className="mynav">
           <Navbar.Header>
               <NavbarBrand>
-                <img src={Logo} className="img-resposive" width={200} height={300} style={{height:70}}/>
+              <span style={{width:"200px", height:"50px",marginTop:"10px",color:"#fff",fontWeight:"bold",fontSize:"25px"}}>Digital <span style={{color:"#00004d"}}>Bihar</span></span>
+               {/* <img src={Logo} className="img-resposive" width={200} height={300} style={{height:70}}/> */}
             </NavbarBrand>
             <Navbar.Toggle/>
           </Navbar.Header>
