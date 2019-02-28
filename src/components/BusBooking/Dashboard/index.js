@@ -87,9 +87,11 @@ export default class Dashboard extends Component {
             const searchDate=  this.state.searchDate.getFullYear() + '-' + (this.state.searchDate.getMonth()+1) + '-' + this.state.searchDate.getDate();
             const url = `${baseUrl}${config.searchRoute}/${source}/${dest}/${searchDate}`;
             Axios.get(url).then((res)=> {
-                if(res.data) {
+                if(res.data && res.data.data.availableRoutes.length) {
                     console.log(res)
                 this.setState({newSearch: res.data.data.availableRoutes, searchResult: res.data.data.availableRoutes})
+                }else {
+                    this.setState({searchResult: [0]})
                 }
             }).catch((error) => {
                 console.log(error);
@@ -133,7 +135,7 @@ export default class Dashboard extends Component {
                         return <div>
                             <BusList key={index} busDetails={item} />
                         </div>     
-                        }) : searchResult.length ? <div>No Bus found...</div>: '' }
+                        }) : searchResult.length ? <div className="alert alert-warning">There are no buses between these two cities. Please try a different date or search with an alternate route.</div>: '' }
                     </Col>                      
                 </Row>
             </Grid>            
