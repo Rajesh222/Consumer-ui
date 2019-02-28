@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import "./index.scss";
-import {Grid, Col, Row, Button } from 'react-bootstrap';
+import {Form, Col, Row, Button } from 'react-bootstrap';
 
 class DebitCard extends Component {
   constructor(props) {
@@ -43,13 +43,13 @@ class DebitCard extends Component {
   }
   render() {
     return (
-      <Grid>
+      <>
           <Row>
-              <Col xs={3}>
+              <Col md={5} lg={5} sm={5} xs={5}>
                   <input type="text" onChange={this.handleDebitCard} placeholder="Enter Card Number"
                   style={{margin:10, textAlign:"center"}}></input>
               </Col>
-              <Col xs={4}>
+              <Col md={7} lg={7} sm={7} xs={7}>
                 <div class="ccicons"> 
                   <a target="_blank" id="rupaySecurity" href="" className="c-icon4"> </a> 
                   <a target="_blank" id="visaSecurity" href="http://usa.visa.com/personal/security/vbv/how_it_works.html" title="Read more about Verified by Visa" className="c-icon1"> </a>
@@ -59,27 +59,27 @@ class DebitCard extends Component {
               </Col>
           </Row>
           <Row>
-              <Col xs={2}>
-                  <input type="text" onChange={this.handleDebitCard} placeholder="MM" style={{margin:10, textAlign:"center"}}></input>
+              <Col md={4} lg={4} sm={4} xs={4}>
+                  <input type="text" onChange={this.handleDebitCard} placeholder="MM" style={{margin:10, textAlign:"center", width: "-webkit-fill-available"}}></input>
               </Col>
-              <Col xs={2}>
-                  <input type="text" onChange={this.handleDebitCard} placeholder="YYYY" style={{margin:10, textAlign:"center"}}></input>
+              <Col md={4} lg={4} sm={4} xs={4}>
+                  <input type="text" onChange={this.handleDebitCard} placeholder="YYYY" style={{margin:10, textAlign:"center",width: "-webkit-fill-available"}}></input>
               </Col>
-              <Col xs={2}>
-                  <input type="text" onChange={this.handleDebitCard} placeholder="CVV" style={{margin:10, textAlign:"center"}}></input>
-              </Col>
-          </Row>
-          <Row>
-              <Col xs={8}>
-                  <input type="text" onChange={this.handleDebitCard} placeholder="Card Holder Name"  style={{margin:10, textAlign:"center"}}></input>
+              <Col md={4} lg={4} sm={4} xs={4}>
+                  <input type="text" onChange={this.handleDebitCard} placeholder="CVV" style={{margin:10, textAlign:"center",width: "-webkit-fill-available"}}></input>
               </Col>
           </Row>
           <Row>
-              <Col xs={2}>
+              <Col md={12} lg={12} sm={12} xs={12}>
+                  <input type="text" onChange={this.handleDebitCard} placeholder="Card Holder Name"  style={{margin:10, textAlign:"center",width: "-webkit-fill-available"}}></input>
+              </Col>
+          </Row>
+          <Row>
+              <Col md={12} lg={12} sm={12} xs={12}>
                 <Button variant="primary" size="lg" className="paynow" style={{margin:10, textAlign:"center"}}> Pay now </Button>
               </Col>
           </Row>
-       </Grid>        
+          </>
     );
   }
 }

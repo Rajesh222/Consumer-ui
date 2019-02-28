@@ -12,19 +12,23 @@ import OthersWallets from './OthersWallets';
 import UPI from './UPI';
 
 class Payment extends React.Component {
-        
+    constructor(props, context) {
+        super(props, context);
+        this.state = {
+          key: 'debitcard',
+        };
+      }
   render() {
     return (
         <Grid>
             <Row>
                 <Col md={5} lg={5} xs={5}>
-                     Make Payment 
+                Please select a payment method
                 </Col>
-                <Col md={7} lg={7} xs={7}>
-                   <i className="fa fa-lock" aria-hidden="true" style={{fontSize:40}}> <span style={{fontSize:14}}>Safe &amp; secure Online Payments</span></i>
-                </Col>
+                
             </Row> 
-            <Tab.Container id="left-tabs-example" defaultActiveKey="debitcard">
+            <Tab.Container id="left-tabs-example" defaultActiveKey="debitcard" activeKey={this.state.key}
+             onSelect={key => this.setState({ key })}>
             <Row>
                 <Col md={2} lg={2} sm={2} xs={2} className="paymentmenu">
                     <Nav variant="pills" className="flex-column">
@@ -37,7 +41,7 @@ class Payment extends React.Component {
                         <NavItem eventKey="netbanking">
                             Net Banking
                         </NavItem>
-                    <NavItem eventKey="googlepay">
+                        <NavItem eventKey="googlepay">
                             Google Pay
                         </NavItem>
                         <NavItem eventKey="phonepay">
