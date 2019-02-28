@@ -1,5 +1,5 @@
 const config = {
-    baseUrl: 'http://localhost:8080/BiharConsumer/api/v0/',
+    baseUrl: 'http://64.202.184.51:8080/BiharConsumer/api/v0/',
     fogotPassword: 'auth/forgotPassword',
     login: 'auth/serviceLoginAuth',
     resetPassword: 'auth/changePassword',

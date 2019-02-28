@@ -89,7 +89,7 @@ export default class Dashboard extends Component {
             Axios.get(url).then((res)=> {
                 if(res.data) {
                     console.log(res)
-                this.setState({newSearch: res.data.data.availableRoutes})
+                this.setState({newSearch: res.data.data.availableRoutes, searchResult: res.data.data.availableRoutes})
                 }
             }).catch((error) => {
                 console.log(error);
@@ -97,7 +97,7 @@ export default class Dashboard extends Component {
         }
     }
     render() {
-        const { selectedSource , newSearch, selectedDestination, searchResult, searchDate, sourceError, destinationError } = this.state;
+        const { selectedSource , newSearch = [], selectedDestination, searchDate, sourceError, destinationError, searchResult = [] } = this.state;
         const citiesOptions = this.state.cities.map(item => ({ label: item.displayName, value: item.cityName }));
         return (
                <Grid style={{width:"100%", minHeight:"30%"}}>
@@ -117,7 +117,7 @@ export default class Dashboard extends Component {
                         <Button block bsStyle="primary" className="searchbtn" onClick={this.handleSearch} type="submit">Search</Button>
                     </Col>
                 </Row>
-                {newSearch && newSearch.length > 0 ? <Row className="bus_pannel">
+                <Row className="bus_pannel">
                     <Col xs={12} sm={12} md={3} className="left_pannel">
                         <Filter handleCheck={this.handleCheck} filterValue={this.state.filterValue}/>
                     </Col >
@@ -129,13 +129,13 @@ export default class Dashboard extends Component {
                             <Col xs={1} sm={1} lg={1} md={1}>Fare</Col>
                             <Col xs={3} sm={2} lg={2} md={3}>Availability</Col>
                         </Row>
-                        {newSearch.map((item, index)=>{
+                        {newSearch.length > 0 ? newSearch.map((item, index)=>{
                         return <div>
                             <BusList key={index} busDetails={item} />
                         </div>     
-                        })}
+                        }) : searchResult.length ? <div>No Bus found...</div>: '' }
                     </Col>                      
-                </Row> : <div></div>} 
+                </Row>
             </Grid>            
         )
    }
