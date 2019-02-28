@@ -78,10 +78,7 @@ export default class SelectSeat extends Component {
                 <Row>
                     <Col md={7} lg={7} xs={7} sm={7}>
                         {lowerBerth.length ?<LowerSeat handleSeatClick={this.handleSeatClick} lowerBerth={lowerBerth} selectedSeat={this.state.selectedSeat}/>:<div></div>}
-                        {
-                        upperBerth.length ?<UpperSeat selectedSeat={this.state.selectedSeat} handleSeatClick={this.handleSeatClick} upperBerth={upperBerth}/>
-                        : <div></div>
-                        }
+                        {upperBerth.length ?<UpperSeat selectedSeat={this.state.selectedSeat} handleSeatClick={this.handleSeatClick} upperBerth={upperBerth}/>:<div></div>}
                         <Col md={12}  className="seat-sign">
                             <SymbolSeat seatType="occupied" handleSeatClick={()=> false} /> <span style={{marginRight:5}}>Occupied</span> <SymbolSeat handleSeatClick={()=> false} /> <span style={{marginRight:5}}>Available</span> 
                             <SymbolSeat seatType="selected" handleSeatClick={()=> false} /> <span>Selected</span> <SymbolSeat seatType="reserved-by-lady" handleSeatClick={()=> false} /> <span style={{marginRight: 5}}>Booked By Ladies</span> <SymbolSeat seatType="reserved-for-lady" handleSeatClick={()=> false} /><span style={{marginRight: 5}}> Reserved for Ladies</span>
@@ -89,13 +86,18 @@ export default class SelectSeat extends Component {
                     </Col>
                     <Col md={5} lg={5} xs={5} sm={5}>
                         <div className="aGYy">
-                        {selectedSeat.length ? <>
+                            <div className="boarding-point">
+                                 <Select value={selectedBoardingPoint} onChange={this.handleBoarding} options={boardingOptions} isSearchable={true} placeholder="Select Boarding Point"/>
+                            </div>
+                            <div className="dropping-point">
+                                <Select value={selectedDroppingPoint} onChange={this.handleDropping} options={droppingOptions} placeholder="Select Dropping point" isSearchable={true}/>
+                            </div>
+                           {selectedSeat.length ? <>
                              <Row style={{margin: "15px 0"}}>
                                <Col md={4} lg={4} sm={4} xs={4}> Seat(s) :</Col> 
                                <Col md={8} lg={8} sm={8} xs={8} style={{fontWeight : 600, textAlign: "right",color: "#000"}}>
                                    {selectedSeat && selectedSeat.map((selected, index)=>{
                                     const last = selectedSeat.length - 1 === index;
-                                    console.log("Last   :: ",last)
                                     const separator = last ? '' : ', ';
                                     return <>{`${selected} ${separator}`}</>
                                  })} 
@@ -116,34 +118,7 @@ export default class SelectSeat extends Component {
                                               {(selectedBoardingPointError || selectedDroppingPointError) && <span className="error-message">Please select boarding and dropping point to continue</span>}
                                               {selectedSeatError && <span className="error-message">Please select seat(s) to continue</span>}
                                    </div>}
-                            
-                            <div className="boarding-point">
-                                <Select
-                                    value={selectedBoardingPoint}
-                                    onChange={this.handleBoarding}
-                                    options={boardingOptions}
-                                    isSearchable={true}
-                                    placeholder="Select Boarding Point"
-                                />
-                            </div>
-                            <div className="dropping-point">
-                                <Select
-                                    value={selectedDroppingPoint}
-                                    onChange={this.handleDropping}
-                                    options={droppingOptions}
-                                    placeholder="Select Dropping point"
-                                    isSearchable={true}
-                                >
-                                </Select>
-                            </div>
-                            <Button
-                                block
-                                bsStyle="primary"
-                                onClick={this.handleContinue}
-                                type="submit"
-                                >
-                                        Continue
-                            </Button>
+                            <Button block bsStyle="primary" onClick={this.handleContinue} type="submit">Continue</Button>
                         </div>
                     </Col>  
                 </Row> 

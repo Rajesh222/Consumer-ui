@@ -120,10 +120,10 @@ export default class Dashboard extends Component {
                     </Col>
                 </Row>
                 <Row className="bus_pannel">
-                    <Col xs={12} sm={12} md={3} className="left_pannel">
+                    <Col xs={12} sm={12} md={2} lg={2} className="left_pannel">
                         <Filter handleCheck={this.handleCheck} filterValue={this.state.filterValue}/>
-                    </Col >
-                    <Col xs={12} sm={12} md={9} className="right_pannel">
+                    </Col>
+                    <Col xs={12} sm={12} md={10} lg={10} className="right_pannel">
                         <Row className="businfo">
                             <Col xs={3} sm={3} lg={3} md={3}>Traveller</Col>
                             <Col xs={3} sm={3} lg={3} md={3}>Departure Time</Col>

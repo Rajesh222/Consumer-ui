@@ -17,7 +17,7 @@ console.log(":::", selectedSeat);
         return (
             <Grid>
                 <Row>
-                   <Col md={9} lg={9} xs={9} sm={12}>
+                   <Col md={9} lg={9} xs={12} sm={12}>
                        <TravellInfo></TravellInfo>
                        <div className="passenger-info">
                            <div className="banner">
@@ -55,11 +55,9 @@ console.log(":::", selectedSeat);
                             </div>
                         </div>
                     </Col>
-                    <Col xs={3} md={3} sm={12} lg={3}>
+                    <Col md={3} lg={3} xs={12} sm={12}>
                       <div className="passenger-info">
-                          <div className="banner">
-                                Fare Details
-                         </div>
+                          <div className="banner">Fare Details</div>
                          <div className="passengercontaint">
                             <div style={{borderBottom:"1px solid #ebebeb",padding:"15px 5px",fontSize:"14px",color:"#4a4a4a"}}>
                             <h4 style={{marginBottom:"7px", fontSize:"15px", fontWeight:"600 "}}>ONWARD FARE</h4>
