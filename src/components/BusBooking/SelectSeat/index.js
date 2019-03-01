@@ -76,15 +76,15 @@ export default class SelectSeat extends Component {
         return (
             <div className="bus-collapse">
                 <Row>
-                    <Col md={7} lg={7} xs={7} sm={7}>
+                    <Col md={7} lg={7} xs={12} sm={12}>
                         {lowerBerth.length ?<LowerSeat handleSeatClick={this.handleSeatClick} lowerBerth={lowerBerth} selectedSeat={this.state.selectedSeat}/>:<div></div>}
                         {upperBerth.length ?<UpperSeat selectedSeat={this.state.selectedSeat} handleSeatClick={this.handleSeatClick} upperBerth={upperBerth}/>:<div></div>}
-                        <Col md={12}  className="seat-sign">
+                        <Col md={12} lg={12} xs={12} sm={12} className="seat-sign">
                             <SymbolSeat seatType="occupied" handleSeatClick={()=> false} /> <span style={{marginRight:5}}>Occupied</span> <SymbolSeat handleSeatClick={()=> false} /> <span style={{marginRight:5}}>Available</span> 
                             <SymbolSeat seatType="selected" handleSeatClick={()=> false} /> <span>Selected</span> <SymbolSeat seatType="reserved-by-lady" handleSeatClick={()=> false} /> <span style={{marginRight: 5}}>Booked By Ladies</span> <SymbolSeat seatType="reserved-for-lady" handleSeatClick={()=> false} /><span style={{marginRight: 5}}> Reserved for Ladies</span>
                         </Col>
                     </Col>
-                    <Col md={5} lg={5} xs={5} sm={5}>
+                    <Col md={5} lg={5} xs={12} sm={12}>
                         <div className="aGYy">
                             <div className="boarding-point">
                                  <Select value={selectedBoardingPoint} onChange={this.handleBoarding} options={boardingOptions} isSearchable={true} placeholder="Select Boarding Point"/>

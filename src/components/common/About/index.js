@@ -50,7 +50,7 @@ class About extends React.Component {
                             Krishna joined digital bihar in Jan 2019, prior to that he has expended over nearly two decades in the Indian Sels and Marketing industry at a leadership position as the Vice President of one of India’s largest Company Munjal Showa.</p>
                         <p>Krishna brings in deep experience in business strategy, partnerships, sales & marketing and in running highly cost effective operations.
                              Noted for a comprehensive, practical, management style focused on turnaround strategies and a stout boardroom presence, 
-                             Biju Mathews is a growth oriented, focused leader with repeated success in sales & marketing, expanding service offerings, building shareholder value, driving vision and achieving critical strategic goals.</p>
+                             Krishna Kumar is a growth oriented, focused leader with repeated success in sales & marketing, expanding service offerings, building shareholder value, driving vision and achieving critical strategic goals.</p>
                         <p>Currently as Chief Operating Office at Digital bihar, Krishna leads major functions like business development, sales, marketing and operations, Working closely with the board and top management, Krishna ensures that both long term and short term strategic goals are implemented seamlessly at digital bihar.</p>
                     </div>
                 </div>

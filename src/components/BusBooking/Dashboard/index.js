@@ -125,11 +125,11 @@ export default class Dashboard extends Component {
                     </Col>
                     <Col xs={12} sm={12} md={10} lg={10} className="right_pannel">
                         <Row className="businfo">
-                            <Col xs={3} sm={3} lg={3} md={3}>Traveller</Col>
+                            <Col xs={2} sm={2} lg={2} md={2}>Traveller</Col>
                             <Col xs={3} sm={3} lg={3} md={3}>Departure Time</Col>
-                            <Col xs={2} sm={2} lg={2} md={2}>Arrival Time</Col>
+                            <Col xs={3} sm={3} lg={3} md={3}>Arrival Time</Col>
                             <Col xs={1} sm={1} lg={1} md={1}>Fare</Col>
-                            <Col xs={3} sm={2} lg={2} md={3}>Availability</Col>
+                            <Col xs={3} sm={3} lg={3} md={3}>Availability</Col>
                         </Row>
                         {newSearch.length > 0 ? newSearch.map((item, index)=>{
                         return <div>
