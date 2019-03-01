@@ -10,7 +10,7 @@ class About extends React.Component {
         <Grid>
            <Row>
                <Col xs={12} sm={12} lg={12} md={12}><h4>About us</h4>
-           <p>digital bihar is India’s largest online bus ticketing platform that has transformed bus travel in the country by
+           <p>Digital bihar Pvt Ltd is India’s largest online bus ticketing platform that has transformed bus travel in the country by
               bringing ease and convenience to millions of Indians who travel using buses. Founded in 2014. By providing widest 
               choice, superior customer service, lowest prices and unmatched benefits, digital bihar has served over 8 million 
               customers have used one or more of our comprehensive travel-related services, which include bus ticketing, cab booking, hotel bookings, activities and ancillary services. we are
