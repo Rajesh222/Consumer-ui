@@ -35,8 +35,9 @@ class About extends React.Component {
                     </div>
                     <div className="media-body">
                         <h4 className="media-heading">Tej Narayan Shahu <small><i>Founder & Chief Executive Officer (CEO)</i></small></h4>   
-                        <p>Tej Narayan Shahu has been Chief Executive Officer of digitalbihar since June 2014. Prior to digitalbihar. He’s also worked as General Manager of Marketing and Innovation at digitalbihar and has also had multiple roles across Marketing, Brand Management and Sales at Hindustan Unilever. Prakash has completed his MBA from IIM Calcutta and also holds an Honours degree in Production Engineering from Mumbai University.</p>
-                        <p>Tej Narayan's vision is to reinvent bus travel in India through digitalbihar.com and in the process make the online portal the preferred choice for booking bus tickets where everyone admires the company for its performance, people and partnerships.</p>
+                        <p>Tej Narayan Shahu has been Chief Executive Officer of digitalbihar since June 2014. Prior to digitalbihar. 
+                            He’s also worked as General Manager of Marketing and Innovation at digitalbihar.
+                             Tej Narayan has completed his Diploma from Engineering from Delhi University.</p>
                     </div>
                 </div>
                 <div className="media">
@@ -45,8 +46,11 @@ class About extends React.Component {
                     </div>
                     <div className="media-body">
                         <h4 className="media-heading">Krishna Kumar <small><i>Chief Operating Officer & Chief Strategy Officer</i></small></h4>
-                        <p>Krishna is the Chief Operating Officer & Chief Strategy Officer of Digital bihar Private limited. Krishna joined digital bihar in Jan 2019, prior to that he has expended over nearly two decades in the Indian B2B media industry at a leadership position as the Vice President of one of India’s largest publishing house.</p>
-                        <p>Krishna brings in deep experience in business strategy, partnerships, sales & marketing and in running highly cost effective operations. Noted for a comprehensive, practical, management style focused on turnaround strategies and a stout boardroom presence, Biju Mathews is a growth oriented, focused leader with repeated success in sales & marketing, expanding service offerings, building shareholder value, driving vision and achieving critical strategic goals.</p>
+                        <p>Krishna is the Chief Operating Officer & Chief Strategy Officer of Digital bihar Private limited. 
+                            Krishna joined digital bihar in Jan 2019, prior to that he has expended over nearly two decades in the Indian Sels and Marketing industry at a leadership position as the Vice President of one of India’s largest Company Munjal Showa.</p>
+                        <p>Krishna brings in deep experience in business strategy, partnerships, sales & marketing and in running highly cost effective operations.
+                             Noted for a comprehensive, practical, management style focused on turnaround strategies and a stout boardroom presence, 
+                             Biju Mathews is a growth oriented, focused leader with repeated success in sales & marketing, expanding service offerings, building shareholder value, driving vision and achieving critical strategic goals.</p>
                         <p>Currently as Chief Operating Office at Digital bihar, Krishna leads major functions like business development, sales, marketing and operations, Working closely with the board and top management, Krishna ensures that both long term and short term strategic goals are implemented seamlessly at digital bihar.</p>
                     </div>
                 </div>
