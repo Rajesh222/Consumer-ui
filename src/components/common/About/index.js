@@ -45,7 +45,7 @@ class About extends React.Component {
                         <Image src={ceoImg} circle className="media-object" width="80" />
                     </div>
                     <div className="media-body">
-                        <h4 className="media-heading">Krishna Kumar <small><i>Chief Operating Officer & Chief Strategy Officer</i></small></h4>
+                        <h4 className="media-heading">Krishna Kumar <small><i>Chief Operating Officer & Chief Strategy Officer (CSO)</i></small></h4>
                         <p>Krishna is the Chief Operating Officer & Chief Strategy Officer of Digital bihar Private limited. 
                             Krishna joined digital bihar in Jan 2019, prior to that he has expended over nearly two decades in the Indian Sels and Marketing industry at a leadership position as the Vice President of one of India’s largest Company Munjal Showa.</p>
                         <p>Krishna brings in deep experience in business strategy, partnerships, sales & marketing and in running highly cost effective operations.
