@@ -32,26 +32,26 @@ class Payment extends React.Component {
             <Row>
                 <Col md={2} lg={2} sm={2} xs={2} className="paymentmenu">
                     <Nav variant="pills" className="flex-column">
-                        <NavItem eventKey="debitcard">
-                            Debit Card
+                        <NavItem eventKey="debitcard" className="chek-out">
+                            Debit Card <span className="fa fa-home"></span>
                         </NavItem>
-                        <NavItem eventKey="creditcard">
-                            Credit Card
+                        <NavItem eventKey="creditcard" className="chek-out">
+                            Credit Card <span className="fa fa-home"></span>
                         </NavItem>
-                        <NavItem eventKey="netbanking">
-                            Net Banking
+                        <NavItem eventKey="netbanking" className="chek-out">
+                            Net Banking <span className="fa fa-home"></span>
                         </NavItem>
-                        <NavItem eventKey="googlepay">
-                            Google Pay
+                        <NavItem eventKey="googlepay" className="chek-out">
+                            Google Pay <span className="fa fa-home"></span>
                         </NavItem>
-                        <NavItem eventKey="phonepay">
-                            Phone Pay
+                        <NavItem eventKey="phonepay" className="chek-out">
+                            Phone Pay <span className="fa fa-home"></span>
                         </NavItem>
-                        <NavItem eventKey="otherwallet">
-                            Other Wallets
+                        <NavItem eventKey="otherwallet" className="chek-out">
+                            Other Wallets <span className="fa fa-home"></span>
                         </NavItem>
-                        <NavItem eventKey="upi">
-                            UPI
+                        <NavItem eventKey="upi" className="chek-out">
+                            UPI <span className="fa fa-home"></span>
                         </NavItem>
                     </Nav>
                 </Col>

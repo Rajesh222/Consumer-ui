@@ -24,3 +24,10 @@
 .active > a{
   color: red;
 }
+.chek-out{
+    border-bottom: 1px solid #dfdfdf;
+    .fa-home{
+        clear: both;
+        padding-left: 10px;
+    }
+}
